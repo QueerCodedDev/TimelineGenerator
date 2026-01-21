@@ -1,0 +1,469 @@
+[
+    {
+        "show": "Leverage",
+        "episodes": [
+            {
+                "season": "1",
+                "episode": "1",
+                "title": "The Nigerian Job",
+                "air_date": "12-07-2008"
+            },
+            {
+                "season": "1",
+                "episode": "2",
+                "title": "The Homecoming Job",
+                "air_date": "12-09-2008"
+            },
+            {
+                "season": "1",
+                "episode": "3",
+                "title": "The Two-Horse Job",
+                "air_date": "12-16-2008"
+            },
+            {
+                "season": "1",
+                "episode": "4",
+                "title": "The Miracle Job",
+                "air_date": "12-23-2008"
+            },
+            {
+                "season": "1",
+                "episode": "5",
+                "title": "The Bank Shot Job",
+                "air_date": "12-30-2008"
+            },
+            {
+                "season": "1",
+                "episode": "6",
+                "title": "The Stork Job",
+                "air_date": "01-06-2009"
+            },
+            {
+                "season": "1",
+                "episode": "7",
+                "title": "The Wedding Job",
+                "air_date": "01-13-2009"
+            },
+            {
+                "season": "1",
+                "episode": "8",
+                "title": "The Mile High Job",
+                "air_date": "01-20-2009"
+            },
+            {
+                "season": "1",
+                "episode": "9",
+                "title": "The Snow Job",
+                "air_date": "01-27-2009"
+            },
+            {
+                "season": "1",
+                "episode": "10",
+                "title": "The 12-Step Job",
+                "air_date": "02-03-2009"
+            },
+            {
+                "season": "1",
+                "episode": "11",
+                "title": "The Juror #6 Job",
+                "air_date": "02-10-2009"
+            },
+            {
+                "season": "1",
+                "episode": "12",
+                "title": "The First David Job",
+                "air_date": "02-17-2009"
+            },
+            {
+                "season": "1",
+                "episode": "13",
+                "title": "The Second David Job",
+                "air_date": "02-24-2009"
+            },
+            {
+                "season": "2",
+                "episode": "1",
+                "title": "The Beantown Bailout Job",
+                "air_date": "07-15-2009"
+            },
+            {
+                "season": "2",
+                "episode": "2",
+                "title": "The Tap-Out Job",
+                "air_date": "07-22-2009"
+            },
+            {
+                "season": "2",
+                "episode": "3",
+                "title": "The Order 23 Job",
+                "air_date": "07-29-2009"
+            },
+            {
+                "season": "2",
+                "episode": "4",
+                "title": "The Fairy Godparents Job",
+                "air_date": "08-05-2009"
+            },
+            {
+                "season": "2",
+                "episode": "5",
+                "title": "The Three Days of the Hunter Job",
+                "air_date": "08-12-2009"
+            },
+            {
+                "season": "2",
+                "episode": "6",
+                "title": "The Top Hat Job",
+                "air_date": "08-19-2009"
+            },
+            {
+                "season": "2",
+                "episode": "7",
+                "title": "The Two Live Crew Job",
+                "air_date": "08-26-2009"
+            },
+            {
+                "season": "2",
+                "episode": "8",
+                "title": "The Ice Man Job",
+                "air_date": "09-02-2009"
+            },
+            {
+                "season": "2",
+                "episode": "9",
+                "title": "The Lost Heir Job",
+                "air_date": "09-09-2009"
+            },
+            {
+                "season": "2",
+                "episode": "10",
+                "title": "The Runway Job",
+                "air_date": "01-13-2010"
+            },
+            {
+                "season": "2",
+                "episode": "11",
+                "title": "The Bottle Job",
+                "air_date": "01-20-2010"
+            },
+            {
+                "season": "2",
+                "episode": "12",
+                "title": "The Zanzibar Marketplace Job",
+                "air_date": "01-27-2010"
+            },
+            {
+                "season": "2",
+                "episode": "13",
+                "title": "The Future Job",
+                "air_date": "02-03-2010"
+            },
+            {
+                "season": "2",
+                "episode": "14",
+                "title": "The Three Strikes Job",
+                "air_date": "02-10-2010"
+            },
+            {
+                "season": "2",
+                "episode": "15",
+                "title": "The Maltese Falcon Job",
+                "air_date": "02-17-2010"
+            },
+            {
+                "season": "3",
+                "episode": "1",
+                "title": "The Jailhouse Job",
+                "air_date": "06-20-2010"
+            },
+            {
+                "season": "3",
+                "episode": "2",
+                "title": "The Reunion Job",
+                "air_date": "06-20-2010"
+            },
+            {
+                "season": "3",
+                "episode": "3",
+                "title": "The Inside Job",
+                "air_date": "06-27-2010"
+            },
+            {
+                "season": "3",
+                "episode": "4",
+                "title": "The Scheherazade Job",
+                "air_date": "06-27-2010"
+            },
+            {
+                "season": "3",
+                "episode": "5",
+                "title": "The Double-Blind Job",
+                "air_date": "07-11-2010"
+            },
+            {
+                "season": "3",
+                "episode": "6",
+                "title": "The Studio Job",
+                "air_date": "07-18-2010"
+            },
+            {
+                "season": "3",
+                "episode": "7",
+                "title": "The Gone-Fishin' Job",
+                "air_date": "07-25-2010"
+            },
+            {
+                "season": "3",
+                "episode": "8",
+                "title": "The Boost Job",
+                "air_date": "08-01-2010"
+            },
+            {
+                "season": "3",
+                "episode": "9",
+                "title": "The Three-Card Monte Job",
+                "air_date": "08-08-2010"
+            },
+            {
+                "season": "3",
+                "episode": "10",
+                "title": "The Underground Job",
+                "air_date": "08-15-2010"
+            },
+            {
+                "season": "3",
+                "episode": "11",
+                "title": "The Rashomon Job",
+                "air_date": "08-22-2010"
+            },
+            {
+                "season": "3",
+                "episode": "12",
+                "title": "The King George Job",
+                "air_date": "08-29-2010"
+            },
+            {
+                "season": "3",
+                "episode": "13",
+                "title": "The Morning After Job",
+                "air_date": "09-05-2010"
+            },
+            {
+                "season": "3",
+                "episode": "14",
+                "title": "The Ho Ho Ho Job",
+                "air_date": "12-12-2010"
+            },
+            {
+                "season": "3",
+                "episode": "15",
+                "title": "The Big Bang Job",
+                "air_date": "12-19-2010"
+            },
+            {
+                "season": "3",
+                "episode": "16",
+                "title": "The San Lorenzo Job",
+                "air_date": "12-19-2010"
+            },
+            {
+                "season": "4",
+                "episode": "1",
+                "title": "The Long Way Down Job",
+                "air_date": "06-26-2011"
+            },
+            {
+                "season": "4",
+                "episode": "2",
+                "title": "The 10 Li'l Grifters Job",
+                "air_date": "07-03-2011"
+            },
+            {
+                "season": "4",
+                "episode": "3",
+                "title": "The 15 Minutes Job",
+                "air_date": "07-10-2011"
+            },
+            {
+                "season": "4",
+                "episode": "4",
+                "title": "The Van Gogh Job",
+                "air_date": "07-17-2011"
+            },
+            {
+                "season": "4",
+                "episode": "5",
+                "title": "The Hot Potato Job",
+                "air_date": "07-24-2011"
+            },
+            {
+                "season": "4",
+                "episode": "6",
+                "title": "The Carnival Job",
+                "air_date": "07-31-2011"
+            },
+            {
+                "season": "4",
+                "episode": "7",
+                "title": "The Grave Danger Job",
+                "air_date": "08-14-2011"
+            },
+            {
+                "season": "4",
+                "episode": "8",
+                "title": "The Boiler Room Job",
+                "air_date": "08-14-2011"
+            },
+            {
+                "season": "4",
+                "episode": "9",
+                "title": "The Cross My Heart Job",
+                "air_date": "08-21-2011"
+            },
+            {
+                "season": "4",
+                "episode": "10",
+                "title": "The Queen's Gambit Job",
+                "air_date": "08-28-2011"
+            },
+            {
+                "season": "4",
+                "episode": "11",
+                "title": "The Experimental Job",
+                "air_date": "11-27-2011"
+            },
+            {
+                "season": "4",
+                "episode": "12",
+                "title": "The Office Job",
+                "air_date": "12-04-2011"
+            },
+            {
+                "season": "4",
+                "episode": "13",
+                "title": "The Girls' Night Out Job",
+                "air_date": "12-11-2011"
+            },
+            {
+                "season": "4",
+                "episode": "14",
+                "title": "The Boys' Night Out Job",
+                "air_date": "12-18-2011"
+            },
+            {
+                "season": "4",
+                "episode": "15",
+                "title": "The Lonely Hearts Job",
+                "air_date": "12-25-2011"
+            },
+            {
+                "season": "4",
+                "episode": "16",
+                "title": "The Gold Job",
+                "air_date": "01-01-2012"
+            },
+            {
+                "season": "4",
+                "episode": "17",
+                "title": "The Radio Job",
+                "air_date": "01-08-2012"
+            },
+            {
+                "season": "4",
+                "episode": "18",
+                "title": "The Last Dam Job",
+                "air_date": "01-15-2012"
+            },
+            {
+                "season": "5",
+                "episode": "1",
+                "title": "The (Very) Big Bird Job",
+                "air_date": "07-15-2012"
+            },
+            {
+                "season": "5",
+                "episode": "2",
+                "title": "The Blue Line Job",
+                "air_date": "07-22-2012"
+            },
+            {
+                "season": "5",
+                "episode": "3",
+                "title": "The First Contact Job",
+                "air_date": "08-05-2012"
+            },
+            {
+                "season": "5",
+                "episode": "4",
+                "title": "The French Connection Job",
+                "air_date": "08-12-2012"
+            },
+            {
+                "season": "5",
+                "episode": "5",
+                "title": "The Gimme a K Street Job",
+                "air_date": "08-19-2012"
+            },
+            {
+                "season": "5",
+                "episode": "6",
+                "title": "The D.B. Cooper Job",
+                "air_date": "08-26-2012"
+            },
+            {
+                "season": "5",
+                "episode": "7",
+                "title": "The Real Fake Car Job",
+                "air_date": "09-02-2012"
+            },
+            {
+                "season": "5",
+                "episode": "8",
+                "title": "The Broken Wing Job",
+                "air_date": "09-09-2012"
+            },
+            {
+                "season": "5",
+                "episode": "9",
+                "title": "The Rundown Job",
+                "air_date": "09-16-2012"
+            },
+            {
+                "season": "5",
+                "episode": "10",
+                "title": "The Frame Up Job",
+                "air_date": "09-16-2012"
+            },
+            {
+                "season": "5",
+                "episode": "11",
+                "title": "The Low Low Price Job",
+                "air_date": "11-27-2012"
+            },
+            {
+                "season": "5",
+                "episode": "12",
+                "title": "The White Rabbit Job",
+                "air_date": "12-04-2012"
+            },
+            {
+                "season": "5",
+                "episode": "13",
+                "title": "The Corkscrew Job",
+                "air_date": "12-11-2012"
+            },
+            {
+                "season": "5",
+                "episode": "14",
+                "title": "The Toy Job",
+                "air_date": "12-18-2012"
+            },
+            {
+                "season": "5",
+                "episode": "15",
+                "title": "The Long Goodbye Job",
+                "air_date": "12-25-2012"
+            }
+        ]
+    }
+]
