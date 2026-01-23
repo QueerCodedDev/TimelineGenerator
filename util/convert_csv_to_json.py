@@ -13,12 +13,14 @@ title_modifiers = {
 }
 
 
-with open('/workspaces/TimelineGenerator/shows_timeline/leverage_data.csv') as file:
+with open('/workspaces/TimelineGenerator/shows_timeline/supernatural_data.csv') as file:
     csv_data = csv.reader(file)
-    for lines in csv_data:
-        print('{')
-        print(f'    "season": "{lines[0]}",')
-        print(f'    "episode": "{lines[1]}",')
-        print(f'    "title": "The {lines[2]} Job",')
-        print(f'    "air_date": "{lines[3]}"')
-        print('},')
+
+    with open('/workspaces/TimelineGenerator/shows_timeline/output_data.json', 'w') as ofile:
+        for lines in csv_data:
+            ofile.write('{\n')
+            ofile.write(f'    "season": "{lines[0]}",\n')
+            ofile.write(f'    "episode": "{lines[1]}",\n')
+            ofile.write(f'    "title": "{lines[2]}",\n')
+            ofile.write(f'    "air_date": "{lines[3]}"\n')
+            ofile.write('},\n')

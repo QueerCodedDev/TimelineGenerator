@@ -1,0 +1,328 @@
+season,number,title,air_date
+1,1,Pilot,9-13-2005
+1,2,Wendigo,9-20-2005
+1,3,Dead in the Water,9-27-2005
+1,4,Phantom Traveler,10-4-2005
+1,5,Bloody Mary,10-11-2005
+1,6,Skin,10-18-2005
+1,7,Hook Man,10-25-2005
+1,8,Bugs,11-8-2005
+1,9,Home,11-15-2005
+1,10,Asylum,11-22-2005
+1,11,Scarecrow,1-10-2006
+1,12,Faith,1-17-2006
+1,13,Route 666,1-31-2006
+1,14,Nightmare,2-7-2006
+1,15,The Benders,2-14-2006
+1,16,Shadow,2-28-2006
+1,17,Hell House,3-30-2006
+1,18,Something Wicked,4-6-2006
+1,19,Provenance,4-13-2006
+1,20,Dead Man's Blood,4-20-2006
+1,21,Salvation,4-27-2006
+1,22,Devil's Trap,5-4-2006
+2,1,In My Time of Dying,9-28-2006
+2,2,Everybody Loves a Clown,10-5-2006
+2,3,Bloodlust,10-12-2006
+2,4,Children Shouldn't Play with Dead Things,10-19-2006
+2,5,Simon Said,10-26-2006
+2,6,No Exit,11-2-2006
+2,7,The Usual Suspects,11-9-2006
+2,8,Crossroad Blues,11-16-2006
+2,9,Croatoan,12-7-2006
+2,10,Hunted,1-11-2007
+2,11,Playthings,1-18-2007
+2,12,Nightshifter,1-25-2007
+2,13,Houses of the Holy,2-1-2007
+2,14,Born Under a Bad Sign,2-8-2007
+2,15,Tall Tales,2-15-2007
+2,16,Roadkill,3-15-2007
+2,17,Heart,3-22-2007
+2,18,Hollywood Babylon,4-19-2007
+2,19,Folsom Prison Blues,4-26-2007
+2,20,What Is and What Should Never Be,5-3-2007
+2,21,All Hell Breaks Loose (Part 1),5-10-2007
+2,22,All Hell Breaks Loose (Part 2),5-17-2007
+3,1,The Magnificent Seven,10-4-2007
+3,2,The Kids Are Alright,10-11-2007
+3,3,Bad Day at Black Rock,10-18-2007
+3,4,Sin City,10-25-2007
+3,5,Bedtime Stories,11-1-2007
+3,6,Red Sky at Morning,11-8-2007
+3,7,Fresh Blood,11-15-2007
+3,8,A Very Supernatural Christmas,12-13-2007
+3,9,Malleus Maleficarum,1-31-2008
+3,10,Dream a Little Dream of Me,2-7-2008
+3,11,Mystery Spot,2-14-2008
+3,12,Jus in Bello,2-21-2008
+3,13,Ghostfacers!,4-24-2008
+3,14,Long-Distance Call,5-1-2008
+3,15,Time Is On My Side,5-8-2008
+3,16,No Rest for the Wicked,5-15-2008
+4,1,Lazarus Rising,9-18-2008
+4,2,"Are You There, God? It's Me, Dean Winchester",9-25-2008
+4,3,In the Beginning,10-2-2008
+4,4,Metamorphosis,10-9-2008
+4,5,Monster Movie,10-16-2008
+4,6,Yellow Fever,10-23-2008
+4,7,"It's the Great Pumpkin, Sam Winchester",10-30-2008
+4,8,Wishful Thinking,11-6-2008
+4,9,I Know What You Did Last Summer,11-13-2008
+4,10,Heaven and Hell,11-20-2008
+4,11,Family Remains,1-15-2009
+4,12,Criss Angel Is a Douche Bag,1-22-2009
+4,13,After School Special,1-29-2009
+4,14,Sex and Violence,2-5-2009
+4,15,Death Takes a Holiday,3-12-2009
+4,16,On the Head of a Pin,3-19-2009
+4,17,It's a Terrible Life,3-26-2009
+4,18,The Monster at the End of This Book,4-2-2009
+4,19,Jump the Shark,4-23-2009
+4,20,The Rapture,4-30-2009
+4,21,When the Levee Breaks,5-7-2009
+4,22,Lucifer Rising,5-14-2009
+5,1,Sympathy for the Devil,9-10-2009
+5,2,"Good God, Y'All!",9-17-2009
+5,3,Free to Be You and Me,9-24-2009
+5,4,The End,10-1-2009
+5,5,Fallen Idols,10-8-2009
+5,6,I Believe the Children Are Our Future,10-15-2009
+5,7,The Curious Case of Dean Winchester,10-29-2009
+5,8,Changing Channels,11-5-2009
+5,9,The Real Ghostbusters,11-12-2009
+5,10,Abandon All Hope...,11-19-2009
+5,11,"Sam, Interrupted",1-21-2010
+5,12,Swap Meat,1-28-2010
+5,13,The Song Remains the Same,2-4-2010
+5,14,My Bloody Valentine[a],2-11-2010
+5,15,Dead Men Don't Wear Plaid,3-25-2010
+5,16,Dark Side of the Moon,4-1-2010
+5,17,99 Problems,4-8-2010
+5,18,Point of No Return,4-15-2010
+5,19,Hammer of the Gods,4-22-2010
+5,20,The Devil You Know,4-29-2010
+5,21,Two Minutes to Midnight,5-6-2010
+5,22,Swan Song,5-13-2010
+6,1,Exile on Main St.,9-24-2010
+6,2,Two and a Half Men,10-1-2010
+6,3,The Third Man,10-8-2010
+6,4,Weekend at Bobby's,10-15-2010
+6,5,Live Free or Twihard,10-22-2010
+6,6,You Can't Handle the Truth,10-29-2010
+6,7,Family Matters,11-5-2010
+6,8,All Dogs Go to Heaven,11-12-2010
+6,9,Clap Your Hands If You Believe...,11-19-2010
+6,10,Caged Heat,12-3-2010
+6,11,Appointment in Samarra,12-10-2010
+6,12,Like a Virgin,2-4-2011
+6,13,Unforgiven,2-11-2011
+6,14,Mannequin 3: The Reckoning,2-18-2011
+6,15,The French Mistake,2-25-2011
+6,16,...And Then There Were None,3-4-2011
+6,17,My Heart Will Go On,4-15-2011
+6,18,Frontierland,4-22-2011
+6,19,Mommy Dearest,4-29-2011
+6,20,The Man Who Would Be King,5-6-2011
+6,21,Let It Bleed,5-20-2011
+6,22,The Man Who Knew Too Much,5-20-2011
+7,1,Meet the New Boss,9-23-2011
+7,2,"Hello, Cruel World",9-30-2011
+7,3,The Girl Next Door,10-7-2011
+7,4,Defending Your Life,10-14-2011
+7,5,"Shut Up, Dr. Phil",10-21-2011
+7,6,Slash Fiction,10-28-2011
+7,7,The Mentalists,11-4-2011
+7,8,"Season 7, Time for a Wedding!",11-11-2011
+7,9,How to Win Friends and Influence Monsters,11-18-2011
+7,10,Death's Door,12-2-2011
+7,11,Adventures in Babysitting,1-6-2012
+7,12,Time After Time,1-13-2012
+7,13,The Slice Girls,2-3-2012
+7,14,Plucky Pennywhistle's Magical Menagerie,2-10-2012
+7,15,Repo Man,2-17-2012
+7,16,Out With the Old,3-16-2012
+7,17,The Born-Again Identity,3-23-2012
+7,18,"Party On, Garth",3-30-2012
+7,19,Of Grave Importance,4-20-2012
+7,20,The Girl with the Dungeons and Dragons Tattoo,4-27-2012
+7,21,Reading Is Fundamental,5-4-2012
+7,22,There Will Be Blood,5-11-2012
+7,23,Survival of the Fittest,5-18-2012
+8,1,We Need to Talk About Kevin,10-3-2012
+8,2,"What's Up, Tiger Mommy?",10-10-2012
+8,3,Heartache,10-17-2012
+8,4,Bitten,10-24-2012
+8,5,Blood Brother,10-31-2012
+8,6,Southern Comfort,11-7-2012
+8,7,A Little Slice of Kevin,11-14-2012
+8,8,Hunteri Heroici,11-28-2012
+8,9,Citizen Fang,12-5-2012
+8,10,Torn and Frayed,1-16-2013
+8,11,LARP and the Real Girl,1-23-2013
+8,12,As Time Goes By,1-30-2013
+8,13,Everybody Hates Hitler,2-6-2013
+8,14,Trial and Error,2-13-2013
+8,15,Man's Best Friend with Benefits,2-20-2013
+8,16,Remember the Titans,2-27-2013
+8,17,Goodbye Stranger,3-20-2013
+8,18,Freaks and Geeks,3-27-2013
+8,19,Taxi Driver,4-3-2013
+8,20,Pac-Man Fever,4-24-2013
+8,21,The Great Escapist,5-1-2013
+8,22,Clip Show,5-8-2013
+8,23,Sacrifice,5-15-2013
+9,1,I Think I'm Gonna Like It Here,10-8-2013
+9,2,Devil May Care,10-15-2013
+9,3,I'm No Angel,10-22-2013
+9,4,Slumber Party,10-29-2013
+9,5,Dog Dean Afternoon,11-5-2013
+9,6,Heaven Can't Wait,11-12-2013
+9,7,Bad Boys,11-19-2013
+9,8,Rock and a Hard Place,11-26-2013
+9,9,Holy Terror,12-3-2013
+9,10,Road Trip,1-14-2014
+9,11,First Born,1-21-2014
+9,12,Sharp Teeth,1-28-2014
+9,13,The Purge,2-4-2014
+9,14,Captives,2-25-2014
+9,15,#THINMAN,3-4-2014
+9,16,Blade Runners,3-18-2014
+9,17,Mother's Little Helper,3-25-2014
+9,18,Meta Fiction,4-15-2014
+9,19,Alex Annie Alexis Ann,4-22-2014
+9,20,Bloodlines,4-29-2014
+9,21,King of the Damned,5-6-2014
+9,22,Stairway to Heaven,5-13-2014
+9,23,Do You Believe in Miracles?,5-20-2014
+10,1,Black,10-7-2014
+10,2,Reichenbach,10-14-2014
+10,3,Soul Survivor,10-21-2014
+10,4,Paper Moon,10-28-2014
+10,5,Fan Fiction,11-11-2014
+10,6,Ask Jeeves,11-18-2014
+10,7,"Girls, Girls, Girls",11-25-2014
+10,8,Hibbing 911,12-2-2014
+10,9,The Things We Left Behind,12-9-2014
+10,10,The Hunter Games,1-20-2015
+10,11,There's No Place Like Home,1-27-2015
+10,12,About a Boy,2-3-2015
+10,13,Halt & Catch Fire,2-10-2015
+10,14,The Executioner's Song,2-17-2015
+10,15,The Things They Carried,3-18-2015
+10,16,Paint It Black,3-25-2015
+10,17,Inside Man,4-1-2015
+10,18,Book of the Damned,4-15-2015
+10,19,The Werther Project,4-22-2015
+10,20,Angel Heart,4-29-2015
+10,21,Dark Dynasty,5-6-2015
+10,22,The Prisoner,5-13-2015
+10,23,Brother's Keeper,5-20-2015
+11,1,"Out of the Darkness, Into the Fire",10-7-2015
+11,2,Form and Void,10-14-2015
+11,3,The Bad Seed,10-21-2015
+11,4,Baby,10-28-2015
+11,5,Thin Lizzie,11-4-2015
+11,6,Our Little World,11-11-2015
+11,7,Plush,11-18-2015
+11,8,Just My Imagination,12-2-2015
+11,9,O Brother Where Art Thou?,12-9-2015
+11,10,The Devil in the Details,1-20-2016
+11,11,Into the Mystic,1-27-2016
+11,12,Don't You Forget About Me,2-3-2016
+11,13,Love Hurts,2-10-2016
+11,14,The Vessel,2-17-2016
+11,15,Beyond the Mat,2-24-2016
+11,16,Safe House,3-23-2016
+11,17,Red Meat,3-30-2016
+11,18,Hell's Angel,4-6-2016
+11,19,The Chitters,4-27-2016
+11,20,Don't Call Me Shurley,5-4-2016
+11,21,All in the Family,5-11-2016
+11,22,We Happy Few,5-18-2016
+11,23,Alpha and Omega,5-25-2016
+12,1,Keep Calm and Carry On,10-13-2016
+12,2,Mamma Mia,10-20-2016
+12,3,The Foundry,10-27-2016
+12,4,American Nightmare,11-3-2016
+12,5,The One You've Been Waiting For,11-10-2016
+12,6,Celebrating the Life of Asa Fox,11-17-2016
+12,7,Rock Never Dies,12-1-2016
+12,8,LOTUS,12-8-2016
+12,9,First Blood,1-26-2017
+12,10,Lily Sunder Has Some Regrets,2-2-2017
+12,11,Regarding Dean,2-9-2017
+12,12,Stuck in the Middle (With You),2-16-2017
+12,13,Family Feud,2-23-2017
+12,14,The Raid,3-2-2017
+12,15,Somewhere Between Heaven and Hell,3-9-2017
+12,16,Ladies Drink Free,3-30-2017
+12,17,The British Invasion,4-6-2017
+12,18,The Memory Remains,4-13-2017
+12,19,The Future,4-27-2017
+12,20,Twigs & Twine & Tasha Banes,5-4-2017
+12,21,There's Something About Mary,5-11-2017
+12,22,Who We Are,5-18-2017
+12,23,All Along the Watchtower,5-18-2017
+13,1,Lost and Found,10-12-2017
+13,2,The Rising Son,10-19-2017
+13,3,Patience,10-26-2017
+13,4,The Big Empty,11-2-2017
+13,5,Advanced Thanatology,11-9-2017
+13,6,Tombstone,11-16-2017
+13,7,War of the Worlds,11-23-2017
+13,8,The Scorpion and the Frog,11-30-2017
+13,9,The Bad Place,12-7-2017
+13,10,Wayward Sisters,1-18-2018
+13,11,Breakdown,1-25-2018
+13,12,Various & Sundry Villains,2-1-2018
+13,13,Devil's Bargain,2-8-2018
+13,14,Good Intentions,3-1-2018
+13,15,A Most Holy Man,3-8-2018
+13,16,Scoobynatural,3-29-2018
+13,17,The Thing,4-5-2018
+13,18,Bring 'em Back Alive,4-12-2018
+13,19,Funeralia,4-19-2018
+13,20,Unfinished Business,4-26-2018
+13,21,Beat the Devil,5-3-2018
+13,22,Exodus,5-10-2018
+13,23,Let the Good Times Roll,5-17-2018
+14,1,Stranger in a Strange Land,10-11-2018
+14,2,Gods and Monsters,10-18-2018
+14,3,The Scar,10-25-2018
+14,4,Mint Condition,11-1-2018
+14,5,Nightmare Logic,11-8-2018
+14,6,Optimism,11-15-2018
+14,7,Unhuman Nature,11-29-2018
+14,8,Byzantium,12-6-2018
+14,9,The Spear,12-13-2018
+14,10,Nihilism,1-17-2019
+14,11,Damaged Goods,1-24-2019
+14,12,Prophet and Loss,1-31-2019
+14,13,Lebanon,2-7-2019
+14,14,Ouroboros,3-7-2019
+14,15,Peace of Mind,3-14-2019
+14,16,Don't Go in the Woods,3-21-2019
+14,17,Game Night,4-4-2019
+14,18,Absence,4-11-2019
+14,19,Jack in the Box,4-18-2019
+14,20,Moriah,4-25-2019
+15,1,Back and to the Future,10-10-2019
+15,2,Raising Hell,10-17-2019
+15,3,The Rupture,10-24-2019
+15,4,Atomic Monsters,11-7-2019
+15,5,Proverbs 17:3,11-14-2019
+15,6,Golden Time,11-21-2019
+15,7,Last Call,12-5-2019
+15,8,"Our Father, Who Aren't in Heaven",12-12-2019
+15,9,The Trap,1-16-2020
+15,10,The Heroes' Journey,1-23-2020
+15,11,The Gamblers,1-30-2020
+15,12,Galaxy Brain,3-16-2020
+15,13,Destiny's Child,3-23-2020
+15,14,Last Holiday,10-8-2020
+15,15,Gimme Shelter,10-15-2020
+15,16,Drag Me Away (From You),10-22-2020
+15,17,Unity,10-29-2020
+15,18,Despair,11-5-2020
+15,19,Inherit the Earth,11-12-2020
+15,20,Carry On,11-19-2020
