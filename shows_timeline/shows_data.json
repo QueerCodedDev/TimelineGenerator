@@ -714,7 +714,78 @@
     {
         "show": "The Librarians: Next Chapter",
         "episodes": [
-            
+            {
+                "season": "1",
+                "episode": "1",
+                "title": "And the Deadly Drekavac",
+                "air_date": "05-25-2025"
+            },
+            {
+                "season": "1",
+                "episode": "2",
+                "title": "And the Dance of Doom",
+                "air_date": "05-26-2025"
+            },
+            {
+                "season": "1",
+                "episode": "3",
+                "title": "And the Ghost Train",
+                "air_date": "06-02-2025"
+            },
+            {
+                "season": "1",
+                "episode": "4",
+                "title": "And the Thief of Love",
+                "air_date": "06-09-2025"
+            },
+            {
+                "season": "1",
+                "episode": "5",
+                "title": "And the Memory Crystal",
+                "air_date": "06-16-2025"
+            },
+            {
+                "season": "1",
+                "episode": "6",
+                "title": "And the House of Cards",
+                "air_date": "06-23-2025"
+            },
+            {
+                "season": "1",
+                "episode": "7",
+                "title": "And the Con-Con",
+                "air_date": "06-30-2025"
+            },
+            {
+                "season": "1",
+                "episode": "8",
+                "title": "And the Hangover from Hell",
+                "air_date": "07-07-2025"
+            },
+            {
+                "season": "1",
+                "episode": "9",
+                "title": "And the Feast of the Vampire",
+                "air_date": "07-14-2025"
+            },
+            {
+                "season": "1",
+                "episode": "10",
+                "title": "And Going Medieval",
+                "air_date": "07-21-2025"
+            },
+            {
+                "season": "1",
+                "episode": "11",
+                "title": "And the Graffiti of the Gods",
+                "air_date": "07-28-2025"
+            },
+            {
+                "season": "1",
+                "episode": "12",
+                "title": "And the Unfinished Business",
+                "air_date": "08-04-2025"
+            }
         ]
     },
     {
