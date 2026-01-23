@@ -1,6 +1,17 @@
 import csv
 
 data = []
+title_modifiers = {
+    'Leverage': {
+        'before': 'The',
+        'after': 'Job'
+    },
+
+    'Librarians': {
+        'before': 'And the'
+    }
+}
+
 
 with open('/workspaces/TimelineGenerator/shows_timeline/leverage_data.csv') as file:
     csv_data = csv.reader(file)
