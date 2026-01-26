@@ -708,7 +708,258 @@
     {
         "show": "The Librarians",
         "episodes": [
-
+            {
+                "season": "1",
+                "episode": "1",
+                "title": "And the Crown of King Arthur",
+                "air_date": "12-07-2014"
+            },
+            {
+                "season": "1",
+                "episode": "2",
+                "title": "And the Sword in the Stone",
+                "air_date": "12-07-2014"
+            },
+            {
+                "season": "1",
+                "episode": "3",
+                "title": "And the Horns of a Dilemma",
+                "air_date": "12-14-2014"
+            },
+            {
+                "season": "1",
+                "episode": "4",
+                "title": "And Santa's Midnight Run",
+                "air_date": "12-21-2014"
+            },
+            {
+                "season": "1",
+                "episode": "5",
+                "title": "And the Apple of Discord",
+                "air_date": "12-28-2014"
+            },
+            {
+                "season": "1",
+                "episode": "6",
+                "title": "And the Fables of Doom",
+                "air_date": "01-04-2015"
+            },
+            {
+                "season": "1",
+                "episode": "7",
+                "title": "And the Rule of Three",
+                "air_date": "01-11-2015"
+            },
+            {
+                "season": "1",
+                "episode": "8",
+                "title": "And the Heart of Darkness",
+                "air_date": "01-11-2015"
+            },
+            {
+                "season": "1",
+                "episode": "9",
+                "title": "And the City of Light",
+                "air_date": "01-18-2015"
+            },
+            {
+                "season": "1",
+                "episode": "10",
+                "title": "And the Loom of Fate",
+                "air_date": "01-18-2015"
+            },
+            {
+                "season": "2",
+                "episode": "1",
+                "title": "And the Drowned Book",
+                "air_date": "11-01-2015"
+            },
+            {
+                "season": "2",
+                "episode": "2",
+                "title": "And the Broken Staff",
+                "air_date": "11-01-2015"
+            },
+            {
+                "season": "2",
+                "episode": "3",
+                "title": "And What Lies Beneath the Stones",
+                "air_date": "11-08-2015"
+            },
+            {
+                "season": "2",
+                "episode": "4",
+                "title": "And the Cost of Education",
+                "air_date": "11-15-2015"
+            },
+            {
+                "season": "2",
+                "episode": "5",
+                "title": "And the Hollow Men",
+                "air_date": "11-22-2015"
+            },
+            {
+                "season": "2",
+                "episode": "6",
+                "title": "And the Infernal Contract",
+                "air_date": "11-29-2015"
+            },
+            {
+                "season": "2",
+                "episode": "7",
+                "title": "And the Image of Image",
+                "air_date": "12-06-2015"
+            },
+            {
+                "season": "2",
+                "episode": "8",
+                "title": "And the Point of Salvation",
+                "air_date": "12-13-2015"
+            },
+            {
+                "season": "2",
+                "episode": "9",
+                "title": "And the Happily Ever After",
+                "air_date": "12-20-2015"
+            },
+            {
+                "season": "2",
+                "episode": "10",
+                "title": "And the Final Curtain",
+                "air_date": "12-27-2015"
+            },
+            {
+                "season": "3",
+                "episode": "1",
+                "title": "And the Rise of Chaos",
+                "air_date": "11-20-2016"
+            },
+            {
+                "season": "3",
+                "episode": "2",
+                "title": "And the Fangs of Death",
+                "air_date": "11-27-2016"
+            },
+            {
+                "season": "3",
+                "episode": "3",
+                "title": "And the Reunion of Evil",
+                "air_date": "12-04-2016"
+            },
+            {
+                "season": "3",
+                "episode": "4",
+                "title": "And the Self-Fulfilling Prophecy",
+                "air_date": "12-11-2016"
+            },
+            {
+                "season": "3",
+                "episode": "5",
+                "title": "And the Tears of a Clown",
+                "air_date": "12-18-2016"
+            },
+            {
+                "season": "3",
+                "episode": "6",
+                "title": "And the Trial of the Triangle",
+                "air_date": "12-25-2016"
+            },
+            {
+                "season": "3",
+                "episode": "7",
+                "title": "And the Curse of Cindy",
+                "air_date": "01-01-2017"
+            },
+            {
+                "season": "3",
+                "episode": "8",
+                "title": "And the Eternal Question",
+                "air_date": "01-08-2017"
+            },
+            {
+                "season": "3",
+                "episode": "9",
+                "title": "And the Fatal Separation",
+                "air_date": "01-15-2017"
+            },
+            {
+                "season": "3",
+                "episode": "10",
+                "title": "And the Wrath of Chaos",
+                "air_date": "01-22-2017"
+            },
+            {
+                "season": "4",
+                "episode": "1",
+                "title": "And the Dark Secret",
+                "air_date": "12-13-2017"
+            },
+            {
+                "season": "4",
+                "episode": "2",
+                "title": "And the Steal of Fortune",
+                "air_date": "12-13-2017"
+            },
+            {
+                "season": "4",
+                "episode": "3",
+                "title": "And the Christmas Thief",
+                "air_date": "12-20-2017"
+            },
+            {
+                "season": "4",
+                "episode": "4",
+                "title": "And the Silver Screen",
+                "air_date": "12-20-2017"
+            },
+            {
+                "season": "4",
+                "episode": "5",
+                "title": "And the Bleeding Crown",
+                "air_date": "12-27-2017"
+            },
+            {
+                "season": "4",
+                "episode": "6",
+                "title": "And the Graves of Time",
+                "air_date": "12-27-2017"
+            },
+            {
+                "season": "4",
+                "episode": "7",
+                "title": "And the Disenchanted Forest",
+                "air_date": "01-03-2018"
+            },
+            {
+                "season": "4",
+                "episode": "8",
+                "title": "And the Hidden Sanctuary",
+                "air_date": "01-10-2018"
+            },
+            {
+                "season": "4",
+                "episode": "9",
+                "title": "And a Town Called Feud",
+                "air_date": "01-17-2018"
+            },
+            {
+                "season": "4",
+                "episode": "10",
+                "title": "And Some Dude Named Jeff",
+                "air_date": "01-24-2018"
+            },
+            {
+                "season": "4",
+                "episode": "11",
+                "title": "And the Trial of the One",
+                "air_date": "01-31-2018"
+            },
+            {
+                "season": "4",
+                "episode": "12",
+                "title": "And the Echoes of Memory",
+                "air_date": "02-07-2018"
+            }
         ]
     },
     {
@@ -814,7 +1065,912 @@
     {
         "show": "The Mentalist",
         "episodes": [
-            
+            {
+                "season": "1",
+                "episode": "1",
+                "title": "Pilot",
+                "air_date": "9-23-2008"
+            },
+            {
+                "season": "1",
+                "episode": "2",
+                "title": "Red Hair and Silver Tape",
+                "air_date": "9-30-2008"
+            },
+            {
+                "season": "1",
+                "episode": "3",
+                "title": "Red Tide",
+                "air_date": "10-14-2008"
+            },
+            {
+                "season": "1",
+                "episode": "4",
+                "title": "Ladies in Red",
+                "air_date": "10-21-2008"
+            },
+            {
+                "season": "1",
+                "episode": "5",
+                "title": "Redwood",
+                "air_date": "10-28-2008"
+            },
+            {
+                "season": "1",
+                "episode": "6",
+                "title": "Red Handed",
+                "air_date": "11-11-2008"
+            },
+            {
+                "season": "1",
+                "episode": "7",
+                "title": "Seeing Red",
+                "air_date": "11-18-2008"
+            },
+            {
+                "season": "1",
+                "episode": "8",
+                "title": "The Thin Red Line",
+                "air_date": "11-25-2008"
+            },
+            {
+                "season": "1",
+                "episode": "9",
+                "title": "Flame Red",
+                "air_date": "12-2-2008"
+            },
+            {
+                "season": "1",
+                "episode": "10",
+                "title": "Red Brick and Ivy",
+                "air_date": "12-16-2008"
+            },
+            {
+                "season": "1",
+                "episode": "11",
+                "title": "Red John's Friends",
+                "air_date": "1-6-2009"
+            },
+            {
+                "season": "1",
+                "episode": "12",
+                "title": "Red Rum",
+                "air_date": "1-13-2009"
+            },
+            {
+                "season": "1",
+                "episode": "13",
+                "title": "Paint it Red",
+                "air_date": "1-18-2009"
+            },
+            {
+                "season": "1",
+                "episode": "14",
+                "title": "Crimson Casanova",
+                "air_date": "2-10-2009"
+            },
+            {
+                "season": "1",
+                "episode": "15",
+                "title": "Scarlett Fever",
+                "air_date": "2-17-2009"
+            },
+            {
+                "season": "1",
+                "episode": "16",
+                "title": "Bloodshot",
+                "air_date": "3-17-2009"
+            },
+            {
+                "season": "1",
+                "episode": "17",
+                "title": "Carnelian Inc.",
+                "air_date": "3-24-2009"
+            },
+            {
+                "season": "1",
+                "episode": "18",
+                "title": "Russet Potatoes",
+                "air_date": "3-31-2009"
+            },
+            {
+                "season": "1",
+                "episode": "19",
+                "title": "A Dozen Red Roses",
+                "air_date": "4-7-2009"
+            },
+            {
+                "season": "1",
+                "episode": "20",
+                "title": "Red Sauce",
+                "air_date": "4-28-2009"
+            },
+            {
+                "season": "1",
+                "episode": "21",
+                "title": "Miss Red",
+                "air_date": "5-5-2009"
+            },
+            {
+                "season": "1",
+                "episode": "22",
+                "title": "Blood Brothers",
+                "air_date": "5-12-2009"
+            },
+            {
+                "season": "1",
+                "episode": "23",
+                "title": "Red John's Footsteps",
+                "air_date": "5-19-2009"
+            },
+            {
+                "season": "2",
+                "episode": "1",
+                "title": "Redemption",
+                "air_date": "9-24-2009"
+            },
+            {
+                "season": "2",
+                "episode": "2",
+                "title": "The Scarlet Letter",
+                "air_date": "10-1-2009"
+            },
+            {
+                "season": "2",
+                "episode": "3",
+                "title": "Red Badge",
+                "air_date": "10-8-2009"
+            },
+            {
+                "season": "2",
+                "episode": "4",
+                "title": "Red Menace",
+                "air_date": "10-15-2009"
+            },
+            {
+                "season": "2",
+                "episode": "5",
+                "title": "Red Scare",
+                "air_date": "10-29-2009"
+            },
+            {
+                "season": "2",
+                "episode": "6",
+                "title": "Black Gold and Red Blood",
+                "air_date": "11-5-2009"
+            },
+            {
+                "season": "2",
+                "episode": "7",
+                "title": "Red Bulls",
+                "air_date": "11-12-2009"
+            },
+            {
+                "season": "2",
+                "episode": "8",
+                "title": "His Red Right Hand",
+                "air_date": "11-19-2009"
+            },
+            {
+                "season": "2",
+                "episode": "9",
+                "title": "A Price Above Rubies",
+                "air_date": "12-10-2009"
+            },
+            {
+                "season": "2",
+                "episode": "10",
+                "title": "Throwing Fire",
+                "air_date": "12-17-2009"
+            },
+            {
+                "season": "2",
+                "episode": "11",
+                "title": "Rose-Colored Glasses",
+                "air_date": "1-14-2010"
+            },
+            {
+                "season": "2",
+                "episode": "12",
+                "title": "Bleeding Heart",
+                "air_date": "1-21-2010"
+            },
+            {
+                "season": "2",
+                "episode": "13",
+                "title": "Redline",
+                "air_date": "2-4-2010"
+            },
+            {
+                "season": "2",
+                "episode": "14",
+                "title": "Blood In, Blood Out",
+                "air_date": "2-11-2010"
+            },
+            {
+                "season": "2",
+                "episode": "15",
+                "title": "Red Herring",
+                "air_date": "3-4-2010"
+            },
+            {
+                "season": "2",
+                "episode": "16",
+                "title": "Code Red",
+                "air_date": "3-11-2010"
+            },
+            {
+                "season": "2",
+                "episode": "17",
+                "title": "The Red Box",
+                "air_date": "4-1-2010"
+            },
+            {
+                "season": "2",
+                "episode": "18",
+                "title": "Aingavite Baa (Red Water)",
+                "air_date": "4-8-2010"
+            },
+            {
+                "season": "2",
+                "episode": "19",
+                "title": "Blood Money",
+                "air_date": "4-22-2010"
+            },
+            {
+                "season": "2",
+                "episode": "20",
+                "title": "Red All Over",
+                "air_date": "4-29-2010"
+            },
+            {
+                "season": "2",
+                "episode": "21",
+                "title": "18-5-4",
+                "air_date": "5-6-2010"
+            },
+            {
+                "season": "2",
+                "episode": "22",
+                "title": "Red Letter",
+                "air_date": "5-13-2010"
+            },
+            {
+                "season": "2",
+                "episode": "23",
+                "title": "Red Sky in the Morning",
+                "air_date": "5-20-2010"
+            },
+            {
+                "season": "3",
+                "episode": "1",
+                "title": "Red Sky at Night",
+                "air_date": "9-23-2010"
+            },
+            {
+                "season": "3",
+                "episode": "2",
+                "title": "Cackle-Bladder Blood",
+                "air_date": "9-30-2010"
+            },
+            {
+                "season": "3",
+                "episode": "3",
+                "title": "The Blood on His Hands",
+                "air_date": "10-7-2010"
+            },
+            {
+                "season": "3",
+                "episode": "4",
+                "title": "Red Carpet Treatment",
+                "air_date": "10-14-2010"
+            },
+            {
+                "season": "3",
+                "episode": "5",
+                "title": "The Red Ponies",
+                "air_date": "10-21-2010"
+            },
+            {
+                "season": "3",
+                "episode": "6",
+                "title": "Pink Chanel Suit",
+                "air_date": "10-28-2010"
+            },
+            {
+                "season": "3",
+                "episode": "7",
+                "title": "Red Hot",
+                "air_date": "11-4-2010"
+            },
+            {
+                "season": "3",
+                "episode": "8",
+                "title": "Ball of Fire",
+                "air_date": "11-11-2010"
+            },
+            {
+                "season": "3",
+                "episode": "9",
+                "title": "Red Moon",
+                "air_date": "11-18-2010"
+            },
+            {
+                "season": "3",
+                "episode": "10",
+                "title": "Jolly Red Elf",
+                "air_date": "12-9-2010"
+            },
+            {
+                "season": "3",
+                "episode": "11",
+                "title": "Bloodsport",
+                "air_date": "1-6-2011"
+            },
+            {
+                "season": "3",
+                "episode": "12",
+                "title": "Bloodhounds",
+                "air_date": "1-20-2011"
+            },
+            {
+                "season": "3",
+                "episode": "13",
+                "title": "Red Alert",
+                "air_date": "2-3-2011"
+            },
+            {
+                "season": "3",
+                "episode": "14",
+                "title": "Blood for Blood",
+                "air_date": "2-10-2011"
+            },
+            {
+                "season": "3",
+                "episode": "15",
+                "title": "Red Gold",
+                "air_date": "2-17-2011"
+            },
+            {
+                "season": "3",
+                "episode": "16",
+                "title": "Red Queen",
+                "air_date": "2-24-2011"
+            },
+            {
+                "season": "3",
+                "episode": "17",
+                "title": "Bloodstream",
+                "air_date": "3-10-2011"
+            },
+            {
+                "season": "3",
+                "episode": "18",
+                "title": "The Red Mile",
+                "air_date": "3-31-2011"
+            },
+            {
+                "season": "3",
+                "episode": "19",
+                "title": "Every Rose Has Its Thorn",
+                "air_date": "4-7-2011"
+            },
+            {
+                "season": "3",
+                "episode": "20",
+                "title": "Redacted",
+                "air_date": "4-28-2011"
+            },
+            {
+                "season": "3",
+                "episode": "21",
+                "title": "Like a Redheaded Stepchild",
+                "air_date": "5-5-2011"
+            },
+            {
+                "season": "3",
+                "episode": "22",
+                "title": "Rhapsody in Red",
+                "air_date": "5-12-2011"
+            },
+            {
+                "season": "3",
+                "episode": "23",
+                "title": "Strawberries and Cream (Part I)",
+                "air_date": "5-19-2011"
+            },
+            {
+                "season": "3",
+                "episode": "24",
+                "title": "Strawberries and Cream (Part II)",
+                "air_date": "5-19-2011"
+            },
+            {
+                "season": "4",
+                "episode": "1",
+                "title": "Scarlet Ribbons",
+                "air_date": "9-22-2011"
+            },
+            {
+                "season": "4",
+                "episode": "2",
+                "title": "Little Red Book",
+                "air_date": "9-29-2011"
+            },
+            {
+                "season": "4",
+                "episode": "3",
+                "title": "Pretty Red Balloon",
+                "air_date": "10-6-2011"
+            },
+            {
+                "season": "4",
+                "episode": "4",
+                "title": "Ring Around the Rosie",
+                "air_date": "10-13-2011"
+            },
+            {
+                "season": "4",
+                "episode": "5",
+                "title": "Blood and Sand",
+                "air_date": "10-20-2011"
+            },
+            {
+                "season": "4",
+                "episode": "6",
+                "title": "Where in the World Is Carmine O'Brien?",
+                "air_date": "10-27-2011"
+            },
+            {
+                "season": "4",
+                "episode": "7",
+                "title": "Blinking Red Light",
+                "air_date": "11-3-2011"
+            },
+            {
+                "season": "4",
+                "episode": "8",
+                "title": "Pink Tops",
+                "air_date": "11-17-2011"
+            },
+            {
+                "season": "4",
+                "episode": "9",
+                "title": "The Redshirt",
+                "air_date": "12-8-2011"
+            },
+            {
+                "season": "4",
+                "episode": "10",
+                "title": "Fugue in Red",
+                "air_date": "12-15-2011"
+            },
+            {
+                "season": "4",
+                "episode": "11",
+                "title": "Always Bet on Red",
+                "air_date": "1-12-2012"
+            },
+            {
+                "season": "4",
+                "episode": "12",
+                "title": "My Bloody Valentine",
+                "air_date": "1-19-2012"
+            },
+            {
+                "season": "4",
+                "episode": "13",
+                "title": "Red Is the New Black",
+                "air_date": "2-2-2012"
+            },
+            {
+                "season": "4",
+                "episode": "14",
+                "title": "At First Blush",
+                "air_date": "2-9-2012"
+            },
+            {
+                "season": "4",
+                "episode": "15",
+                "title": "War of the Roses",
+                "air_date": "2-16-2012"
+            },
+            {
+                "season": "4",
+                "episode": "16",
+                "title": "His Thoughts Were Red Thoughts",
+                "air_date": "2-23-2012"
+            },
+            {
+                "season": "4",
+                "episode": "17",
+                "title": "Cheap Burgundy",
+                "air_date": "3-8-2012"
+            },
+            {
+                "season": "4",
+                "episode": "18",
+                "title": "Ruddy Cheeks",
+                "air_date": "3-9-2012"
+            },
+            {
+                "season": "4",
+                "episode": "19",
+                "title": "Pink Champagne on Ice",
+                "air_date": "3-29-2012"
+            },
+            {
+                "season": "4",
+                "episode": "20",
+                "title": "Something's Rotten in Redmund",
+                "air_date": "4-5-2012"
+            },
+            {
+                "season": "4",
+                "episode": "21",
+                "title": "Ruby Slippers",
+                "air_date": "4-26-2012"
+            },
+            {
+                "season": "4",
+                "episode": "22",
+                "title": "So Long, and Thanks for All the Red Snapper",
+                "air_date": "5-3-2012"
+            },
+            {
+                "season": "4",
+                "episode": "23",
+                "title": "Red Rover, Red Rover",
+                "air_date": "5-10-2012"
+            },
+            {
+                "season": "4",
+                "episode": "24",
+                "title": "The Crimson Hat",
+                "air_date": "5-17-2012"
+            },
+            {
+                "season": "5",
+                "episode": "1",
+                "title": "The Crimson Ticket",
+                "air_date": "9-30-2012"
+            },
+            {
+                "season": "5",
+                "episode": "2",
+                "title": "Devil's Cherry",
+                "air_date": "10-7-2012"
+            },
+            {
+                "season": "5",
+                "episode": "3",
+                "title": "Not One Red Cent",
+                "air_date": "10-14-2012"
+            },
+            {
+                "season": "5",
+                "episode": "4",
+                "title": "Blood Feud",
+                "air_date": "10-21-2012"
+            },
+            {
+                "season": "5",
+                "episode": "5",
+                "title": "Red Dawn",
+                "air_date": "10-28-2012"
+            },
+            {
+                "season": "5",
+                "episode": "6",
+                "title": "Cherry Picked",
+                "air_date": "11-4-2012"
+            },
+            {
+                "season": "5",
+                "episode": "7",
+                "title": "If It Bleeds, It Leads",
+                "air_date": "11-11-2012"
+            },
+            {
+                "season": "5",
+                "episode": "8",
+                "title": "Red Sails in the Sunset",
+                "air_date": "11-18-2012"
+            },
+            {
+                "season": "5",
+                "episode": "9",
+                "title": "Black Cherry",
+                "air_date": "11-25-2012"
+            },
+            {
+                "season": "5",
+                "episode": "10",
+                "title": "Panama Red",
+                "air_date": "12-9-2012"
+            },
+            {
+                "season": "5",
+                "episode": "11",
+                "title": "Days of Wine and Roses",
+                "air_date": "1-6-2013"
+            },
+            {
+                "season": "5",
+                "episode": "12",
+                "title": "Little Red Corvette",
+                "air_date": "1-13-2013"
+            },
+            {
+                "season": "5",
+                "episode": "13",
+                "title": "The Red Barn",
+                "air_date": "1-27-2013"
+            },
+            {
+                "season": "5",
+                "episode": "14",
+                "title": "Red in Tooth and Claw",
+                "air_date": "2-17-2013"
+            },
+            {
+                "season": "5",
+                "episode": "15",
+                "title": "Red Lacquer Nail Polish",
+                "air_date": "3-3-2013"
+            },
+            {
+                "season": "5",
+                "episode": "16",
+                "title": "There Will Be Blood",
+                "air_date": "3-10-2013"
+            },
+            {
+                "season": "5",
+                "episode": "17",
+                "title": "Red, White and Blue",
+                "air_date": "3-17-2013"
+            },
+            {
+                "season": "5",
+                "episode": "18",
+                "title": "Behind the Red Curtain",
+                "air_date": "3-24-2013"
+            },
+            {
+                "season": "5",
+                "episode": "19",
+                "title": "Red Letter Day",
+                "air_date": "4-14-2013"
+            },
+            {
+                "season": "5",
+                "episode": "20",
+                "title": "Red Velvet Cupcakes",
+                "air_date": "4-21-2013"
+            },
+            {
+                "season": "5",
+                "episode": "21",
+                "title": "Red and Itchy",
+                "air_date": "4-28-2013"
+            },
+            {
+                "season": "5",
+                "episode": "22",
+                "title": "Red John's Rules",
+                "air_date": "5-5-2013"
+            },
+            {
+                "season": "6",
+                "episode": "1",
+                "title": "The Desert Rose",
+                "air_date": "9-29-2013"
+            },
+            {
+                "season": "6",
+                "episode": "2",
+                "title": "Black-Winged Redbird",
+                "air_date": "10-6-2013"
+            },
+            {
+                "season": "6",
+                "episode": "3",
+                "title": "Wedding in Red",
+                "air_date": "10-13-2013"
+            },
+            {
+                "season": "6",
+                "episode": "4",
+                "title": "Red Listed",
+                "air_date": "10-20-2013"
+            },
+            {
+                "season": "6",
+                "episode": "5",
+                "title": "The Red Tattoo",
+                "air_date": "10-27-2013"
+            },
+            {
+                "season": "6",
+                "episode": "6",
+                "title": "Fire and Brimstone",
+                "air_date": "11-10-2013"
+            },
+            {
+                "season": "6",
+                "episode": "7",
+                "title": "The Great Red Dragon",
+                "air_date": "11-17-2013"
+            },
+            {
+                "season": "6",
+                "episode": "8",
+                "title": "Red John",
+                "air_date": "11-24-2013"
+            },
+            {
+                "season": "6",
+                "episode": "9",
+                "title": "My Blue Heaven",
+                "air_date": "12-1-2013"
+            },
+            {
+                "season": "6",
+                "episode": "10",
+                "title": "Green Thumb",
+                "air_date": "12-8-2013"
+            },
+            {
+                "season": "6",
+                "episode": "11",
+                "title": "White Lines",
+                "air_date": "1-5-2014"
+            },
+            {
+                "season": "6",
+                "episode": "12",
+                "title": "The Golden Hammer",
+                "air_date": "1-12-2014"
+            },
+            {
+                "season": "6",
+                "episode": "13",
+                "title": "Black Helicopters",
+                "air_date": "3-9-2014"
+            },
+            {
+                "season": "6",
+                "episode": "14",
+                "title": "Grey Water",
+                "air_date": "3-16-2014"
+            },
+            {
+                "season": "6",
+                "episode": "15",
+                "title": "White as the Driven Snow",
+                "air_date": "3-23-2014"
+            },
+            {
+                "season": "6",
+                "episode": "16",
+                "title": "Violets",
+                "air_date": "3-30-2014"
+            },
+            {
+                "season": "6",
+                "episode": "17",
+                "title": "Silver Wings of Time",
+                "air_date": "4-13-2014"
+            },
+            {
+                "season": "6",
+                "episode": "18",
+                "title": "Forest Green",
+                "air_date": "4-20-2014"
+            },
+            {
+                "season": "6",
+                "episode": "19",
+                "title": "Brown Eyed Girls",
+                "air_date": "4-27-2014"
+            },
+            {
+                "season": "6",
+                "episode": "20",
+                "title": "Il Tavolo Bianco",
+                "air_date": "5-4-2014"
+            },
+            {
+                "season": "6",
+                "episode": "21",
+                "title": "Black Hearts",
+                "air_date": "5-11-2014"
+            },
+            {
+                "season": "6",
+                "episode": "22",
+                "title": "Blue Bird",
+                "air_date": "5-18-2014"
+            },
+            {
+                "season": "7",
+                "episode": "1",
+                "title": "Nothing But Blue Skies",
+                "air_date": "11-30-2014"
+            },
+            {
+                "season": "7",
+                "episode": "2",
+                "title": "The Greybar Hotel",
+                "air_date": "12-7-2014"
+            },
+            {
+                "season": "7",
+                "episode": "3",
+                "title": "Orange Blossom Ice Cream",
+                "air_date": "12-14-2014"
+            },
+            {
+                "season": "7",
+                "episode": "4",
+                "title": "Black Market",
+                "air_date": "12-21-2014"
+            },
+            {
+                "season": "7",
+                "episode": "5",
+                "title": "The Silver Briefcase",
+                "air_date": "12-28-2014"
+            },
+            {
+                "season": "7",
+                "episode": "6",
+                "title": "Green Light",
+                "air_date": "1-7-2015"
+            },
+            {
+                "season": "7",
+                "episode": "7",
+                "title": "Little Yellow House",
+                "air_date": "1-14-2015"
+            },
+            {
+                "season": "7",
+                "episode": "8",
+                "title": "The Whites of His Eyes",
+                "air_date": "1-21-2015"
+            },
+            {
+                "season": "7",
+                "episode": "9",
+                "title": "Copper Bullet",
+                "air_date": "1-28-2015"
+            },
+            {
+                "season": "7",
+                "episode": "10",
+                "title": "Nothing Gold Can Stay",
+                "air_date": "2-4-2015"
+            },
+            {
+                "season": "7",
+                "episode": "11",
+                "title": "Byzantium",
+                "air_date": "2-11-2015"
+            },
+            {
+                "season": "7",
+                "episode": "12",
+                "title": "Brown Shag Carpet",
+                "air_date": "2-18-2015"
+            },
+            {
+                "season": "7",
+                "episode": "13",
+                "title": "White Orchids",
+                "air_date": "2-18-2015"
+            }
         ]
     },
     {
@@ -2788,7 +3944,726 @@
     {
         "show": "Psych",
         "episodes": [
-            
+            {
+                "season": "1",
+                "episode": "1",
+                "title": "Pilot",
+                "air_date": "7-7-2006"
+            },
+            {
+                "season": "1",
+                "episode": "2",
+                "title": "Spellingg Bee",
+                "air_date": "7-14-2006"
+            },
+            {
+                "season": "1",
+                "episode": "3",
+                "title": "Speak Now or Forever Hold Your Piece",
+                "air_date": "7-21-2006"
+            },
+            {
+                "season": "1",
+                "episode": "4",
+                "title": "Woman Seeking Dead Husband: Smokers Okay, No Pets",
+                "air_date": "7-28-2006"
+            },
+            {
+                "season": "1",
+                "episode": "5",
+                "title": "9 Lives",
+                "air_date": "8-4-2006"
+            },
+            {
+                "season": "1",
+                "episode": "6",
+                "title": "Weekend Warriors",
+                "air_date": "8-11-2006"
+            },
+            {
+                "season": "1",
+                "episode": "7",
+                "title": "Who Ya Gonna Call?",
+                "air_date": "8-18-2006"
+            },
+            {
+                "season": "1",
+                "episode": "8",
+                "title": "Shawn vs. the Red Phantom",
+                "air_date": "8-25-2006"
+            },
+            {
+                "season": "1",
+                "episode": "9",
+                "title": "Forget Me Not",
+                "air_date": "1-19-2007"
+            },
+            {
+                "season": "1",
+                "episode": "10",
+                "title": "From the Earth to the Starbucks",
+                "air_date": "1-26-2007"
+            },
+            {
+                "season": "1",
+                "episode": "11",
+                "title": "He Loves Me, He Loves Me Not, He Loves Me, Oops He's Dead!",
+                "air_date": "2-2-2007"
+            },
+            {
+                "season": "1",
+                "episode": "12",
+                "title": "Cloudy... With a Chance of Murder",
+                "air_date": "2-9-2007"
+            },
+            {
+                "season": "1",
+                "episode": "13",
+                "title": "Game, Set... Muuurder?",
+                "air_date": "2-16-2007"
+            },
+            {
+                "season": "1",
+                "episode": "14",
+                "title": "Poker? I Barely Know Her",
+                "air_date": "2-23-2007"
+            },
+            {
+                "season": "1",
+                "episode": "15",
+                "title": "Scary Sherry: Bianca's Toast",
+                "air_date": "3-2-2007"
+            },
+            {
+                "season": "2",
+                "episode": "1",
+                "title": "American Duos",
+                "air_date": "7-13-2007"
+            },
+            {
+                "season": "2",
+                "episode": "2",
+                "title": "65 Million Years Off",
+                "air_date": "7-20-2007"
+            },
+            {
+                "season": "2",
+                "episode": "3",
+                "title": "Psy vs. Psy",
+                "air_date": "7-27-2007"
+            },
+            {
+                "season": "2",
+                "episode": "4",
+                "title": "Zero to Murder in Sixty Seconds",
+                "air_date": "8-3-2007"
+            },
+            {
+                "season": "2",
+                "episode": "5",
+                "title": "And Down the Stretch Comes Murder",
+                "air_date": "8-10-2007"
+            },
+            {
+                "season": "2",
+                "episode": "6",
+                "title": "Meat Is Murder, But Murder Is Also Murder",
+                "air_date": "8-17-2007"
+            },
+            {
+                "season": "2",
+                "episode": "7",
+                "title": "If You're So Smart, Then Why Are You Dead?",
+                "air_date": "8-24-2007"
+            },
+            {
+                "season": "2",
+                "episode": "8",
+                "title": "Rob-a-Bye Baby",
+                "air_date": "9-7-2007"
+            },
+            {
+                "season": "2",
+                "episode": "9",
+                "title": "Bounty Hunters!",
+                "air_date": "9-14-2007"
+            },
+            {
+                "season": "2",
+                "episode": "10",
+                "title": "Gus' Dad May Have Killed an Old Guy",
+                "air_date": "12-7-2007"
+            },
+            {
+                "season": "2",
+                "episode": "11",
+                "title": "There's Something About Mira",
+                "air_date": "1-11-2008"
+            },
+            {
+                "season": "2",
+                "episode": "12",
+                "title": "The Old and the Restless",
+                "air_date": "1-18-2008"
+            },
+            {
+                "season": "2",
+                "episode": "13",
+                "title": "Lights, Camera... Homicidio",
+                "air_date": "1-25-2008"
+            },
+            {
+                "season": "2",
+                "episode": "14",
+                "title": "Dis-Lodged",
+                "air_date": "2-1-2008"
+            },
+            {
+                "season": "2",
+                "episode": "15",
+                "title": "Black and Tan: A Crime of Fashion",
+                "air_date": "2-8-2008"
+            },
+            {
+                "season": "2",
+                "episode": "16",
+                "title": "Shawn (and Gus) of the Dead",
+                "air_date": "2-15-2008"
+            },
+            {
+                "season": "3",
+                "episode": "1",
+                "title": "Ghosts",
+                "air_date": "7-18-2008"
+            },
+            {
+                "season": "3",
+                "episode": "2",
+                "title": "Murder?   Anyone?   Anyone?   Bueller?",
+                "air_date": "7-25-2008"
+            },
+            {
+                "season": "3",
+                "episode": "3",
+                "title": "Daredevils!",
+                "air_date": "8-1-2008"
+            },
+            {
+                "season": "3",
+                "episode": "4",
+                "title": "The Greatest Adventure in the History of Basic Cable",
+                "air_date": "8-8-2008"
+            },
+            {
+                "season": "3",
+                "episode": "5",
+                "title": "Disco Didn't Die. It Was Murdered!",
+                "air_date": "8-15-2008"
+            },
+            {
+                "season": "3",
+                "episode": "6",
+                "title": "There Might Be Blood",
+                "air_date": "8-22-2008"
+            },
+            {
+                "season": "3",
+                "episode": "7",
+                "title": "Talk Derby to Me",
+                "air_date": "9-5-2008"
+            },
+            {
+                "season": "3",
+                "episode": "8",
+                "title": "Gus Walks into a Bank",
+                "air_date": "9-12-2008"
+            },
+            {
+                "season": "3",
+                "episode": "9",
+                "title": "Christmas Joy",
+                "air_date": "11-28-2008"
+            },
+            {
+                "season": "3",
+                "episode": "10",
+                "title": "Six Feet Under the Sea",
+                "air_date": "1-9-2009"
+            },
+            {
+                "season": "3",
+                "episode": "11",
+                "title": "Lassie Did a Bad, Bad Thing",
+                "air_date": "1-16-2009"
+            },
+            {
+                "season": "3",
+                "episode": "12",
+                "title": "Earth, Wind and... Wait for It",
+                "air_date": "1-23-2009"
+            },
+            {
+                "season": "3",
+                "episode": "13",
+                "title": "Any Given Friday Night at 10pm, 9pm Central",
+                "air_date": "1-30-2009"
+            },
+            {
+                "season": "3",
+                "episode": "14",
+                "title": "Truer Lies",
+                "air_date": "2-6-2009"
+            },
+            {
+                "season": "3",
+                "episode": "15",
+                "title": "Tuesday the 17th",
+                "air_date": "2-13-2009"
+            },
+            {
+                "season": "3",
+                "episode": "16",
+                "title": "An Evening with Mr. Yang",
+                "air_date": "2-20-2009"
+            },
+            {
+                "season": "4",
+                "episode": "1",
+                "title": "Extradition: British Columbia",
+                "air_date": "8-7-2009"
+            },
+            {
+                "season": "4",
+                "episode": "2",
+                "title": "He Dead",
+                "air_date": "8-14-2009"
+            },
+            {
+                "season": "4",
+                "episode": "3",
+                "title": "High Noon-ish",
+                "air_date": "8-21-2009"
+            },
+            {
+                "season": "4",
+                "episode": "4",
+                "title": "The Devil's in the Details... and the Upstairs Bedroom",
+                "air_date": "8-28-2009"
+            },
+            {
+                "season": "4",
+                "episode": "5",
+                "title": "Shawn Gets the Yips",
+                "air_date": "9-11-2009"
+            },
+            {
+                "season": "4",
+                "episode": "6",
+                "title": "Bollywood Homicide",
+                "air_date": "9-18-2009"
+            },
+            {
+                "season": "4",
+                "episode": "7",
+                "title": "High Top Fade-Out",
+                "air_date": "9-25-2009"
+            },
+            {
+                "season": "4",
+                "episode": "8",
+                "title": "Let's Get Hairy",
+                "air_date": "10-9-2009"
+            },
+            {
+                "season": "4",
+                "episode": "9",
+                "title": "Shawn Takes a Shot in the Dark",
+                "air_date": "10-16-2009"
+            },
+            {
+                "season": "4",
+                "episode": "10",
+                "title": "You Can't Handle This Episode",
+                "air_date": "1-27-2010"
+            },
+            {
+                "season": "4",
+                "episode": "11",
+                "title": "Thrill Seekers and Hell-Raisers",
+                "air_date": "2-3-2010"
+            },
+            {
+                "season": "4",
+                "episode": "12",
+                "title": "A Very Juliet Episode",
+                "air_date": "2-10-2010"
+            },
+            {
+                "season": "4",
+                "episode": "13",
+                "title": "Death Is in the Air",
+                "air_date": "2-17-2010"
+            },
+            {
+                "season": "4",
+                "episode": "14",
+                "title": "Think Tank",
+                "air_date": "2-24-2010"
+            },
+            {
+                "season": "4",
+                "episode": "15",
+                "title": "The Head, the Tail, the Whole Damn Episode",
+                "air_date": "3-3-2010"
+            },
+            {
+                "season": "4",
+                "episode": "16",
+                "title": "Mr. Yin Presents...",
+                "air_date": "3-10-2010"
+            },
+            {
+                "season": "5",
+                "episode": "1",
+                "title": "Romeo and Juliet and Juliet",
+                "air_date": "7-14-2010"
+            },
+            {
+                "season": "5",
+                "episode": "2",
+                "title": "Feet Don't Kill Me Now",
+                "air_date": "7-21-2010"
+            },
+            {
+                "season": "5",
+                "episode": "3",
+                "title": "Not Even Close... Encounters",
+                "air_date": "7-28-2010"
+            },
+            {
+                "season": "5",
+                "episode": "4",
+                "title": "Chivalry Is Not Dead... But Someone Is",
+                "air_date": "8-4-2010"
+            },
+            {
+                "season": "5",
+                "episode": "5",
+                "title": "Shawn and Gus in Drag (Racing)",
+                "air_date": "8-11-2010"
+            },
+            {
+                "season": "5",
+                "episode": "6",
+                "title": "Viagra Falls",
+                "air_date": "8-18-2010"
+            },
+            {
+                "season": "5",
+                "episode": "7",
+                "title": "Ferry Tale",
+                "air_date": "8-25-2010"
+            },
+            {
+                "season": "5",
+                "episode": "8",
+                "title": "Shawn 2.0",
+                "air_date": "9-1-2010"
+            },
+            {
+                "season": "5",
+                "episode": "9",
+                "title": "One, Maybe Two, Ways Out",
+                "air_date": "9-8-2010"
+            },
+            {
+                "season": "5",
+                "episode": "10",
+                "title": "Extradition II: The Actual Extradition Part",
+                "air_date": "11-10-2010"
+            },
+            {
+                "season": "5",
+                "episode": "11",
+                "title": "In Plain Fright",
+                "air_date": "11-17-2010"
+            },
+            {
+                "season": "5",
+                "episode": "12",
+                "title": "Dual Spires",
+                "air_date": "12-1-2010"
+            },
+            {
+                "season": "5",
+                "episode": "13",
+                "title": "We'd Like to Thank the Academy",
+                "air_date": "12-8-2010"
+            },
+            {
+                "season": "5",
+                "episode": "14",
+                "title": "The Polarizing Express",
+                "air_date": "12-15-2010"
+            },
+            {
+                "season": "5",
+                "episode": "15",
+                "title": "Dead Bear Walking",
+                "air_date": "12-15-2010"
+            },
+            {
+                "season": "5",
+                "episode": "16",
+                "title": "Yang 3 in 2D",
+                "air_date": "12-22-2010"
+            },
+            {
+                "season": "6",
+                "episode": "1",
+                "title": "Shawn Rescues Darth Vader",
+                "air_date": "10-12-2011"
+            },
+            {
+                "season": "6",
+                "episode": "2",
+                "title": "Last Night Gus",
+                "air_date": "10-19-2011"
+            },
+            {
+                "season": "6",
+                "episode": "3",
+                "title": "This Episode Sucks",
+                "air_date": "10-26-2011"
+            },
+            {
+                "season": "6",
+                "episode": "4",
+                "title": "The Amazing Psych-Man & Tap Man, Issue #2",
+                "air_date": "11-2-2011"
+            },
+            {
+                "season": "6",
+                "episode": "5",
+                "title": "Dead Man's Curve Ball",
+                "air_date": "11-9-2011"
+            },
+            {
+                "season": "6",
+                "episode": "6",
+                "title": "Shawn, Interrupted",
+                "air_date": "11-16-2011"
+            },
+            {
+                "season": "6",
+                "episode": "7",
+                "title": "In for a Penny...",
+                "air_date": "11-30-2011"
+            },
+            {
+                "season": "6",
+                "episode": "8",
+                "title": "The Tao of Gus",
+                "air_date": "12-7-2011"
+            },
+            {
+                "season": "6",
+                "episode": "9",
+                "title": "Neil Simon's Lover's Retreat",
+                "air_date": "12-14-2011"
+            },
+            {
+                "season": "6",
+                "episode": "10",
+                "title": "Indiana Shawn and the Temple of the Kinda Crappy, Rusty Old Dagger",
+                "air_date": "2-29-2012"
+            },
+            {
+                "season": "6",
+                "episode": "11",
+                "title": "Heeeeere's Lassie",
+                "air_date": "3-7-2012"
+            },
+            {
+                "season": "6",
+                "episode": "12",
+                "title": "Shawn and the Real Girl",
+                "air_date": "3-14-2012"
+            },
+            {
+                "season": "6",
+                "episode": "13",
+                "title": "Let's Doo-Wop It Again",
+                "air_date": "3-21-2012"
+            },
+            {
+                "season": "6",
+                "episode": "14",
+                "title": "Autopsy Turvy",
+                "air_date": "3-28-2012"
+            },
+            {
+                "season": "6",
+                "episode": "15",
+                "title": "True Grits",
+                "air_date": "4-4-2012"
+            },
+            {
+                "season": "6",
+                "episode": "16",
+                "title": "Santabarbaratown",
+                "air_date": "4-11-2012"
+            },
+            {
+                "season": "7",
+                "episode": "1",
+                "title": "Santabarbaratown 2",
+                "air_date": "2-27-2013"
+            },
+            {
+                "season": "7",
+                "episode": "2",
+                "title": "Juliet Takes a Luvvah",
+                "air_date": "3-6-2013"
+            },
+            {
+                "season": "7",
+                "episode": "3",
+                "title": "Lassie Jerky",
+                "air_date": "3-13-2013"
+            },
+            {
+                "season": "7",
+                "episode": "4",
+                "title": "No Country for Two Old Men",
+                "air_date": "3-20-2013"
+            },
+            {
+                "season": "7",
+                "episode": "5",
+                "title": "100 Clues",
+                "air_date": "3-27-2013"
+            },
+            {
+                "season": "7",
+                "episode": "6",
+                "title": "Cirque Du Soul",
+                "air_date": "4-3-2013"
+            },
+            {
+                "season": "7",
+                "episode": "7",
+                "title": "Deez Nups",
+                "air_date": "4-10-2013"
+            },
+            {
+                "season": "7",
+                "episode": "8",
+                "title": "Right Turn or Left for Dead",
+                "air_date": "4-17-2013"
+            },
+            {
+                "season": "7",
+                "episode": "9",
+                "title": "Juliet Wears the Pantsuit",
+                "air_date": "4-24-2013"
+            },
+            {
+                "season": "7",
+                "episode": "10",
+                "title": "Santa Barbarian Candidate",
+                "air_date": "5-1-2013"
+            },
+            {
+                "season": "7",
+                "episode": "11",
+                "title": "Office Space",
+                "air_date": "5-8-2013"
+            },
+            {
+                "season": "7",
+                "episode": "12",
+                "title": "Dead Air",
+                "air_date": "5-15-2013"
+            },
+            {
+                "season": "7",
+                "episode": "13",
+                "title": "Nip and Suck It!",
+                "air_date": "5-22-2013"
+            },
+            {
+                "season": "7",
+                "episode": "14",
+                "title": "No Trout About It",
+                "air_date": "5-29-2013"
+            },
+            {
+                "season": "7",
+                "episode": "15-16",
+                "title": "Psych: The Musical",
+                "air_date": "12-15-2013"
+            },
+            {
+                "season": "8",
+                "episode": "1",
+                "title": "Lock, Stock, Some Smoking Barrels and Burton Guster's Goblet of Fire",
+                "air_date": "1-8-2014"
+            },
+            {
+                "season": "8",
+                "episode": "2",
+                "title": "S.E.I.Z.E. the Day",
+                "air_date": "1-15-2014"
+            },
+            {
+                "season": "8",
+                "episode": "3",
+                "title": "Remake A.K.A. Cloudy... With a Chance of Improvement",
+                "air_date": "1-22-2014"
+            },
+            {
+                "season": "8",
+                "episode": "4",
+                "title": "Someone's Got a Woody",
+                "air_date": "1-29-2014"
+            },
+            {
+                "season": "8",
+                "episode": "5",
+                "title": "COG Blocked",
+                "air_date": "2-5-2014"
+            },
+            {
+                "season": "8",
+                "episode": "6",
+                "title": "1967: A Psych Odyssey",
+                "air_date": "2-26-2014"
+            },
+            {
+                "season": "8",
+                "episode": "7",
+                "title": "Shawn and Gus Truck Things Up",
+                "air_date": "3-5-2014"
+            },
+            {
+                "season": "8",
+                "episode": "8",
+                "title": "A Touch of Sweevil",
+                "air_date": "3-12-2014"
+            },
+            {
+                "season": "8",
+                "episode": "9",
+                "title": "A Nightmare on State Street",
+                "air_date": "3-19-2014"
+            },
+            {
+                "season": "8",
+                "episode": "10",
+                "title": "The Break-Up",
+                "air_date": "3-26-2014"
+            }
         ]
     },
     {

@@ -6,7 +6,7 @@ Repository for a program that will generate timelines for use in infographics an
     - [x] Leverage
     - [x] Leverage: Redemption
     - [x] The Librarian
-    - [ ] The Librarians
+    - [x] The Librarians
     - [x] The Librarians: Next Chapter
     - [ ] Psych
     - [x] Psych Movies
