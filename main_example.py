@@ -24,13 +24,13 @@ def generate_interactive_timeline(json_file):
     # 3. Create the timeline visualization using Plotly Express
 
     # Plotly's timeline function treats 'start' and 'end' as horizontal bar boundaries
-    fig = px.timeline(df, x_start="start", x_end="end", y="event", title="Project Timeline")
+    fig = px.timeline(df, x_start="start", x_end="end", y="show", title="Project Timeline")
     
     # Customize the visualization
     fig.update_yaxes(autorange="reversed") # Reverse the order for a top-down timeline
     fig.update_layout(
         xaxis_title="Date",
-        yaxis_title="Event",
+        yaxis_title="Show",
         font=dict(family="Arial", size=12, color="black"),
         hovermode="x unified"
     )
@@ -50,7 +50,7 @@ def generate_static_timeline(json_file):
 
     # Extract data
     dates = [datetime.strptime(item['start'], "%Y-%m-%d") for item in data]
-    labels = [item['event'] for item in data]
+    labels = [item['show'] for item in data]
     
     # Create figure and axes
     fig, ax = plt.subplots(figsize=(8, 5), constrained_layout=True)
@@ -78,5 +78,5 @@ def generate_static_timeline(json_file):
 if __name__ == "__main__":
     import numpy as np # Required for static timeline np.zeros
     # Make sure to have the timeline_data.json file in the same directory
-    generate_interactive_timeline("sample_data.json")
+    generate_interactive_timeline("res/series_data.json")
     # generate_static_timeline("sample_data.json")
