@@ -1,7 +1,7 @@
 function setup() {
     createCanvas(400,400);
-    test = loadJSON('res/series_data.json');
-    console.log(test)
+    example = loadJSON('res/series_data.json');
+    console.log(example)
 }
 
 function draw() {
