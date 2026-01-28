@@ -84,23 +84,29 @@ class Entry {
     }
 
     calc_entry_length() {
-        let start_split = this.start.split('-');
-        let end_split = this.end.split('-');
-        let start_month = parseInt(start_split[0]);
-        let start_day = parseInt(start_split[1]);
-        let start_year = parseInt(start_split[2]);
-        let end_month = parseInt(end_split[0]);
-        let end_day = parseInt(end_split[1]);
-        let end_year = parseInt(end_split[2]);
+        // let start_split = this.start.split('-');
+        // let end_split = this.end.split('-');
+        // let start_month = parseInt(start_split[0]);
+        // let start_day = parseInt(start_split[1]);
+        // let start_year = parseInt(start_split[2]);
+        // let end_month = parseInt(end_split[0]);
+        // let end_day = parseInt(end_split[1]);
+        // let end_year = parseInt(end_split[2]);
 
-        let months = end_month - start_month;
-        let days = end_day - start_day;
-        let years = end_year - start_year;
+        // let months = end_month - start_month;
+        // let days = end_day - start_day;
+        // let years = end_year - start_year;
 
-        print(this.name)
-        print("Months: " + months)
-        print(days)
-        print(years)
+        // print(this.name)
+        // print("Months: " + months)
+        // print(days)
+        // print(years)
+
+        let temp = new Date(this.start);
+        let temp2 = new Date(this.end);
+        let diff = Math.abs(temp2 - temp);
+        diff = Math.ceil(diff / (1000 * 60 * 60 * 24))
+        print("Diff: " + diff)
 
     }
 
