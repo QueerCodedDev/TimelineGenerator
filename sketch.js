@@ -26,6 +26,7 @@ function setup() {
 }
 
 function draw() {
+    print('[\'The One With Blocks For Letters is hoping you\'ll see this\']')
     background(255,50,0);
     setup_timeline_background();
 
