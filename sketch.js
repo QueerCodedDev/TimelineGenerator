@@ -25,7 +25,7 @@ function draw() {
         line(0, i*timeline_row_height, width, i*timeline_row_height);
     }
     for (let i = 0; i < total_years_spanned_cieling; i++) {
-        line(i * timeline_row_length, 100, i * timeline_row_length, i * timeline_row_length + 50);
+        line(i * timeline_row_length, 0, 0, canvas_height);
     }
     noLoop();
 }
