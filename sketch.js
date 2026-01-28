@@ -24,7 +24,7 @@ function setup() {
 
     createCanvas(canvas_width, canvas_height);
 
-    entry_manager = new EntryManager.EntryManager(series_data_arr, starting_year);
+    entry_manager = new EntryManager(series_data_arr, starting_year);
 }
 
 function draw() {
