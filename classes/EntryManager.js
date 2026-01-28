@@ -1,6 +1,6 @@
 import { Entry } from './Entry.js';
 
-class EntryManager {
+export class EntryManager {
     constructor(entries_data) {
         this.entries_arr = this.parse_entries_data(entries_data);
     }

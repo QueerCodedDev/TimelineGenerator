@@ -1,4 +1,4 @@
-class Entry {
+export class Entry {
     constructor(data) {
         this.name  = data['show'];
         this.start = data['start'];
