@@ -90,7 +90,7 @@ class EntryManager {
         let y = 0;
         for (let e of this.entries_arr) {
             let x = calc_dist_as_days('01-01-'+starting_year, e.start)
-            e.render(x, y);
+            e.render(x, y * timeline_row_height);
             y++;
         }
     }
