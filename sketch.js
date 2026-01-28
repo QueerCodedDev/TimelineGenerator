@@ -11,6 +11,8 @@ let series_data_json;
 let series_data_arr;
 let entry_manager;
 
+    print('[\'The One With Blocks For Letters\' is looking at you from `script.js`]');
+
 function preload() {
     series_data_json = loadJSON('res/series_data.json');
 }
@@ -26,7 +28,6 @@ function setup() {
 }
 
 function draw() {
-    print('[\'The One With Blocks For Letters is hoping you\'ll see this\']')
     background(255,50,0);
     setup_timeline_background();
 

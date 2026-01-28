@@ -1,4 +1,6 @@
 export function calc_dist_as_days(start, end) {
+    print('[\'The One With Blocks For Letters\' is looking at you from `calc_dist_as_days.js`]');
+
     let start_date = new Date(start);
     let end_date = new Date(end);
     let diff_milli = Math.abs(end_date - start_date);
