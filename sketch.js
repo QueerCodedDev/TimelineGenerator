@@ -97,7 +97,8 @@ class Entry {
         let days = end_day - start_day;
         let years = end_year - start_year;
 
-        print(months)
+        print(this.name)
+        print("Months: " + months)
         print(days)
         print(years)
 
