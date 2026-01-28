@@ -26,10 +26,24 @@ function draw() {
 }
 
 function setup_timeline_background() {
+    // variables used for labels and readibility
+    let x1, y1, x2, y2;
+
+    // draw lines for each row that will be generated on the timeline
     for (let i = 0; i < series_data_arr.length; i++) {
-        line(0, i*timeline_row_height, width, i*timeline_row_height);
+        x1 = 0;
+        y1 = i*timeline_row_height;
+        x2 = canvas_width;
+        y2 = i * timeline_row_height;
+        line(x1, y1, x2, y2);
     }
+
+    // draw lines to show the year marks
     for (let i = 0; i < total_years_spanned_cieling; i++) {
-        line(i * timeline_row_length, 0, i * timeline_row_length, canvas_height);
+        x1 = i * timeline_row_length
+        y1 = 0
+        x2 = i * timeline_row_length
+        y2 = canvas_height
+        line(x1, y1, x2, y2);
     }
 }
