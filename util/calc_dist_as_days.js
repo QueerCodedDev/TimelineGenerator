@@ -1,5 +1,6 @@
-function calc_dist_as_days(start, end) {
     console.log('[\'The One With Blocks For Letters\' is looking at you from `calc_dist_as_days.js`]');
+function calc_dist_as_days(start, end) {
+
 
     let start_date = new Date(start);
     let end_date = new Date(end);
