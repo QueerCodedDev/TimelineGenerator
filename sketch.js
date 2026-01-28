@@ -3,11 +3,12 @@ let series_data_arr;
 
 function preload() {
     series_data_json = loadJSON('res/series_data.json');
-    series_data_arr = series_data_json[0];
+    series_data_arr = series_data_json.shows;
 }
 
 function setup() {
     createCanvas(400,400);
+    print(series_data_json);
     print(series_data_arr);
 }
 
