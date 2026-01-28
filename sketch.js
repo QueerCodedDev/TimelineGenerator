@@ -118,7 +118,7 @@ class Entry {
         
         // milliseconds per second * seconds per minute * minutes per hours * hours per day
         let milli_per_day = (1000 * 60 * 60 * 24); 
-        diff_days = Math.ceil(diff_milli / milli_per_day)
+        let diff_days = Math.ceil(diff_milli / milli_per_day)
         
         return diff_days;
     }
