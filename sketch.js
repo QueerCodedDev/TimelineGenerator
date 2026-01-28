@@ -14,7 +14,7 @@ function setup() {
     series_data_arr = series_data_json.shows;
     canvas_height = timeline_row_height*series_data_arr.length;
     canvas_width = timeline_row_length*total_years_spanned_cieling;
-    createCanvas(width, height);
+    createCanvas(canvas_width, canvas_height);
 
     
 }
