@@ -1,4 +1,4 @@
-import { Entry } from 'classes/Entry.js';
+import { Entry } from './Entry.js';
 
 class EntryManager {
     constructor(entries_data) {
