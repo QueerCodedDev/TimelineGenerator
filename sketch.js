@@ -5,7 +5,7 @@ let canvas_width;
 let canvas_height;
 let series_data_json;
 let series_data_arr;
-let entries = [];
+let entry_manager;
 
 function preload() {
     series_data_json = loadJSON('res/series_data.json');
@@ -18,14 +18,15 @@ function setup() {
 
     createCanvas(canvas_width, canvas_height);
 
-    for (let d of series_data_arr) {
-        entries.push(new Entry(d));
-    }
+    entry_manager = new EntryManager(series_data_arr);
 }
 
 function draw() {
     background(255,50,0);
     setup_timeline_background();
+
+    entry_manager.render_entries();
+
     noLoop();
 }
 
@@ -70,44 +71,53 @@ function setup_timeline_background() {
     stroke(0, 0, 0, 100);
 }
 
+function render_entries() {
+    for (let e in entries) {
+        e.render();
+    }
+}
+
+class EntryManager {
+    constructor(entries_data) {
+        this.entries_arr = this.parse_entries_data(entries_data);
+    }
+
+    parse_entries_data(data) {
+        for (let d of data) {
+            this.entries_arr.push(new Entry(d));
+        }
+    }
+
+    render_entries() {
+        for (let e of this.entries_arr) {
+            e.render();
+        }
+    }
+}
+
 class Entry {
     constructor(data) {
         this.name  = data['show'];
         this.start = data['start'];
         this.end   = data['end'];
 
-        this.calc_entry_length();
+        this.render_length = this.calc_entry_length();
     }
 
     render() {
-
+        rect(0,0,this.render_length, 100);
     }
 
     calc_entry_length() {
-        // let start_split = this.start.split('-');
-        // let end_split = this.end.split('-');
-        // let start_month = parseInt(start_split[0]);
-        // let start_day = parseInt(start_split[1]);
-        // let start_year = parseInt(start_split[2]);
-        // let end_month = parseInt(end_split[0]);
-        // let end_day = parseInt(end_split[1]);
-        // let end_year = parseInt(end_split[2]);
-
-        // let months = end_month - start_month;
-        // let days = end_day - start_day;
-        // let years = end_year - start_year;
-
-        // print(this.name)
-        // print("Months: " + months)
-        // print(days)
-        // print(years)
-
-        let temp = new Date(this.start);
-        let temp2 = new Date(this.end);
-        let diff = Math.abs(temp2 - temp);
-        diff = Math.ceil(diff / (1000 * 60 * 60 * 24))
-        print("Diff: " + diff)
-
+        let start_date = new Date(this.start);
+        let end_date = new Date(this.end);
+        let diff_milli = Math.abs(end_date - start_date);
+        
+        // milliseconds per second * seconds per minute * minutes per hours * hours per day
+        let milli_per_day = (1000 * 60 * 60 * 24); 
+        diff_days = Math.ceil(diff_milli / milli_per_day)
+        
+        return diff_days;
     }
 
 }
