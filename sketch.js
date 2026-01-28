@@ -21,11 +21,15 @@ function setup() {
 
 function draw() {
     background(255,50,0);
+    setup_timeline_background();
+    noLoop();
+}
+
+function setup_timeline_background() {
     for (let i = 0; i < series_data_arr.length; i++) {
         line(0, i*timeline_row_height, width, i*timeline_row_height);
     }
     for (let i = 0; i < total_years_spanned_cieling; i++) {
         line(i * timeline_row_length, 0, i * timeline_row_length, canvas_height);
     }
-    noLoop();
 }
