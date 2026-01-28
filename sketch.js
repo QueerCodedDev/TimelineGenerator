@@ -83,9 +83,12 @@ class EntryManager {
     }
 
     parse_entries_data(data) {
+        let temp_arr = []
         for (let d of data) {
-            this.entries_arr.push(new Entry(d));
+            temp_arr.push(new Entry(d));
         }
+
+        return temp_arr;
     }
 
     render_entries() {
