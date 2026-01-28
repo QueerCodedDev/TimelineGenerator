@@ -19,7 +19,7 @@ function setup() {
     createCanvas(canvas_width, canvas_height);
 
     for (let d of series_data_arr) {
-        entries.push(Entry(d));
+        entries.push(new Entry(d));
     }
 }
 
@@ -75,10 +75,19 @@ class Entry {
         this.name  = data['show'];
         this.start = data['start'];
         this.end   = data['end'];
+
+        this.calc_entry_length();
     }
 
     render() {
 
+    }
+
+    calc_entry_length() {
+        let start_month, start_day, start_year;
+        let end_month, end_day, end_year;
+        let start_split = this.start.split('-');
+        let end_split = this.end.split('-');
     }
 
 }
