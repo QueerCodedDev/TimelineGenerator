@@ -1,5 +1,6 @@
 let timeline_row_height = 100;
 let timeline_row_length = 365;
+let starting_year = 2004;
 let total_years_spanned_cieling = 25;
 let canvas_width;
 let canvas_height;
@@ -71,12 +72,6 @@ function setup_timeline_background() {
     stroke(0, 0, 0, 100);
 }
 
-function render_entries() {
-    for (let e in entries) {
-        e.render();
-    }
-}
-
 class EntryManager {
     constructor(entries_data) {
         this.entries_arr = this.parse_entries_data(entries_data);
@@ -92,8 +87,11 @@ class EntryManager {
     }
 
     render_entries() {
+        let x = 0;
         for (let e of this.entries_arr) {
-            e.render();
+            let y = calc_dist_as_days('01-01-'+starting_year, e.start)
+            e.render(x, y);
+            x++;
         }
     }
 }
@@ -107,20 +105,25 @@ class Entry {
         this.render_length = this.calc_entry_length();
     }
 
-    render() {
-        rect(0,0,this.render_length, 100);
+    render(x, y) {
+        // rect(x, y, length, height)
+        rect(x, y, this.render_length, timeline_row_height);
     }
 
     calc_entry_length() {
-        let start_date = new Date(this.start);
-        let end_date = new Date(this.end);
-        let diff_milli = Math.abs(end_date - start_date);
-        
-        // milliseconds per second * seconds per minute * minutes per hours * hours per day
-        let milli_per_day = (1000 * 60 * 60 * 24); 
-        let diff_days = Math.ceil(diff_milli / milli_per_day)
-        
-        return diff_days;
+        calc_dist_as_days(this.start, this.end)
     }
 
+}
+
+function calc_dist_as_days(start, end) {
+    let start_date = new Date(start);
+    let end_date = new Date(end);
+    let diff_milli = Math.abs(end_date - start_date);
+    
+    // milliseconds per second * seconds per minute * minutes per hours * hours per day
+    let milli_per_day = (1000 * 60 * 60 * 24); 
+    let diff_days = Math.ceil(diff_milli / milli_per_day)
+    
+    return diff_days;
 }
