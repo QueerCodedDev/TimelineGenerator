@@ -87,11 +87,11 @@ class EntryManager {
     }
 
     render_entries() {
-        let x = 0;
+        let y = 0;
         for (let e of this.entries_arr) {
-            let y = calc_dist_as_days('01-01-'+starting_year, e.start)
+            let x = calc_dist_as_days('01-01-'+starting_year, e.start)
             e.render(x, y);
-            x++;
+            y++;
         }
     }
 }
