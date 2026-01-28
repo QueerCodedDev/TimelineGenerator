@@ -1,5 +1,5 @@
 import { EntryManager } from './classes/EntryManager.js';
-import { setup_timeline_background } from './util/setup_timeline_background';
+import { setup_timeline_background } from './util/setup_timeline_background.js';
 
 let timeline_row_height = 100;
 let timeline_row_length = 365;
