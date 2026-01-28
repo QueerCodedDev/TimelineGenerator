@@ -6,7 +6,7 @@ export class Entry {
 
         this.render_length = this.calc_entry_length();
 
-            print('[\'The One With Blocks For Letters\' is looking at you from `Entry.js`]');
+            console.log('[\'The One With Blocks For Letters\' is looking at you from `Entry.js`]');
     }
 
     render(x, y) {

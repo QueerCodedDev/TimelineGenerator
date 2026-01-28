@@ -1,5 +1,5 @@
 export function setup_timeline_background() {
-    print('[\'The One With Blocks For Letters\' is looking at you from `setup_timeline_background.js`]');
+    console.log('[\'The One With Blocks For Letters\' is looking at you from `setup_timeline_background.js`]');
 
     // variables used for labels and readibility
     let x1, y1, x2, y2;
