@@ -1,6 +1,8 @@
 let timeline_row_height = 100;
 let timeline_row_length = 100;
 let total_years_spanned_cieling = 25;
+let canvas_width;
+let canvas_height;
 let series_data_json;
 let series_data_arr;
 
@@ -10,8 +12,9 @@ function preload() {
 
 function setup() {
     series_data_arr = series_data_json.shows;
-
-    createCanvas(timeline_row_length*total_years_spanned_cieling, timeline_row_height*series_data_arr.length);
+    canvas_height = timeline_row_height*series_data_arr.length;
+    canvas_width = timeline_row_length*total_years_spanned_cieling;
+    createCanvas(width, height);
 
     
 }
