@@ -111,7 +111,7 @@ class Entry {
     }
 
     calc_entry_length() {
-        calc_dist_as_days(this.start, this.end)
+        return calc_dist_as_days(this.start, this.end)
     }
 
 }
