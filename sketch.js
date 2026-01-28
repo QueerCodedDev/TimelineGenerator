@@ -1,8 +1,11 @@
 function setup() {
     createCanvas(400,400);
-    example = loadJSON('res/series_data.json').parse();
-    console.log(example)
-    console.log(example.length())
+    let series_data_json = loadJSON('res/series_data.json');
+    let series_data_arr = []
+    for(let d of series_data_json) {
+      series_data_arr.push(d);
+    }
+    print(series_data_arr);
 }
 
 function draw() {
