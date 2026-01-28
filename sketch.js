@@ -22,7 +22,7 @@ function setup() {
 
     createCanvas(canvas_width, canvas_height);
 
-    entry_manager = new EntryManager(series_data_arr);
+    entry_manager = new EntryManager(series_data_arr, starting_year);
 }
 
 function draw() {

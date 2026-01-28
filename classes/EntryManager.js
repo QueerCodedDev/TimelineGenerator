@@ -1,8 +1,9 @@
 import { Entry } from './Entry.js';
 
 export class EntryManager {
-    constructor(entries_data) {
+    constructor(entries_data, starting_year) {
         this.entries_arr = this.parse_entries_data(entries_data);
+        this.starting_year = starting_year;
     }
 
     parse_entries_data(data) {
