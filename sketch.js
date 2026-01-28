@@ -84,10 +84,23 @@ class Entry {
     }
 
     calc_entry_length() {
-        let start_month, start_day, start_year;
-        let end_month, end_day, end_year;
         let start_split = this.start.split('-');
         let end_split = this.end.split('-');
+        let start_month = parseInt(start_split[0]);
+        let start_day = parseInt(start_split[1]);
+        let start_year = parseInt(start_split[2]);
+        let end_month = parseInt(end_split[0]);
+        let end_day = parseInt(end_split[1]);
+        let end_year = parseInt(end_split[2]);
+
+        let months = end_month - start_month;
+        let days = end_day - start_day;
+        let years = end_year - start_year;
+
+        print(months)
+        print(days)
+        print(years)
+
     }
 
 }
