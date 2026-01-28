@@ -1,5 +1,5 @@
 let timeline_row_height = 100;
-let timeline_row_length = 200;
+let timeline_row_length = 100;
 let total_years_spanned_cieling = 25;
 let series_data_json;
 let series_data_arr;
