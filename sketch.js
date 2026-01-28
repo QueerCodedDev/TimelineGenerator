@@ -1,5 +1,5 @@
 let timeline_row_height = 100;
-let timeline_row_length = 100;
+let timeline_row_length = 365;
 let total_years_spanned_cieling = 25;
 let canvas_width;
 let canvas_height;
@@ -16,7 +16,6 @@ function setup() {
     canvas_width = timeline_row_length * total_years_spanned_cieling;
 
     createCanvas(canvas_width, canvas_height);
-
 }
 
 function draw() {
@@ -46,4 +45,17 @@ function setup_timeline_background() {
         y2 = canvas_height
         line(x1, y1, x2, y2);
     }
+}
+
+class Entry {
+    constructor(data) {
+        this.name  = data['show'];
+        this.start = data['start'];
+        this.end   = data['end'];
+    }
+
+    render() {
+
+    }
+
 }
