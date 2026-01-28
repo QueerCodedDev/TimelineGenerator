@@ -5,6 +5,7 @@ let canvas_width;
 let canvas_height;
 let series_data_json;
 let series_data_arr;
+let entries = [];
 
 function preload() {
     series_data_json = loadJSON('res/series_data.json');
@@ -16,6 +17,10 @@ function setup() {
     canvas_width = timeline_row_length * total_years_spanned_cieling;
 
     createCanvas(canvas_width, canvas_height);
+
+    for (let d of series_data_arr) {
+        entries.push(Entry(d));
+    }
 }
 
 function draw() {
@@ -31,7 +36,7 @@ function setup_timeline_background() {
     // draw lines for each row that will be generated on the timeline
     for (let i = 0; i < series_data_arr.length; i++) {
         x1 = 0;
-        y1 = i*timeline_row_height;
+        y1 = i * timeline_row_height;
         x2 = canvas_width;
         y2 = i * timeline_row_height;
 
@@ -60,6 +65,9 @@ function setup_timeline_background() {
 
         line(x1, y1, x2, y2);
     }
+
+    // reset stroke alpha back to 100
+    stroke(0, 0, 0, 100);
 }
 
 class Entry {
