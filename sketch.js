@@ -11,7 +11,7 @@ function preload() {
 function setup() {
     series_data_arr = series_data_json.shows;
 
-    createCanvas(timeline_row_height*series_data_arr.length, timeline_row_length*total_years_spanned_cieling);
+    createCanvas(timeline_row_length*total_years_spanned_cieling, timeline_row_height*series_data_arr.length);
 
     
 }
