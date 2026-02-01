@@ -6,7 +6,7 @@ class Entry {
         this.end   = data['end'];
 
         this.render_length = this.calc_entry_length();
-console.log('[\'The One With Blocks For Letters\' is looking at you from `Entry.js`]');
+
             
     }
 

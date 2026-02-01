@@ -1,10 +1,8 @@
-// import { Entry } from './Entry.js';
-
 class EntryManager {
     constructor(entries_data, starting_year) {
         this.entries_arr = this.parse_entries_data(entries_data);
         this.starting_year = starting_year;
-            console.log('[\'The One With Blocks For Letters\' is looking at you from `EntryManager.js`]');
+            
     }
 
     parse_entries_data(data) {
