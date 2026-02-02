@@ -22,22 +22,22 @@ class Entry {
     determine_entry_color() {
         switch(this.uni) {
             case 'lib':
-                this.fill_color = "#F5D327"
+                this.fill_color = 'rgb(245, 211, 39)';
                 break;
             case 'lev':
-                this.fill_color = "#27B0F5"
+                this.fill_color = 'rgb(39, 176, 245)';
                 break;
             case 'spn':
-                this.fill_color = "#C223BD"
+                this.fill_color = 'rgb(194, 35, 189)';
                 break;
             case 'psy':
-                this.fill_color = "#23C227"
+                this.fill_color = 'rgb(35, 194, 39)';
                 break;
             case 'men':
-                this.fill_color = "#C22823"
+                this.fill_color = 'rgb(194, 40, 35)';
                 break;
             default:
-                this.fill_color = "#FFFFFF"
+                this.fill_color = 'rgb(255, 255, 255)';
         }
     }
 

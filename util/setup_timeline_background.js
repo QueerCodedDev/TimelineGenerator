@@ -12,7 +12,7 @@ function setup_timeline_background() {
         x2 = canvas_width;
         y2 = i * timeline_row_height;
 
-        stroke(255);
+        stroke(white);
         line(x1, y1, x2, y2);
     }
 
