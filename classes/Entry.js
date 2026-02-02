@@ -21,25 +21,26 @@ class Entry {
     }
 
     determine_entry_color() {
-        switch(this.uni) {
-            case 'lib':
-                return color(245, 211, 39);
-                break;
-            case 'lev':
-                return color(39, 176, 245);
-                break;
-            case 'spn':
-                return color(194, 35, 189);
-                break;
-            case 'psy':
-                return color(35, 194, 39);
-                break;
-            case 'men':
-                return color(194, 40, 35);
-                break;
-            default:
-                return color(255, 255, 255);
-        }
+        // switch(this.uni) {
+        //     case 'lib':
+        //         return color(245, 211, 39);
+        //         break;
+        //     case 'lev':
+        //         return color(39, 176, 245);
+        //         break;
+        //     case 'spn':
+        //         return color(194, 35, 189);
+        //         break;
+        //     case 'psy':
+        //         return color(35, 194, 39);
+        //         break;
+        //     case 'men':
+        //         return color(194, 40, 35);
+        //         break;
+        //     default:
+        //         return color(255, 255, 255);
+        // }
+        return 255;
     }
 
     calc_entry_length() {
