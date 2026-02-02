@@ -21,5 +21,7 @@ class EntryManager {
             e.render(x, y * timeline_row_height);
             y++;
         }
+
+        fill(255);
     }
 }
