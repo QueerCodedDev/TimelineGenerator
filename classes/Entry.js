@@ -1,9 +1,10 @@
 
 class Entry {
     constructor(data) {
-        this.name  = data['show'];
-        this.start = data['start'];
-        this.end   = data['end'];
+        this.uni   = data.universe;
+        this.name  = data.show;
+        this.start = data.start;
+        this.end   = data.end;
 
         this.render_length = this.calc_entry_length();
 
@@ -11,7 +12,7 @@ class Entry {
     }
 
     render(x, y) {
-        // rect(x, y, length, height)
+        // function variable placement reference: rect(x, y, length, height)
         rect(x, y, this.render_length, timeline_row_height);
     }
 
