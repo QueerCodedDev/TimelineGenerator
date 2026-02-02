@@ -13,6 +13,7 @@ class Entry {
 
     render(x, y) {
         // function variable placement reference: rect(x, y, length, height)
+        console.log(this.fill_color);
         fill(this.fill_color);
         rect(x, y, this.render_length, timeline_row_height);
         textSize(25);
