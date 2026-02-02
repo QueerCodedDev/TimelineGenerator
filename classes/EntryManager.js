@@ -6,7 +6,7 @@ class EntryManager {
     }
 
     parse_entries_data(data) {
-        let temp_arr = []
+        let temp_arr = [];
         for (let d of data) {
             temp_arr.push(new Entry(d));
         }
@@ -17,7 +17,7 @@ class EntryManager {
     render_entries() {
         let y = 0;
         for (let e of this.entries_arr) {
-            let x = calc_dist_as_days('01-01-' + starting_year, e.start)
+            let x = calc_dist_as_days('01-01-' + starting_year, e.start);
             e.render(x, y * timeline_row_height);
             y++;
         }

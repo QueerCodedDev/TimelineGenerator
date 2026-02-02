@@ -6,7 +6,19 @@ function setup_timeline_background() {
     let x1, y1, x2, y2;
 
     // draw lines for each row that will be generated on the timeline
-    for (let i = 0; i < series_data_arr.length; i++) {
+    //for (let i = 0; i < series_data_arr.length; i++) {
+    //    x1 = 0;
+    //    y1 = i * timeline_row_height;
+    //    x2 = canvas_width;
+    //    y2 = i * timeline_row_height;
+
+    //   stroke('white');
+    //    line(x1, y1, x2, y2);
+    //}
+
+    // draw lines for each row that will be generated on the timeline
+    let i = 0;
+    for (let d of series_data_arr) {
         x1 = 0;
         y1 = i * timeline_row_height;
         x2 = canvas_width;
@@ -14,6 +26,8 @@ function setup_timeline_background() {
 
         stroke('white');
         line(x1, y1, x2, y2);
+        
+        i++;
     }
 
     // draw lines to show the year marks
@@ -27,7 +41,7 @@ function setup_timeline_background() {
     }
 
     // set stroke alpha so that month lines are lighter than year lines
-    stroke(0, 0, 0, 50);
+    stroke(255, 255, 255, 50);
 
     // draw lines to show the month marks
     for (let i = 0; i < total_years_spanned_cieling * 12; i++) {
@@ -39,6 +53,6 @@ function setup_timeline_background() {
         line(x1, y1, x2, y2);
     }
 
-    // reset stroke alpha back to 100
+    // reset stroke to black, and alpha back to 100
     stroke(0, 0, 0, 100);
 }
