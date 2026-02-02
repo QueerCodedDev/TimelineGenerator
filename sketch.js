@@ -8,14 +8,12 @@ let series_data_json;
 let series_data_arr;
 let entry_manager;
 
-    
-
 function preload() {
     series_data_json = loadJSON('res/series_data.json');
 }
 
 function setup() {
-    series_data_arr = series_data_json.shows;
+    series_data_arr = series_data_json.media;
     canvas_height = timeline_row_height * series_data_arr.length;
     canvas_width = timeline_row_length * total_years_spanned_cieling;
 
