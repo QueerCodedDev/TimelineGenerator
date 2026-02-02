@@ -23,22 +23,22 @@ class Entry {
     determine_entry_color() {
         switch(this.uni) {
             case 'lib':
-                this.fill_color = color(245, 211, 39);
+                return color(245, 211, 39);
                 break;
             case 'lev':
-                this.fill_color = color(39, 176, 245);
+                return color(39, 176, 245);
                 break;
             case 'spn':
-                this.fill_color = color(194, 35, 189);
+                return color(194, 35, 189);
                 break;
             case 'psy':
-                this.fill_color = color(35, 194, 39);
+                return color(35, 194, 39);
                 break;
             case 'men':
-                this.fill_color = color(194, 40, 35);
+                return color(194, 40, 35);
                 break;
             default:
-                this.fill_color = color(255, 255, 255);
+                return color(255, 255, 255);
         }
     }
 
