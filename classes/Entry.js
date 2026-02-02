@@ -14,7 +14,7 @@ class Entry {
     render(x, y) {
         // function variable placement reference: rect(x, y, length, height)
         rect(x, y, this.render_length, timeline_row_height);
-        text(this.name, x + 25, y - 25);
+        text(this.name, x + 25, y + 25);
     }
 
     calc_entry_length() {
