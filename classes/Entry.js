@@ -19,26 +19,22 @@ class Entry {
 
         fill(255);
         textSize(25);
-        text(this.name, x + 25, y + timeline_row_height / 2);
+        textWrap(WORD);
+        text(this.name, x + 25, y + timeline_row_height / 2, this.render_length);
     }
 
     determine_entry_color() {
         switch(this.uni) {
             case 'lib':
-                return color(245, 211, 39);
-                break;
+                return color(245, 211,  39);
             case 'lev':
-                return color(39, 176, 245);
-                break;
+                return color( 39, 176, 245);
             case 'spn':
-                return color(194, 35, 189);
-                break;
+                return color(194,  35, 189);
             case 'psy':
-                return color(35, 194, 39);
-                break;
+                return color( 35, 194,  39);
             case 'men':
-                return color(194, 40, 35);
-                break;
+                return color(194,  40,  35);
             default:
                 return color(255, 255, 255);
         }
