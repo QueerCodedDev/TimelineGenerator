@@ -1,7 +1,7 @@
 class EntryManager {
     constructor(entries_data, starting_year) {
         this.entries_arr = this.parse_entries_data(entries_data);
-        this.starting_year = starting_year;
+        this.starting_year = this.calc_starting_year();
             
     }
 
@@ -19,6 +19,8 @@ class EntryManager {
         for (let d of this.entries_arr) {
             console.log(d.start.split('-')[2]);
         }
+
+        return 2004; //just for testing purposes
     }
 
     render_entries() {
