@@ -20,6 +20,7 @@ class Entry {
         fill(255);
         textSize(25);
         textWrap(WORD);
+        textAlign(LEFT, CENTER);
         text(this.name, x + 25, y + timeline_row_height / 2, this.render_length);
     }
 
