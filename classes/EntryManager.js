@@ -14,9 +14,17 @@ class EntryManager {
         return temp_arr;
     }
 
+    calc_starting_year() {
+        let earliest_year;
+        for (let d of this.entries_arr) {
+            console.log(d.start.split('-')[2]);
+        }
+    }
+
     render_entries() {
         let y = 0;
         for (let e of this.entries_arr) {
+            // calculate the distance from the start of the timeline to the start of the entry
             let x = calc_dist_as_days('01-01-' + starting_year, e.start);
             e.render(x, y * timeline_row_height);
             y++;
