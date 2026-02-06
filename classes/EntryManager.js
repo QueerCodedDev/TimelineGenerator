@@ -15,12 +15,14 @@ class EntryManager {
     }
 
     calc_starting_year() {
-        let earliest_year;
+        let earliest_year = 9999;
         for (let d of this.entries_arr) {
-            console.log(d.start.split('-')[2]);
+            let temp_year = d.start.split('-')[2];
+            if (temp_year < earliest_year) earliest_year = temp_year;
         }
 
-        return 2004; //just for testing purposes
+        console.log(earliest_year);
+        return earliest_year;
     }
 
     render_entries() {
