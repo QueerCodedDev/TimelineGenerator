@@ -5,8 +5,6 @@ let canvas_height;
 let series_data_json;
 let episode_data_json;
 let ActiveEntryManager;
-let EpisodeEntryManager;
-let ActiveEntryManager;
 
 let TIMELINE_OPTIONS = {
     'SERIES': 'series',
