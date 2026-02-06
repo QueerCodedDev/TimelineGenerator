@@ -16,6 +16,7 @@ function setup() {
     canvas_height = timeline_row_height * series_data_arr.length;
     canvas_width  = timeline_row_length * entry_manager.ending_year;
 
+    console.log('test')
     createCanvas(canvas_width, canvas_height);
 }
 
