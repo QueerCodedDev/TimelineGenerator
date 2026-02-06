@@ -20,7 +20,7 @@ function preload() {
 
 function setup() {
     if (TIMELINE_CHOICE == TIMELINE_OPTIONS.SERIES) {
-        ActiveEntryManager = new EntryManager(series_data_json.media);
+        ActiveEntryManager = new SeriesEntryManager(series_data_json.media);
     } else if (TIMELINE_CHOICE == TIMELINE_OPTIONS.EPISODE) {
         ActiveEntryManager = new EntryManager(episode_data_json);
     }
