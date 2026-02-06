@@ -13,7 +13,6 @@ class Entry {
 
     render(x, y) {
         // function variable placement reference: rect(x, y, length, height)
-        stroke(this.fill_color);
         fill(this.fill_color);
         rect(x, y, this.render_length, timeline_row_height);
 
@@ -21,7 +20,7 @@ class Entry {
         textSize(25);
         textWrap(WORD);
         textAlign(LEFT, CENTER);
-        stroke('black');
+        
         strokeWeight(2);
         text(this.name, x + 25, y + timeline_row_height / 2, this.render_length);
     }

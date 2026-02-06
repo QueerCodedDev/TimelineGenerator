@@ -57,7 +57,7 @@ class EntryManager {
             y++;
         }
 
-        fill(255);
+        fill('white');
         strokeWeight(1);
     }
 }
