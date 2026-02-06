@@ -14,6 +14,7 @@ class Entry {
     render(x, y) {
         // function variable placement reference: rect(x, y, length, height)
         fill(this.fill_color);
+        noStroke();
         rect(x, y, this.render_length, timeline_row_height);
 
         fill(255);
