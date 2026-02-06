@@ -31,7 +31,7 @@ function setup_timeline_background(entry_manager) {
     }
 
     // draw lines to show the year marks
-    for (let i = 0; i < entry_manager.total_duration; i++) {
+    for (let i = 0; i <= entry_manager.total_duration; i++) {
         x1 = i * timeline_row_length;
         y1 = 0;
         x2 = i * timeline_row_length;
@@ -44,7 +44,7 @@ function setup_timeline_background(entry_manager) {
     stroke(255, 255, 255, 50);
 
     // draw lines to show the month marks
-    for (let i = 0; i < entry_manager.total_duration * 12; i++) {
+    for (let i = 0; i <= entry_manager.total_duration * 12; i++) {
         x1 = i * timeline_row_length / 12;
         y1 = 0;
         x2 = i * timeline_row_length / 12;
