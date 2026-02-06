@@ -14,7 +14,7 @@ function setup() {
     series_data_arr = series_data_json.media;
     entry_manager = new EntryManager(series_data_arr);
     canvas_height = timeline_row_height * series_data_arr.length;
-    canvas_width  = timeline_row_length * entry_manager.total_duration;
+    canvas_width  = timeline_row_length * (entry_manager.total_duration + 1);
 
     console.log('test')
     createCanvas(canvas_width, canvas_height);
