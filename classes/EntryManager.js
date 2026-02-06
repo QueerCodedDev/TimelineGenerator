@@ -33,5 +33,6 @@ class EntryManager {
         }
 
         fill(255);
+        strokeWeight(1);
     }
 }

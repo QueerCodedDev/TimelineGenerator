@@ -21,7 +21,8 @@ class Entry {
         textSize(25);
         textWrap(WORD);
         textAlign(LEFT, CENTER);
-        stroke('black')
+        stroke('black');
+        strokeWeight(2);
         text(this.name, x + 25, y + timeline_row_height / 2, this.render_length);
     }
 
