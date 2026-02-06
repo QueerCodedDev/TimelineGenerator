@@ -7,7 +7,7 @@ function setup_timeline_background(Entry_Manager) {
 
     // draw lines for each row that will be generated on the timeline
     let i = 0;
-    for (let d of series_data_arr) {
+    for (let d of Entry_Manager.entries_arr) {
         x1 = 0;
         y1 = i * timeline_row_height;
         x2 = canvas_width;
