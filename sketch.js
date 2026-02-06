@@ -3,28 +3,25 @@ let timeline_row_length = 365;
 let canvas_width;
 let canvas_height;
 let series_data_json;
-let series_data_arr;
-let entry_manager;
+let SeriesEntryManager;
 
 function preload() {
     series_data_json = loadJSON('res/series_data.json');
 }
 
 function setup() {
-    series_data_arr = series_data_json.media;
-    entry_manager = new EntryManager(series_data_arr);
-    canvas_height = timeline_row_height * series_data_arr.length;
-    canvas_width  = timeline_row_length * entry_manager.total_duration;
+    SeriesEntryManager = new EntryManager(series_data_json.media);
+    canvas_height = timeline_row_height * SeriesEntryManager.entries_arr.length;
+    canvas_width  = timeline_row_length * SeriesEntryManager.total_duration;
 
-    console.log('test')
     createCanvas(canvas_width, canvas_height);
 }
 
 function draw() {
     background('black');
-    setup_timeline_background(entry_manager);
+    setup_timeline_background(SeriesEntryManager);
 
-    entry_manager.render_entries();
+    SeriesEntryManager.render_entries();
 
     noLoop();
 }
