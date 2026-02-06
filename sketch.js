@@ -21,7 +21,7 @@ function setup() {
 
 function draw() {
     background('black');
-    setup_timeline_background();
+    setup_timeline_background(entry_manager);
 
     entry_manager.render_entries();
 

@@ -1,5 +1,5 @@
     
-function setup_timeline_background() {
+function setup_timeline_background(entry_manager) {
 
 
     // variables used for labels and readibility
@@ -31,7 +31,7 @@ function setup_timeline_background() {
     }
 
     // draw lines to show the year marks
-    for (let i = 0; i < total_years_spanned_cieling; i++) {
+    for (let i = 0; i < entry_manager.total_duration; i++) {
         x1 = i * timeline_row_length;
         y1 = 0;
         x2 = i * timeline_row_length;
@@ -44,7 +44,7 @@ function setup_timeline_background() {
     stroke(255, 255, 255, 50);
 
     // draw lines to show the month marks
-    for (let i = 0; i < total_years_spanned_cieling * 12; i++) {
+    for (let i = 0; i < entry_manager.total_duration * 12; i++) {
         x1 = i * timeline_row_length / 12;
         y1 = 0;
         x2 = i * timeline_row_length / 12;

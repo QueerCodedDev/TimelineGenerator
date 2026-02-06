@@ -8,6 +8,7 @@ class EntryManager {
         // Parsing data from start_end_year_data for readibility
         this.starting_year = this.start_end_year_data.start_year;
         this.ending_year = this.start_end_year_data.end_year;
+        this.total_duration = this.ending_year - this.starting_year;
     }
 
     // Function for parsing data and using it for creating Entries
