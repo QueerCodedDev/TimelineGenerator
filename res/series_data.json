@@ -12,6 +12,6 @@
         {"universe": "psy", "show": "Psych: Lassie Come Home",                       "start": "07-15-2020", "end": "07-15-2021"},
         {"universe": "lev", "show": "Leverage: Redemption",                          "start": "07-09-2021", "end": "06-05-2025"},
         {"universe": "psy", "show": "Psych: This Is Gus",                            "start": "11-18-2021", "end": "11-18-2022"},
-        {"universe": "lib", "show": "The Librarians: Next Chapter",                  "start": "05-25-2025"," end": "08-04-2025"}
+        {"universe": "lib", "show": "The Librarians: Next Chapter",                  "start": "05-25-2025", "end": "08-04-2025"}
     ]
 }
