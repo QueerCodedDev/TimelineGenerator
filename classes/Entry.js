@@ -56,7 +56,7 @@ class Entry {
         let curr_season  =  1;
         let prev_episode_air_date;
 
-        for (let e of this.data.episodes) {
+        for (let e of this.episodes) {
             if (e.season == curr_season && e.episode == 1) {
                 temp_seasons.push({'start': e.air_date, 'end': ''})
             }
