@@ -19,11 +19,7 @@ function preload() {
 }
 
 function setup() {
-    if (TIMELINE_CHOICE == TIMELINE_OPTIONS.SERIES) {
-        ActiveEntryManager = new SeriesEntryManager(series_data_json.media);
-    } else if (TIMELINE_CHOICE == TIMELINE_OPTIONS.EPISODE) {
-        ActiveEntryManager = new EntryManager(episode_data_json.media);
-    }
+    EntryManager = new EntryManager(series_data_json.media, episode_data_json.media)
 
     canvas_height = timeline_row_height * ActiveEntryManager.entries_arr.length;
     canvas_width  = timeline_row_length * ActiveEntryManager.total_duration;
