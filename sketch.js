@@ -11,7 +11,7 @@ let TIMELINE_OPTIONS = {
     'EPISODE': 'episode'
 } 
 
-let TIMELINE_CHOICE = TIMELINE_OPTIONS.SERIES;
+let TIMELINE_CHOICE = TIMELINE_OPTIONS.EPISODE;
 
 function preload() {
     series_data_json = loadJSON('res/series_data.json');
