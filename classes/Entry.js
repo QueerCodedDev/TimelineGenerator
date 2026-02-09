@@ -5,9 +5,13 @@ class Entry {
         this.name  = data.show;
         this.start = data.start;
         this.end   = data.end;
-
+        
         this.fill_color    = this.determine_entry_color();
         this.render_length = this.calc_entry_length();
+        if (TIMELINE_CHOICE == TIMELINE_OPTIONS.EPISODE) {
+            this.episodes = data.episodes;
+            this.seasons = this.get_seasons();
+        }
 
     }
 
@@ -47,4 +51,25 @@ class Entry {
         return calc_dist_as_days(this.start, this.end)
     }
 
+    get_seasons() {
+        let temp_seasons = [];
+        let curr_season  =  1;
+        let prev_episode_air_date;
+
+        for (let e of this.data.episodes) {
+            if (e.season == curr_season && e.episode == 1) {
+                temp_seasons.push({'start': e.air_date, 'end': ''})
+            }
+
+            prev_episode_air_date = e.air_date;
+
+            if (e.season > curr_season && e.episode == 1) {
+                temp_seasons[curr_season].end = prev_episode_air_date;
+                curr_season++;
+            } 
+        }
+
+        console.log(temp_seasons);
+        return temp_seasons;
+    }
 }
