@@ -52,22 +52,16 @@ class Entry {
     }
 
     get_seasons() {
-        let temp_seasons = [];
+        let temp_seasons = [[]];
         let curr_season  =  1;
-        let prev_episode_air_date;
 
         for (let e of this.episodes) {
-            if (e.season == curr_season && e.episode == 1) {
-                temp_seasons.push({'start': e.air_date, 'end': ''})
-            }
-
-            prev_episode_air_date = e.air_date;
-
-            if (e.season > curr_season && e.episode == 1) {
-                console.log(temp_seasons)
-                temp_seasons[curr_season-1].end = prev_episode_air_date;
+            if (e.season == curr_season) {
+                temp_seasons[curr_season-1].push(e);
+            } else if (e.season > curr_season) {
                 curr_season++;
-            } 
+                temp_seasons.push([]);
+            }
         }
 
         console.log(temp_seasons);
