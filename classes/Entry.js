@@ -61,7 +61,7 @@ class Entry {
                 temp_seasons[curr_season-1].push(e);
             } else if (e.season > curr_season) {
                 curr_season++;
-                temp_seasons.push([]);
+                temp_seasons.push([e]);
             }
         }
 
