@@ -3,6 +3,8 @@
         {
             "show": "Leverage",
             "universe": "lev",
+            "start": "12-07-2008",
+            "end": "12-25-2012",
             "episodes": [
                 {
                     "season": "01",
@@ -471,6 +473,8 @@
         {
             "show": "Leverage: Redemption",
             "universe": "lev",
+            "start": "07-09-2021",
+            "end": "06-05-2025",
             "episodes":[
                 {
                     "season": "01",
@@ -711,6 +715,8 @@
         {
             "show": "The Librarians",
             "universe": "lib",
+            "start": "12-07-2014",
+            "end": "02-07-2018",
             "episodes": [
                 {
                     "season": "01",
@@ -969,6 +975,8 @@
         {
             "show": "The Librarians: Next Chapter",
             "universe": "lib",
+            "start": "05-25-2025",
+            "end": "08-04-2025",
             "episodes": [
                 {
                     "season": "01",
@@ -1045,32 +1053,31 @@
             ]
         },
         {
-            "show": "The Librarian",
+            "show": "The Librarian: Quest for the Spear",
             "universe": "lib",
-            "episodes": [
-                {
-                    "season": "01",
-                    "episode": "01",
-                    "title": "Quest for the Spear",
-                    "air_date": "12-05-2004"
-                },
-                {
-                    "season": "02",
-                    "episode": "01",
-                    "title": "Return to King Solomon's Mines",
-                    "air_date": "12-03-2006"
-                },
-                {
-                    "season": "03",
-                    "episode": "01",
-                    "title": "Curse of the Judas Chalice",
-                    "air_date": "12-07-2008"
-                }
-            ]
+            "start": "12-05-2004",
+            "end": "12-05-2005",
+            "episodes": null
+        },
+        {
+            "show": "The Librarian: Return to King Solomon's Mines",
+            "universe": "lib",
+            "start": "12-03-2006",
+            "end": "12-04-2007",
+            "episodes": null
+        },
+        {
+            "show": "The Librarian: Curse of the Judas Chalice",
+            "universe": "lib",
+            "start": "12-07-2008",
+            "end": "12-07-2009",
+            "episodes": null
         },
         {
             "show": "The Mentalist",
             "universe": "men",
+            "start": "09-23-2008",
+            "end": "02-18-2015",
             "episodes": [
                 {
                     "season": "01",
@@ -1983,6 +1990,8 @@
         {
             "show": "Supernatural",
             "universe": "spn",
+            "start": "09-13-2005",
+            "end": "11-19-2020",
             "episodes": [
                 {
                     "season": "01",
@@ -3952,6 +3961,8 @@
         {
             "show": "Psych",
             "universe": "psy",
+            "start": "07-07-2006",
+            "end": "03-26-2014",
             "episodes": [
                 {
                     "season": "01",
@@ -4676,28 +4687,25 @@
             ]
         },
         {
-            "show": "Psych Movies",
+            "show": "Psych: The Movie",
             "universe": "psy",
-            "episodes": [
-                {
-                    "season": "01",
-                    "episode": "01",
-                    "title": "Psych: The Movie",
-                    "air_date": "12-07-2017"
-                },
-                {
-                    "season": "02",
-                    "episode": "01",
-                    "title": "Psych: Lassie Come Home",
-                    "air_date": "07-15-2020"
-                },
-                {
-                    "season": "03",
-                    "episode": "01",
-                    "title": "Psych: This is Gus",
-                    "air_date": "11-18-2021"
-                }
-            ]
+            "start": "12-07-2017",
+            "end": "12-07-2018",
+            "episodes": null
+        },
+        {
+            "show": "Psych: Lassie Come Home",
+            "universe": "psy",
+            "start": "07-15-2020",
+            "end": "07-15-2021",
+            "episodes": null
+        },
+        {
+            "show": "Psych: This Is Gus",
+            "universe": "psy",
+            "start": "11-18-2021",
+            "end": "11-18-2022",
+            "episodes": null
         }
     ]
 }
