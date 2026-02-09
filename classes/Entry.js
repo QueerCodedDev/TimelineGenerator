@@ -64,6 +64,7 @@ class Entry {
             prev_episode_air_date = e.air_date;
 
             if (e.season > curr_season && e.episode == 1) {
+                console.log(temp_seasons)
                 temp_seasons[curr_season].end = prev_episode_air_date;
                 curr_season++;
             } 
