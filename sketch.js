@@ -22,7 +22,7 @@ function setup() {
     if (TIMELINE_CHOICE == TIMELINE_OPTIONS.SERIES) {
         ActiveEntryManager = new SeriesEntryManager(series_data_json.media);
     } else if (TIMELINE_CHOICE == TIMELINE_OPTIONS.EPISODE) {
-        ActiveEntryManager = new EntryManager(episode_data_json);
+        ActiveEntryManager = new EntryManager(episode_data_json.media);
     }
 
     canvas_height = timeline_row_height * ActiveEntryManager.entries_arr.length;
