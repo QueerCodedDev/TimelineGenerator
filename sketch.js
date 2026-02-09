@@ -14,12 +14,11 @@ let TIMELINE_OPTIONS = {
 let TIMELINE_CHOICE = TIMELINE_OPTIONS.EPISODE;
 
 function preload() {
-    series_data_json = loadJSON('res/series_data.json');
     episode_data_json = loadJSON('res/shows_data.json')
 }
 
 function setup() {
-    EntryManager = new EntryManager(series_data_json.media, episode_data_json.media)
+    EntryManager = new EntryManager(episode_data_json.media)
 
     canvas_height = timeline_row_height * ActiveEntryManager.entries_arr.length;
     canvas_width  = timeline_row_length * ActiveEntryManager.total_duration;

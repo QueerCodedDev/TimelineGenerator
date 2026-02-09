@@ -1,7 +1,7 @@
 class EntryManager {
-    constructor(series_data, episode_data) {
+    constructor(entries_data) {
         // Array of all entries involved
-        this.entries_arr = this.parse_entries_data(series_data);
+        this.entries_arr = this.parse_entries_data(entries_data);
         // Get the earliest year present in data
         // as well as the latest year present in data
         this.start_end_year_data = this.get_start_and_end_year();
