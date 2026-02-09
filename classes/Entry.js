@@ -52,6 +52,7 @@ class Entry {
     }
 
     get_seasons() {
+        if (this.episodes == null) return null;
         let temp_seasons = [[]];
         let curr_season  =  1;
 
