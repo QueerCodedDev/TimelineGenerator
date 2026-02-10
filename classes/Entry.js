@@ -64,7 +64,7 @@ class Entry {
             }
         }
 
-        let s_data = {};
+        let s_data = [];
         for (let ts of temp_seasons) {
             let end = ts.length - 1;
             s_data.push({'season': ts[0].season, 'start': ts[0].air_date, 'end': ts[end].air_date});
