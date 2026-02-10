@@ -5,13 +5,12 @@ class Entry {
         this.name  = data.show;
         this.start = data.start;
         this.end   = data.end;
-        
+        this.eps   = data.episodes;
+
         this.fill_color    = this.determine_entry_color();
         this.render_length = this.calc_entry_length();
-        if (TIMELINE_CHOICE == TIMELINE_OPTIONS.EPISODE) {
-            this.episodes = data.episodes;
-            this.seasons = this.get_seasons();
-        }
+        
+        this.seasons = this.get_seasons_data();
 
     }
 
@@ -52,11 +51,11 @@ class Entry {
     }
 
     get_seasons() {
-        if (this.episodes == null) return null;
+        if (this.eps == null) return null;
         let temp_seasons = [[]];
         let curr_season  =  1;
 
-        for (let e of this.episodes) {
+        for (let e of this.eps) {
             if (e.season == curr_season) {
                 temp_seasons[curr_season-1].push(e);
             } else if (e.season > curr_season) {
@@ -65,7 +64,12 @@ class Entry {
             }
         }
 
-        console.log(temp_seasons);
+        let s_data = {};
+        for (let ts of temp_seasons) {
+            let end = ts.length - 1;
+            s_data.push({'season': ts[0].season, 'start': ts[0].air_date, 'end': ts[end].air_date});
+        }
+        console.log(s_data);
         return temp_seasons;
     }
 }
