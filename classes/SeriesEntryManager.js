@@ -1,3 +1,0 @@
-class SeriesEntryManager extends EntryManager {
-    
-}
