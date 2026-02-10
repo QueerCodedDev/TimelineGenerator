@@ -29,8 +29,10 @@ class Entry {
         console.log("ENTRY:" + this.name);
         console.log("SEASONS: " + this.seasons);
 
-        for (let sd of this.seasons) {
-            rect(x, y, this.calc_entry_length(this.start, sd.end), timeline_row_height);
+        if (this.seasons != null) {
+            for (let sd of this.seasons) {
+                rect(x, y, this.calc_entry_length(this.start, sd.end), timeline_row_height);
+            }
         }
 
         fill(255);
