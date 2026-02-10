@@ -1,4 +1,4 @@
-class Colors {
+class ColorManager {
     static colors = {
         'lib': color(245, 211,  39),
         'lev': color( 39, 176, 245),
