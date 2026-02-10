@@ -2,16 +2,8 @@ let timeline_row_height = 100;
 let timeline_row_length = 365;
 let canvas_width;
 let canvas_height;
-let series_data_json;
 let episode_data_json;
 let ActiveEntryManager;
-
-let TIMELINE_OPTIONS = {
-    'SERIES': 'series',
-    'EPISODE': 'episode'
-} 
-
-let TIMELINE_CHOICE = TIMELINE_OPTIONS.EPISODE;
 
 function preload() {
     episode_data_json = loadJSON('res/shows_data.json')
