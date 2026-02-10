@@ -7,7 +7,7 @@ class Entry {
         this.end   = data.end;
         this.eps   = data.episodes;
 
-        this.fill_color    = this.determine_entry_color();
+        this.fill_color    = Colors.colors[this.uni]
         this.render_length = this.calc_entry_length(this.start, this.end);
         
         this.seasons = this.get_seasons_data();
