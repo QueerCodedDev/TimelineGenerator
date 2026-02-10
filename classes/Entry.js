@@ -79,6 +79,6 @@ class Entry {
             s_data.push({'season': ts[0].season, 'start': ts[0].air_date, 'end': ts[end].air_date});
         }
         console.log(s_data);
-        return temp_seasons;
+        return s_data;
     }
 }
