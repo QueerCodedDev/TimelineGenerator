@@ -25,6 +25,10 @@ class Entry {
 
         noFill();
         stroke('red');
+        // for (let i = 0; i < this.seasons)
+        console.log("ENTRY:" + this.name);
+        console.log("SEASONS: " + this.seasons);
+
         for (let sd of this.seasons) {
             rect(x, y, this.calc_entry_length(this.start, sd.end), timeline_row_height);
         }
