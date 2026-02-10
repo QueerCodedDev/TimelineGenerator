@@ -24,10 +24,7 @@ class Entry {
         // seasons end and begin.
 
         noFill();
-        stroke('red');
-        // for (let i = 0; i < this.seasons)
-        console.log("ENTRY:" + this.name);
-        console.log("SEASONS: " + this.seasons);
+        stroke('black');
 
         if (this.seasons != null) {
             for (let sd of this.seasons) {
