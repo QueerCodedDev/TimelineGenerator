@@ -23,6 +23,12 @@ class Entry {
         // Add in lines or something that break up the shows by season for easy viewing of when
         // seasons end and begin.
 
+        noFill();
+        stroke('red');
+        for (let sd of this.seasons) {
+            rect(x, y, this.calc_entry_length(this.start, sd.end), timeline_row_height);
+        }
+
         fill(255);
         textSize(25);
         textWrap(WORD);
