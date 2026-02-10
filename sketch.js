@@ -18,7 +18,7 @@ function preload() {
 }
 
 function setup() {
-    EntryManager = new EntryManager(episode_data_json.media)
+    ActiveEntryManager = new EntryManager(episode_data_json.media)
 
     canvas_height = timeline_row_height * ActiveEntryManager.entries_arr.length;
     canvas_width  = timeline_row_length * ActiveEntryManager.total_duration;
