@@ -50,7 +50,7 @@ class Entry {
         return calc_dist_as_days(this.start, this.end)
     }
 
-    get_seasons() {
+    get_seasons_data() {
         if (this.eps == null) return null;
         let temp_seasons = [[]];
         let curr_season  =  1;
