@@ -20,6 +20,9 @@ class Entry {
         noStroke();
         rect(x, y, this.render_length, timeline_row_height);
 
+        // Add in lines or something that break up the shows by season for easy viewing of when
+        // seasons end and begin.
+
         fill(255);
         textSize(25);
         textWrap(WORD);
