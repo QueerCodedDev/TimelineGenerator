@@ -11,8 +11,11 @@ class EntryManager {
         // Calculate total duration, and then add one to adjust timeline range
         // so that it will actually include the final entry
         this.total_duration = this.ending_year - this.starting_year + 1;
-        // Determine how many rows are needed based on the number of universes
-        this.universe_count = this.get_universe_count();
+        // Get universe tags and names
+        this.universe_data = this.get_universes_and_count();
+        // Parsing data from universe_data for readibility
+        this.universe_count = this.universe_data.count;
+        this.universe_tags = this.universe_data.universes;
 
         this.sort_and_group_entries_by_universe();
     }
@@ -65,7 +68,7 @@ class EntryManager {
         strokeWeight(1);
     }
 
-    get_universe_count() {
+    get_universes_and_count() {
         let universes = [];
         let count = 0;
 
@@ -76,13 +79,18 @@ class EntryManager {
             }
         }
         console.log("count:" + count)
-        return count;
+        return { 'count': count, 'universes': universes };
     }
 
     sort_and_group_entries_by_universe() {
         let universes = [];
-        for (let i of this.universe_count) {
-            universes.push[{'uni': this.entries_arr[i].uni, 'shows': []}];
+        for (let uni of this.universe_tags) {
+            let applicable_universes = [];
+            for (let e of this.entries_arr) {
+                if (e.uni == uni) applicable_universes.push(e);
+            }
+
+            universes.push[{'uni': uni, 'shows': applicable_universes}];
         }
 
         console.log(universes)
