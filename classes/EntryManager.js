@@ -11,6 +11,8 @@ class EntryManager {
         // Calculate total duration, and then add one to adjust timeline range
         // so that it will actually include the final entry
         this.total_duration = this.ending_year - this.starting_year + 1;
+        // Determine how many rows are needed based on the number of universes
+        this.universe_count = this.get_universe_count();
     }
 
     // Function for parsing data and using it for creating Entries
@@ -59,5 +61,19 @@ class EntryManager {
 
         fill('white');
         strokeWeight(1);
+    }
+
+    get_universe_count() {
+        let universes = [];
+        let count = 0;
+
+        for (let e of this.entries_arr) {
+            if (!universes.includes(e.uni)) {
+                universes.push(e.uni);
+                count++;
+            }
+        }
+        console.log("count:" + count)
+        return count;
     }
 }

@@ -8,7 +8,7 @@ class Entry {
         this.eps   = data.episodes;
 
         this.fill_color    = this.determine_entry_color();
-        this.render_length = this.calc_entry_length();
+        this.render_length = this.calc_entry_length(this.start, this.end);
         
         this.seasons = this.get_seasons_data();
 
@@ -46,8 +46,8 @@ class Entry {
         }
     }
 
-    calc_entry_length() {
-        return calc_dist_as_days(this.start, this.end)
+    calc_entry_length(start, end) {
+        return calc_dist_as_days(start, end);
     }
 
     get_seasons_data() {

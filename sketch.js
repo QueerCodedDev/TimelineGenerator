@@ -20,7 +20,7 @@ function preload() {
 function setup() {
     ActiveEntryManager = new EntryManager(episode_data_json.media)
 
-    canvas_height = timeline_row_height * ActiveEntryManager.entries_arr.length;
+    canvas_height = timeline_row_height * ActiveEntryManager.get_universe_count();
     canvas_width  = timeline_row_length * ActiveEntryManager.total_duration;
     
     createCanvas(canvas_width, canvas_height);
