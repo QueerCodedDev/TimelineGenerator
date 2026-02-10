@@ -90,7 +90,7 @@ class EntryManager {
                 if (e.uni == uni) applicable_universes.push(e);
             }
 
-            universes.push[{'uni': uni, 'shows': applicable_universes}];
+            universes.push([{'uni': uni, 'shows': applicable_universes}]);
         }
 
         console.log(universes)
