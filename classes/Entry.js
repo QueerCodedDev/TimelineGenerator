@@ -17,7 +17,6 @@ class Entry {
     render(x, y) {
         // function variable placement reference: rect(x, y, length, height)
         fill(this.fill_color);
-        noStroke();
         rect(x, y, this.render_length, timeline_row_height);
 
         // Add in lines or something that break up the shows by season for easy viewing of when
