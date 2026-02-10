@@ -13,6 +13,8 @@ class EntryManager {
         this.total_duration = this.ending_year - this.starting_year + 1;
         // Determine how many rows are needed based on the number of universes
         this.universe_count = this.get_universe_count();
+
+        this.sort_and_group_entries_by_universe();
     }
 
     // Function for parsing data and using it for creating Entries
@@ -75,5 +77,14 @@ class EntryManager {
         }
         console.log("count:" + count)
         return count;
+    }
+
+    sort_and_group_entries_by_universe() {
+        let universes = [];
+        for (let i of this.universe_count) {
+            universes.push[{'uni': this.entries_arr[i].uni, 'shows': []}];
+        }
+
+        console.log(universes)
     }
 }
