@@ -56,12 +56,11 @@ class EntryManager {
      * Calls render for each Entry, and the Entry handles the rest.
      */
     render_entries() {
-        let y = 0;
         for (let e of this.entries_arr) {
             // calculate the distance from the start of the timeline to the start of the entry
             let x = calc_dist_as_days('01-01-' + this.starting_year, e.start);
+            let y = this.universe_tags.indexOf(e.uni) + 1;
             e.render(x, y * timeline_row_height);
-            y++;
         }
 
         fill('white');
