@@ -16,6 +16,7 @@ function setup() {
     canvas_width  = timeline_row_length * ActiveEntryManager.total_duration;
     
     createCanvas(canvas_width, canvas_height);
+    
 }
 
 function draw() {
