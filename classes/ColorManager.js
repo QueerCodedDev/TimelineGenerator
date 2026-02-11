@@ -1,9 +1,9 @@
 class ColorManager {
     static colors = {
-        'lib': color(245, 211,  39),
-        'lev': color( 39, 176, 245),
-        'spn': color(194,  35, 189),
-        'psy': color( 35, 194,  39),
-        'men': color(194,  40,  35)
+        'lib': 'F5D327',
+        'lev': '27B0F5',
+        'spn': 'C223BD',
+        'psy': '23C227',
+        'men': 'C22823'
         }
 }
