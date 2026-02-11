@@ -23,6 +23,4 @@ function draw() {
     setup_timeline_background(ActiveEntryManager);
 
     ActiveEntryManager.render_entries();
-
-    noLoop();
 }
