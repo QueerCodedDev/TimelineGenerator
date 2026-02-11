@@ -16,6 +16,7 @@ function setup() {
     canvas_width  = timeline_row_length * ActiveEntryManager.total_duration;
     
     createCanvas(canvas_width, canvas_height);
+    console.log('THIS IS A TEST TO DETERMINE IF THE NEW BRANCH IS BEING TESTED OR NOT')
 }
 
 function draw() {
