@@ -77,7 +77,7 @@ class EntryManager {
                 count++;
             }
         }
-        console.log("count:" + count)
+
         return { 'count': count, 'universes': universes };
     }
 
@@ -91,7 +91,5 @@ class EntryManager {
 
             universes.push([{'uni': uni, 'shows': applicable_universes}]);
         }
-
-        console.log(universes)
     }
 }

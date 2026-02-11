@@ -1,13 +1,14 @@
-    
-function setup_timeline_background(Entry_Manager) {
-
-
+/**
+ * 
+ * @param {EntryManager} entryManager 
+ */
+function setup_timeline_background(entryManager) {
     // variables used for labels and readibility
     let x1, y1, x2, y2;
 
     // draw lines for each row that will be generated on the timeline
     let i = 0;
-    for (let d of Entry_Manager.entries_arr) {
+    for (let d of entryManager.entries_arr) {
         x1 = 0;
         y1 = i * timeline_row_height;
         x2 = canvas_width;
@@ -20,7 +21,7 @@ function setup_timeline_background(Entry_Manager) {
     }
 
     // draw lines to show the year marks
-    for (let i = 0; i <= Entry_Manager.total_duration; i++) {
+    for (let i = 0; i <= entryManager.total_duration; i++) {
         x1 = i * timeline_row_length;
         y1 = 0;
         x2 = i * timeline_row_length;
@@ -33,7 +34,7 @@ function setup_timeline_background(Entry_Manager) {
     stroke(255, 255, 255, 50);
 
     // draw lines to show the month marks
-    for (let i = 0; i <= Entry_Manager.total_duration * 12; i++) {
+    for (let i = 0; i <= entryManager.total_duration * 12; i++) {
         x1 = i * timeline_row_length / 12;
         y1 = 0;
         x2 = i * timeline_row_length / 12;

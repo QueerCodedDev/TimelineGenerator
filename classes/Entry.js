@@ -39,23 +39,6 @@ class Entry {
         text(this.name, x + 25, y + timeline_row_height / 2, this.render_length);
     }
 
-    determine_entry_color() {
-        switch(this.uni) {
-            case 'lib':
-                return color(245, 211,  39);
-            case 'lev':
-                return color( 39, 176, 245);
-            case 'spn':
-                return color(194,  35, 189);
-            case 'psy':
-                return color( 35, 194,  39);
-            case 'men':
-                return color(194,  40,  35);
-            default:
-                return color(255, 255, 255);
-        }
-    }
-
     calc_entry_length(start, end) {
         return calc_dist_as_days(start, end);
     }
@@ -79,7 +62,7 @@ class Entry {
             let end = ts.length - 1;
             s_data.push({'season': ts[0].season, 'start': ts[0].air_date, 'end': ts[end].air_date});
         }
-        console.log(s_data);
+
         return s_data;
     }
 }
