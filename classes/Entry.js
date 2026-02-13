@@ -1,14 +1,6 @@
 class Entry {
     constructor(data) {
-        this.universe   = data.universe;
-        this.name  = data.show;
-        this.start = data.start;
-        this.end   = data.end;
         this.eps   = data.episodes;
-
-        this.fill_color    = ColorManager.colors[this.universe]
-        this.render_length = this.calc_entry_length(this.start, this.end);
-        
         this.seasons = this.get_seasons_data();
 
     }

@@ -38,7 +38,7 @@ class MediaEntry {
             this.bounds.height
         )
 
-        fill(255);
+        fill('white');
         textSize(25);
         textWrap(WORD);
         textAlign(LEFT, CENTER);
@@ -55,8 +55,12 @@ class MediaEntry {
         return true;
     }
 
-    render_popup(mx, my) {
+    render_popup(mx) {
         rect(mx, this.bounds.y2, 100, 50);
+        fill('black');
+        textSize(20);
+        textAlign(LEFT, TOP);
+        noStroke();
         text(this.popup_text, mx, this.bounds.y2);
     }
 }
