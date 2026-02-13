@@ -3,11 +3,11 @@ class MediaEntry {
         this.name       = data.name;
         this.universe   = data.universe;
         this.air_date   = data.start;
-        this.bounds     = this.calc_bounds();
         this.fill_color = ColorManager.colors[this.universe];
+        this.bounds;
     }
 
     render(){};
 
-    calc_bounds(){};
+    calc_bounds(start){};
 }

@@ -96,4 +96,10 @@ class EntryManager {
             universes.push([{'uni': uni, 'shows': applicable_universes}]);
         }
     }
+
+    calculate_entry_bounds() {
+        for (let e of this.entries_arr) {
+            e.calc_bounds(this.starting_year);
+        }
+    }
 }

@@ -5,7 +5,7 @@ class MovieEntry extends MediaEntry {
         super(data);
     }
 
-    calc_bounds() {
+    calc_bounds(start) {
         let bounds = {
             'x1': 0,
             'y1': 0,
@@ -15,7 +15,7 @@ class MovieEntry extends MediaEntry {
             'width': 0,
         }
 
-        bounds.x1 = calc_dist_as_days(activeEntryManager.start, this.air_date);
+        bounds.x1 = calc_dist_as_days(start, this.air_date);
 
         console.log(bounds)
 
