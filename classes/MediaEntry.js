@@ -6,6 +6,7 @@ class MediaEntry {
         this.end        = data.end;
         this.fill_color = ColorManager.colors[this.universe];
         this.bounds;
+        this.popup_text;
     }
 
     calc_bounds(start) {
@@ -56,5 +57,16 @@ class MediaEntry {
         if (my < this.bounds.y1 || my > this.bounds.y2) return false;
 
         return true;
+    }
+
+    render_popup(mx) {
+        let render_border = 2;
+        fill(this.fill_color);
+        rect(mx, this.bounds.y2, textWidth(this.popup_text), textAscent());
+        fill('black');
+        textSize(20);
+        textAlign(LEFT, TOP);
+        noStroke();
+        text(this.popup_text, mx + render_border, this.bounds.y2 + render_border);
     }
 }
