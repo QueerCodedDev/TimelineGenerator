@@ -24,7 +24,11 @@ class EntryManager {
     parse_entries_data(data) {
         let temp_arr = [];
         for (let d of data) {
-            temp_arr.push(new Entry(d));
+            if (d.episodes == null) {
+                temp_arr.push(new MovieEntry(d))
+            } else {
+                temp_arr.push(new TVEntry(d));
+            }
         }
 
         return temp_arr;
@@ -59,8 +63,9 @@ class EntryManager {
         for (let e of this.entries_arr) {
             // calculate the distance from the start of the timeline to the start of the entry
             let x = calc_dist_as_days('01-01-' + this.starting_year, e.start);
-            let y = this.universe_tags.indexOf(e.uni);
-            e.render(x, y * timeline_row_height);
+            let y = this.universe_tags.indexOf(e.universe);
+            // e.render(x, y * timeline_row_height);
+            e.render();
         }
 
         fill('white');
@@ -72,8 +77,8 @@ class EntryManager {
         let count = 0;
 
         for (let e of this.entries_arr) {
-            if (!universes.includes(e.uni)) {
-                universes.push(e.uni);
+            if (!universes.includes(e.universe)) {
+                universes.push(e.universe);
                 count++;
             }
         }
@@ -86,10 +91,24 @@ class EntryManager {
         for (let uni of this.universe_tags) {
             let applicable_universes = [];
             for (let e of this.entries_arr) {
-                if (e.uni == uni) applicable_universes.push(e);
+                if (e.universe == uni) applicable_universes.push(e);
             }
 
             universes.push([{'uni': uni, 'shows': applicable_universes}]);
+        }
+    }
+
+    calculate_entry_bounds() {
+        for (let e of this.entries_arr) {
+            e.calc_bounds(this.starting_year);
+        }
+    }
+
+    check_for_clicked_entry(mx, my) {
+        for (let e of this.entries_arr) {
+            if (e.mouse_clicked_inside(mx, my)) {
+                e.render_popup(mx);
+            }
         }
     }
 }
