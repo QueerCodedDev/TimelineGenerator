@@ -108,6 +108,7 @@ class EntryManager {
         for (let e of this.entries_arr) {
             if (e.mouse_clicked_inside(mx, my)) {
                 e.render_popup(mx, my);
+                noLoop();
             }
         }
     }
