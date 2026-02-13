@@ -15,7 +15,7 @@ function setup() {
     activeEntryManager = new EntryManager(episode_data_json.media)
     activeEntryManager.calculate_entry_bounds();
 
-    canvas_height = timeline_row_height * activeEntryManager.universe_count;
+    canvas_height = timeline_row_height * (activeEntryManager.universe_count + 1);
     canvas_width  = timeline_row_length * activeEntryManager.total_duration;
     
     createCanvas(canvas_width, canvas_height);
