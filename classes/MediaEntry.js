@@ -7,6 +7,7 @@ class MediaEntry {
         this.fill_color = ColorManager.colors[this.universe];
         this.bounds;
         this.popup_text;
+        this.ascent_modifier;
     }
 
     calc_bounds(start) {
@@ -62,7 +63,12 @@ class MediaEntry {
     render_popup(mx) {
         let render_border = 2;
         fill(this.fill_color);
-        rect(mx, this.bounds.y2, textWidth(this.popup_text), textAscent());
+        rect(
+            mx,
+            this.bounds.y2,
+            textWidth(this.popup_text),
+            textAscent() * this.ascent_modifier
+        );
         fill('black');
         textSize(20);
         textAlign(LEFT, TOP);

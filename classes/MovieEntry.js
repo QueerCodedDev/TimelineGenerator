@@ -5,5 +5,6 @@ class MovieEntry extends MediaEntry {
         super(data);
 
         this.popup_text = `Aired: ${this.start}`;
+        this.ascent_modifier = 1;
     }
 }

@@ -4,5 +4,6 @@ class TVEntry extends MediaEntry {
         this.episodes;
         this.seasons;
         this.popup_text = `Start: ${this.start}\nEnd:   ${this.end}`;
+        this.ascent_modifier = 2;
     }
 }
