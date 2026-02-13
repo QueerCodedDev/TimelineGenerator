@@ -15,7 +15,7 @@ class MovieEntry extends MediaEntry {
             'width': 0,
         }
 
-        bounds.x1 = calc_dist_as_days(start, this.air_date);
+        bounds.x1 = calc_dist_as_days(start, this.start);
 
         console.log(bounds)
 
