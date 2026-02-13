@@ -25,3 +25,12 @@ function draw() {
 
     activeEntryManager.render_entries();
 }
+
+function mouseClicked() {
+    // Display pop-up
+    activeEntryManager.check_for_clicked_entry(mouseX, mouseY);
+}
+
+function doubleClicked() {
+    // Change tv render mode or something to include episode lines?
+}

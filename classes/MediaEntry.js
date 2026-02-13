@@ -5,6 +5,7 @@ class MediaEntry {
         this.start      = data.start;
         this.end        = data.end;
         this.fill_color = ColorManager.colors[this.universe];
+        this.popup_text = `Start: ${this.start}\nEnd: ${this.end}`;
         this.bounds;
     }
 
@@ -25,8 +26,6 @@ class MediaEntry {
         bounds.length = bounds.x2 - bounds.x1;
         bounds.height = bounds.y2 - bounds.y1;
 
-        console.log(this.name + '|||' + bounds)
-
         this.bounds = bounds;
     }
 
@@ -46,5 +45,17 @@ class MediaEntry {
         stroke('black');
         strokeWeight(2);
         text(this.name, this.bounds.x1 + 25, this.bounds.y1 + this.bounds.height / 2, this.bounds.length);
-    };
+    }
+
+    mouse_clicked_inside(mx, my) {
+        if (mx < this.bounds.x1 && mx > this.bounds.x2) return false;
+        if (my < this.bounds.y1 && my > this.bounds.y2) return false;
+
+        return true;
+    }
+
+    render_popup(mx, my) {
+        rect(mx, my, 100, 50);
+        text(this.popup_text, mx, this.bounds.y2);
+    }
 }

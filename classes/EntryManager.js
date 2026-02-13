@@ -83,8 +83,6 @@ class EntryManager {
             }
         }
 
-        console.log(universes)
-
         return { 'count': count, 'universes': universes };
     }
 
@@ -103,6 +101,14 @@ class EntryManager {
     calculate_entry_bounds() {
         for (let e of this.entries_arr) {
             e.calc_bounds(this.starting_year);
+        }
+    }
+
+    check_for_clicked_entry(mx, my) {
+        for (let e of this.entries_arr) {
+            if (e.mouse_clicked_inside(mx, my)) {
+                e.render_popup(mx, my);
+            }
         }
     }
 }
