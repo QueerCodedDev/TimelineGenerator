@@ -64,7 +64,8 @@ class EntryManager {
             // calculate the distance from the start of the timeline to the start of the entry
             let x = calc_dist_as_days('01-01-' + this.starting_year, e.start);
             let y = this.universe_tags.indexOf(e.universe);
-            e.render(x, y * timeline_row_height);
+            // e.render(x, y * timeline_row_height);
+            e.render();
         }
 
         fill('white');

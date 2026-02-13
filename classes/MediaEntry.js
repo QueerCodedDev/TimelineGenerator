@@ -8,7 +8,15 @@ class MediaEntry {
         this.bounds;
     }
 
-    render(){};
+    render() {
+        fill(this.fill_color);
+        rect(
+            this.bounds.x1,
+            this.bounds.y1,
+            this.bounds.length,
+            this.bounds.height
+        )
+    };
 
     calc_bounds(start){};
 }
