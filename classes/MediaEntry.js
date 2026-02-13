@@ -25,7 +25,7 @@ class MediaEntry {
         bounds.length = bounds.x2 - bounds.x1;
         bounds.height = bounds.y2 - bounds.y1;
 
-        console.log(bounds)
+        console.log(this.name + '|||' + bounds)
 
         this.bounds = bounds;
     }
