@@ -29,7 +29,9 @@ function draw() {
 
 function mouseClicked() {
     // Display pop-up
+    loop();
     activeEntryManager.check_for_clicked_entry(mouseX, mouseY);
+    noLoop();
 }
 
 function doubleClicked() {
