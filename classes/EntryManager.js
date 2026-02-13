@@ -63,7 +63,7 @@ class EntryManager {
         for (let e of this.entries_arr) {
             // calculate the distance from the start of the timeline to the start of the entry
             let x = calc_dist_as_days('01-01-' + this.starting_year, e.start);
-            let y = this.universe_tags.indexOf(e.uni);
+            let y = this.universe_tags.indexOf(e.universe);
             e.render(x, y * timeline_row_height);
         }
 
@@ -76,8 +76,8 @@ class EntryManager {
         let count = 0;
 
         for (let e of this.entries_arr) {
-            if (!universes.includes(e.uni)) {
-                universes.push(e.uni);
+            if (!universes.includes(e.universe)) {
+                universes.push(e.universe);
                 count++;
             }
         }
@@ -92,7 +92,7 @@ class EntryManager {
         for (let uni of this.universe_tags) {
             let applicable_universes = [];
             for (let e of this.entries_arr) {
-                if (e.uni == uni) applicable_universes.push(e);
+                if (e.universe == uni) applicable_universes.push(e);
             }
 
             universes.push([{'uni': uni, 'shows': applicable_universes}]);
