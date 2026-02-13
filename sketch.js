@@ -12,7 +12,7 @@ function preload() {
 function setup() {
     for (let m of episode_data_json.media) {
         for (let e of m.episodes) {
-            console.log(`{"name": ${m.name},\n"universe": ${m.universe},\n"season": ${e.season},\n"episode": ${e.episode},\n"title": ${e.title},\n"air_date": ${e.air_date}`);
+            createDiv(`{"name": ${m.name},\n"universe": ${m.universe},\n"season": ${e.season},\n"episode": ${e.episode},\n"title": ${e.title},\n"air_date": ${e.air_date}}`);
         }
     }
 
