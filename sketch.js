@@ -13,10 +13,10 @@ function setup() {
     for (let m of episode_data_json.media) {
         if (m.episodes != null) {
             for (let e of m.episodes) {
-                createDiv(`{"name": ${m.name},\n"universe": ${m.universe},\n"season": ${e.season},\n"episode": ${e.episode},\n"title": ${e.title},\n"air_date": ${e.air_date}},`);
+                createDiv(`{"name": "${m.name}",\n"universe": "${m.universe}",\n"season": ${e.season},\n"episode": ${e.episode},\n"title": "${e.title}",\n"air_date": "${e.air_date}"},`);
             }
         } else {
-            createDiv(`{"name": ${m.name},\n"universe": ${m.universe},\n"air_date": ${m.start}},`);
+            createDiv(`{"name": "${m.name}",\n"universe": "${m.universe}",\n"air_date": "${m.start}"},`);
         }
     }
 
