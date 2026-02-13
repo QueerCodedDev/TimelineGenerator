@@ -52,7 +52,6 @@ class MediaEntry {
         if (my < this.bounds.y1 || my > this.bounds.y2) return false;
 
         console.log("mouse inside")
-        noLoop();
         return true;
     }
 

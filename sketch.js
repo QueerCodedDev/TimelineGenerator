@@ -24,6 +24,7 @@ function draw() {
     setup_timeline_background(activeEntryManager);
 
     activeEntryManager.render_entries();
+    noLoop();
 }
 
 function mouseClicked() {
