@@ -82,6 +82,8 @@ class EntryManager {
             }
         }
 
+        console.log(universes)
+
         return { 'count': count, 'universes': universes };
     }
 
