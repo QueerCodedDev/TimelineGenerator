@@ -10,6 +10,8 @@ function preload() {
 }
 
 function setup() {
+    textFont('Consolas'); //fixed width font
+
     activeEntryManager = new EntryManager(episode_data_json.media)
     activeEntryManager.calculate_entry_bounds();
 
