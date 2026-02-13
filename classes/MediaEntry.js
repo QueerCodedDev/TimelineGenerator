@@ -27,6 +27,6 @@ class MediaEntry {
 
         console.log(bounds)
 
-        return bounds;
+        this.bounds = bounds;
     }
 }
