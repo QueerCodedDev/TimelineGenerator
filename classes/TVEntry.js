@@ -1,3 +1,6 @@
+/**
+This is a class specifically for Timeline Entries that are for TV Shows
+*/
 class TVEntry extends MediaEntry {
     constructor(data) {
         super(data);
