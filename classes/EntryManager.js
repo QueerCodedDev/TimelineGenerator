@@ -44,6 +44,7 @@ class EntryManager {
         // Get year from start and year from end, compare to existing.
         // Replace earliest_year and latest_year with new values as needed.
         for (let d of this.entries_arr) {
+            console.log(d.start)
             let temp_year_start = d.start.split('-')[2];
             if (temp_year_start < earliest_year) earliest_year = temp_year_start;
 
