@@ -45,6 +45,6 @@ class MediaEntry {
         textAlign(LEFT, CENTER);
         stroke('black');
         strokeWeight(2);
-        text(this.name, this.bounds.x1 + 25, this.bounds.y1 + timeline_row_height / 2, this.render_length);
+        text(this.name, this.bounds.x1 + 25, this.bounds.y1 + this.bounds.height / 2, this.bounds.length);
     };
 }
