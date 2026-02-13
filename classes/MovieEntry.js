@@ -9,11 +9,11 @@ class MovieEntry extends MediaEntry {
 
     render_popup(mx) {
         fill(this.fill_color);
-        rect(mx, this.bounds.y2, textWidth(this.popup_text), textAscent(this.popup_text));
+        rect(mx, this.bounds.y2, textWidth(this.popup_text), textAscent());
         fill('black');
         textSize(20);
         textAlign(LEFT, TOP);
         noStroke();
-        text(this.popup_text, mx + 5, this.bounds.y2 + 5);
+        text(this.popup_text, mx, this.bounds.y2);
     }
 }
