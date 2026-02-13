@@ -5,7 +5,6 @@ class MediaEntry {
         this.start      = data.start;
         this.end        = data.end;
         this.fill_color = ColorManager.colors[this.universe];
-        this.popup_text = `Start: ${this.start}\nEnd:   ${this.end}`;
         this.bounds;
     }
 
@@ -17,7 +16,7 @@ class MediaEntry {
             'y2': 0,
             'length': 0,
             'height': 0,
-        }
+        };
 
         bounds.x1 = calc_dist_as_days(start, this.start);
         bounds.y1 = activeEntryManager.universe_tags.indexOf(this.universe) * timeline_row_height;
@@ -36,7 +35,7 @@ class MediaEntry {
             this.bounds.y1,
             this.bounds.length,
             this.bounds.height
-        )
+        );
 
         fill('white');
         textSize(25);
@@ -44,23 +43,18 @@ class MediaEntry {
         textAlign(LEFT, CENTER);
         stroke('black');
         strokeWeight(2);
-        text(this.name, this.bounds.x1 + 25, this.bounds.y1 + this.bounds.height / 2, this.bounds.length);
+        text(
+            this.name,
+            this.bounds.x1 + 25,
+            this.bounds.y1 + this.bounds.height / 2,
+            this.bounds.length
+        );
     }
 
     mouse_clicked_inside(mx, my) {
         if (mx < this.bounds.x1 || mx > this.bounds.x2) return false;
         if (my < this.bounds.y1 || my > this.bounds.y2) return false;
 
-        console.log("mouse inside")
         return true;
-    }
-
-    render_popup(mx) {
-        rect(mx, this.bounds.y2, 200, 50);
-        fill('black');
-        textSize(20);
-        textAlign(LEFT, TOP);
-        noStroke();
-        text(this.popup_text, mx + 5, this.bounds.y2 + 5);
     }
 }
