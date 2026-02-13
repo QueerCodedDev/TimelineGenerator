@@ -7,6 +7,7 @@ class TVEntry extends MediaEntry {
     }
 
     render_popup(mx) {
+        fill(this.fill_color);
         rect(mx, this.bounds.y2, 200, 50);
         fill('black');
         textSize(20);
