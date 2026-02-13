@@ -33,7 +33,6 @@ class TVEntry extends MediaEntry {
             );
         }
 
-        console.log(s_data)
         return s_data;
     }
 }
