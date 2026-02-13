@@ -28,7 +28,7 @@ class TVEntry extends MediaEntry {
                     'season': ts[0].season,
                     'start': ts[0].air_date,
                     'end': ts[end].air_date,
-                    'episodes': ts.episodes
+                    'episodes': ts
                 }
             );
         }
