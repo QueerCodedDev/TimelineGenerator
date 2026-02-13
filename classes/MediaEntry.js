@@ -5,7 +5,7 @@ class MediaEntry {
         this.start      = data.start;
         this.end        = data.end;
         this.fill_color = ColorManager.colors[this.universe];
-        this.popup_text = `Start: ${this.start}\nEnd: ${this.end}`;
+        this.popup_text = `Start: ${this.start}\nEnd:   ${this.end}`;
         this.bounds;
     }
 
@@ -61,6 +61,6 @@ class MediaEntry {
         textSize(20);
         textAlign(LEFT, TOP);
         noStroke();
-        text(this.popup_text, mx + 10, this.bounds.y2 + 10);
+        text(this.popup_text, mx + 5, this.bounds.y2 + 5);
     }
 }
