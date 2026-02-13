@@ -20,9 +20,9 @@ class MediaEntry {
 
         bounds.x1 = calc_dist_as_days(start, this.start);
         bounds.y1 = activeEntryManager.universe_tags.indexOf(this.universe) * timeline_row_height;
-        bounds.x2 = calc_dist_as_days(bounds.x1, this.end);
+        bounds.x2 = calc_dist_as_days(start, this.end);
         bounds.y2 = bounds.y1 + timeline_row_height;
-        bounds.length = calc_dist_as_days(bounds.x1, bounds.x2);
+        bounds.length = bounds.x2 - bounds.x1;
         bounds.height = bounds.y2 - bounds.y1;
 
         console.log(this.name + '|||' + bounds)
