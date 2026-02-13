@@ -52,11 +52,12 @@ class MediaEntry {
         if (my < this.bounds.y1 || my > this.bounds.y2) return false;
 
         console.log("mouse inside")
+        noLoop();
         return true;
     }
 
     render_popup(mx, my) {
-        rect(mx, my, 100, 50);
+        rect(mx, this.bounds.y2, 100, 50);
         text(this.popup_text, mx, this.bounds.y2);
     }
 }
