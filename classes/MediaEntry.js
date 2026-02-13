@@ -48,8 +48,8 @@ class MediaEntry {
     }
 
     mouse_clicked_inside(mx, my) {
-        if (mx < this.bounds.x1 && mx > this.bounds.x2) return false;
-        if (my < this.bounds.y1 && my > this.bounds.y2) return false;
+        if (mx < this.bounds.x1 || mx > this.bounds.x2) return false;
+        if (my < this.bounds.y1 || my > this.bounds.y2) return false;
 
         console.log("mouse inside")
         return true;
