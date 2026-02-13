@@ -1,6 +1,6 @@
 class TVEntry extends MediaEntry {
-    constructor() {
-        super();
+    constructor(data) {
+        super(data);
         this.episodes;
         this.seasons;
     }

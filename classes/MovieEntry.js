@@ -1,8 +1,8 @@
 // is movie entry if episodes == null
 
 class MovieEntry extends MediaEntry {
-    constructor() {
-        super();
+    constructor(data) {
+        super(data);
     }
 
     calc_bounds() {
