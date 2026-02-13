@@ -56,11 +56,11 @@ class MediaEntry {
     }
 
     render_popup(mx) {
-        rect(mx, this.bounds.y2, 100, 50);
+        rect(mx, this.bounds.y2, 200, 50);
         fill('black');
         textSize(20);
         textAlign(LEFT, TOP);
         noStroke();
-        text(this.popup_text, mx, this.bounds.y2);
+        text(this.popup_text, mx + 10, this.bounds.y2 + 10);
     }
 }
