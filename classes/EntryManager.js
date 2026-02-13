@@ -24,8 +24,11 @@ class EntryManager {
     parse_entries_data(data) {
         let temp_arr = [];
         for (let d of data) {
-            console.log(d)
-            temp_arr.push(new Entry(d));
+            if (d.episodes == null) {
+                temp_arr.push(new MovieEntry(d))
+            } else {
+                temp_arr.push(new TVEntry(d));
+            }
         }
 
         return temp_arr;
