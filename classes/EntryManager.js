@@ -28,7 +28,7 @@ class EntryManager {
         let sorted_arr = [];
         while (arr.length >= 1) {
             let min = arr[0];
-            for (let i = 1; i < arr.length - 1; i++) {
+            for (let i = 0; i < arr.length - 1; i++) {
                 let min_date = new Date(min.air_date);
                 let checking = new Date(arr[i].air_date);
                 if (min_date > checking) {
