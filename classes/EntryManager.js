@@ -15,8 +15,6 @@ class EntryManager {
             }
         }
 
-        console.log(temp_arr.length);
-
         // Sort Entries by air_date
         temp_arr = this.sort(temp_arr);
 
