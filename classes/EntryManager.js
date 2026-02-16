@@ -2,6 +2,7 @@ class EntryManager {
     constructor(entries_data) {
         // Array of all entries involved
         this.entries_arr = this.parse_entries_data(entries_data);
+        this.timelineDIV = createDiv();
         this.format_entries();
     }
 
@@ -58,7 +59,7 @@ class EntryManager {
 
     render() {
         for (let e of this.entries_arr) {
-            e.render();
+            this.timelineDIV.child(e.view);
         }
     }
 }
