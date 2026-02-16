@@ -2,11 +2,6 @@ class EntryManager {
     constructor(entries_data) {
         // Array of all entries involved
         this.entries_arr = this.parse_entries_data(entries_data);
-        // Get universe tags and names
-        this.universe_data = this.get_universes_and_count();
-        // Parsing data from universe_data for readibility
-        this.universe_count = this.universe_data.count;
-        this.universe_tags = this.universe_data.universes;
     }
 
     // Function for parsing data and using it for creating Entries
