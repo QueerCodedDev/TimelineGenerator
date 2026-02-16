@@ -7,8 +7,10 @@ function preload() {
 
 function setup() {
     entryManager = new EntryManager (media_data_json.media)
+    let i = 0;
     for (let md of entryManager.entries_arr) {
-        createDiv(`${md.air_date} | Name: ${md.name} | Universe: ${md.universe}`);
+        createDiv(`${i}. ${md.air_date} | Name: ${md.name} | Universe: ${md.universe}`);
+        i++;
     }
 }
 

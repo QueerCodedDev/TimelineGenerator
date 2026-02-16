@@ -4,22 +4,26 @@ class EntryManager {
         this.entries_arr = this.parse_entries_data(entries_data);
     }
 
-    // Function for parsing data and using it for creating Entries
+    // Parse data, create entries, and then sort entries by air_date
     parse_entries_data(data) {
         let temp_arr = [];
         for (let d of data) {
-            if (d.season == null) {
-                temp_arr.push(new MovieEntry(d))
-            } else {
-                temp_arr.push(new TVEntry(d));
+            if (d.season == null) { // If no season data
+                temp_arr.push(new MovieEntry(d)); // Create as MovieEntry
+            } else { // otherwise (it has season data)
+                temp_arr.push(new TVEntry(d)); // Create as TVEntry
             }
         }
 
+        console.log(temp_arr.length);
+        
+        // Sort Entries by air_date
         temp_arr = this.sort(temp_arr);
 
         return temp_arr;
     }
 
+    // Sorting Entries by air_date
     sort(arr) {
         let sorted_arr = [];
         while (arr.length >= 2) {
