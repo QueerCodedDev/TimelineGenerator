@@ -1,51 +1,17 @@
-let timeline_row_height = 100;
-let timeline_row_length = 365;
-let canvas_width;
-let canvas_height;
-let episode_data_json;
-let activeEntryManager;
+let media_data_json;
 
 function preload() {
-    episode_data_json = loadJSON('res/shows_data.json')
+    media_data_json = loadJSON('res/individual_data.json')
 }
 
 function setup() {
-    for (let m of episode_data_json.media) {
-        if (m.episodes != null) {
-            for (let e of m.episodes) {
-                createDiv(`{"name": "${m.name}",\n"universe": "${m.universe}",\n"season": "${e.season}",\n"episode": "${e.episode}",\n"title": "${e.title}",\n"air_date": "${e.air_date}"},`);
-            }
-        } else {
-            createDiv(`{"name": "${m.name}",\n"universe": "${m.universe}",\n"air_date": "${m.start}"},`);
-        }
-    }
-
-    textFont('Consolas'); //fixed width font
-
-    activeEntryManager = new EntryManager(episode_data_json.media)
-    activeEntryManager.calculate_entry_bounds();
-
-    canvas_height = timeline_row_height * (activeEntryManager.universe_count + 1);
-    canvas_width  = timeline_row_length * activeEntryManager.total_duration;
+    background(55);
     
-    createCanvas(canvas_width, canvas_height);
+    for (let md of media_data_json) {
+        createDiv(`${md.air_date} | Name: ${md.name} | Universe: ${md.universe}`);
+    }
 }
 
 function draw() {
-    background('black');
-    setup_timeline_background(activeEntryManager);
-
-    activeEntryManager.render_entries();
     noLoop();
-}
-
-function mouseClicked() {
-    // Display pop-up
-    loop();
-    activeEntryManager.check_for_clicked_entry(mouseX, mouseY);
-    noLoop();
-}
-
-function doubleClicked() {
-    // Change tv render mode or something to include episode lines?
 }
