@@ -4,4 +4,11 @@ class MovieEntry extends MediaEntry {
     constructor(data) {
         super(data);
     }
+
+    format_entry() {
+        let nameDIV  = createDiv(`${this.name}`);
+        let airDIV   = createDiv(`${this.air_date}`);
+        this.view.child(nameDIV);
+        this.view.child(airDIV);
+    }
 }
