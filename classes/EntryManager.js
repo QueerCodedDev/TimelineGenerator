@@ -40,7 +40,8 @@ class EntryManager {
         }
 
         // Push what should be the last element left in the array, to the end of the sorted array
-        sorted_arr.push(arr[0]);
+        //sorted_arr.push(arr[0]);
+        console.log(arr)
 
         return sorted_arr;
     }
