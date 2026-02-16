@@ -15,10 +15,8 @@ class EntryManager {
             }
         }
 
-        // Sort Entries by air_date
-        temp_arr = this.sort(temp_arr);
-
-        return temp_arr;
+        // Sort Entries by air_date and then return
+        return this.sort(temp_arr);
     }
 
     // Sorting Entries by air_date
@@ -49,5 +47,11 @@ class EntryManager {
         }
 
         return sorted_arr;
+    }
+
+    render() {
+        for (let e of this.entries_arr) {
+            e.render();
+        }
     }
 }
