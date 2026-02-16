@@ -26,7 +26,7 @@ class EntryManager {
     // Sorting Entries by air_date
     sort(arr) {
         let sorted_arr = [];
-        while (arr.length >= 2) {
+        while (arr.length >= 1) {
             let min = arr[0];
             for (let i = 1; i < arr.length - 1; i++) {
                 let min_date = new Date(min.air_date);
