@@ -16,7 +16,7 @@ class EntryManager {
         }
 
         console.log(temp_arr.length);
-        
+
         // Sort Entries by air_date
         temp_arr = this.sort(temp_arr);
 
@@ -38,6 +38,9 @@ class EntryManager {
             sorted_arr.push(min);
             arr.splice(arr.indexOf(min), 1);
         }
+
+        // Push what should be the last element left in the array, to the end of the sorted array
+        sorted_arr.push(arr[0]);
 
         return sorted_arr;
     }
