@@ -8,6 +8,6 @@ class MediaEntry {
     }
 
     render() {
-
+        this.view.show();
     }
 }
