@@ -57,9 +57,6 @@ class EntryManager {
     }
 
     render() {
-        this.entries_arr[0].render();
-        return;
-        
         for (let e of this.entries_arr) {
             e.render();
         }
