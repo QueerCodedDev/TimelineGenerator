@@ -35,7 +35,7 @@ class EntryManager {
                 }
             }
             sorted_arr.push(min);
-            arr.splice(arr.indexOf(min));
+            arr.splice(arr.indexOf(min), 1);
         }
 
         return sorted_arr;
