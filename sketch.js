@@ -7,7 +7,7 @@ function preload() {
 function setup() {
     background(55);
     
-    for (let md of media_data_json) {
+    for (let md of media_data_json.media) {
         createDiv(`${md.air_date} | Name: ${md.name} | Universe: ${md.universe}`);
     }
 }
