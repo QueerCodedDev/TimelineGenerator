@@ -60,6 +60,7 @@ class EntryManager {
     render() {
         for (let e of this.entries_arr) {
             this.timelineDIV.child(e.view);
+            this.timelineDIV.child('<br>');
         }
     }
 }
