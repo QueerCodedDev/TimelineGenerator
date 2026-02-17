@@ -1,3 +1,5 @@
+const { createElement } = require("react");
+
 class EntryManager {
     constructor(entries_data) {
         // Array of all entries involved
@@ -60,7 +62,7 @@ class EntryManager {
     render() {
         for (let e of this.entries_arr) {
             this.timelineDIV.child(e.view);
-            this.timelineDIV.child('<br>');
+            this.timelineDIV.child(createElement('br'));
         }
     }
 }
