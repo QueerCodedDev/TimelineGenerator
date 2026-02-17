@@ -6,6 +6,7 @@ function preload() {
 }
 
 function setup() {
+    noCanvas();
     // Create an EntryManager using the json data provided
     entryManager = new EntryManager (media_data_json.media)
     entryManager.render();
