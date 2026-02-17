@@ -60,6 +60,7 @@ class EntryManager {
         let timelineDIV = createDiv().addClass('timeline');
         for (let e of this.entries_arr) {
             timelineDIV.child(e.view);
+            timelineDIV.child(createElement('br'));
         }
     }
 }
