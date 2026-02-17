@@ -1,5 +1,3 @@
-const { createElement } = require("react");
-
 class EntryManager {
     constructor(entries_data) {
         // Array of all entries involved
