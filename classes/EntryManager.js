@@ -2,7 +2,6 @@ class EntryManager {
     constructor(entries_data) {
         // Array of all entries involved
         this.entries_arr = this.parse_entries_data(entries_data);
-        this.timelineDIV = createDiv().addClass('timeline');
         this.format_entries();
     }
 
@@ -58,9 +57,10 @@ class EntryManager {
     }
 
     render() {
+        timelineDIV = createDiv().addClass('timeline');
         for (let e of this.entries_arr) {
-            this.timelineDIV.child(e.view);
-            this.timelineDIV.child(p5.createElement('br'));
+            timelineDIV.child(e.view);
+            timelineDIV.child(p5.createElement('br'));
         }
     }
 }
