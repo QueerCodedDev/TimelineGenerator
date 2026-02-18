@@ -15,12 +15,11 @@ function setup() {
     entryManager.render();
 
     createCanvas(canvasDim.width, canvasDim.height);
+    translate(canvasDim.width/2, 0);
+    rectMode(CENTER);
 }
 
 function draw() {
     background(255,0,0);
-    translate(canvasDim.width/2, 0);
-    rectMode(CENTER);
-    rect(0, 0, 50, 50);
     noLoop();
 }

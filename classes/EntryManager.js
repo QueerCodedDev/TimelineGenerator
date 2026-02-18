@@ -8,14 +8,23 @@ class EntryManager {
     // Parse data, create entries, and then sort entries by air_date
     parse_entries_data(data) {
         let temp_arr = [];
+
+        // data gathering code
+        let movie_count = 0;
+        let tv_count = 0;
+
         for (let d of data) {
             if (d.season == null) { // If no season data
                 temp_arr.push(new MovieEntry(d)); // Create as MovieEntry
+                movie_count++;
             } else { // otherwise (it has season data)
                 temp_arr.push(new TVEntry(d)); // Create as TVEntry
+                tv_count++;
             }
         }
 
+        // Output gathered data
+        console.log(`Movies: ${movie_count}\nEpisodes: ${tv_count}`);
         // Sort Entries by air_date and then return
         return this.sort(temp_arr);
     }
@@ -57,8 +66,11 @@ class EntryManager {
     }
 
     render() {
+        let dates = [];
         for (let e of this.entries_arr) {
-
+            dates.push(e.air_date);
         }
+
+        console.log(`Unique Dates: ${new Set(dates).size}`);
     }
 }
