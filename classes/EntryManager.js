@@ -1,8 +1,8 @@
 class EntryManager {
     constructor(entries_data) {
         this.entry_stats = {
-            'movie_count': null,
-            'episode_count': null,
+            'movie_count': 0,
+            'episode_count': 0,
             'unique_dates': null
         };
         // Array of all entries involved
@@ -14,23 +14,15 @@ class EntryManager {
     parse_entries_data(data) {
         let temp_arr = [];
 
-        // data gathering code
-        let movie_count = 0;
-        let tv_count = 0;
-
         for (let d of data) {
             if (d.season == null) { // If no season data
                 temp_arr.push(new MovieEntry(d)); // Create as MovieEntry
-                movie_count++;
+                this.entry_stats.movie_count++;
             } else { // otherwise (it has season data)
                 temp_arr.push(new TVEntry(d)); // Create as TVEntry
-                tv_count++;
+                this.entry_stats.episode_count++;
             }
         }
-
-        // Store gathered data
-        this.entry_stats.movie_count = movie_count;
-        this.entry_stats.episode_count = episode_count;
 
         // Sort Entries by air_date and then return
         return this.sort(temp_arr);
