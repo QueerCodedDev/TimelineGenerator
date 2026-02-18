@@ -1,5 +1,7 @@
 class EntryManager {
     constructor(entries_data) {
+        // Collection of stats pertaining to the entries.
+        // Bundled like this for easy access. May unbundle later.
         this.entry_stats = {
             'movie_count': 0,
             'episode_count': 0,
@@ -73,7 +75,6 @@ class EntryManager {
     }
 
     render() {
-        console.log(`Unique Dates: ${this.entry_stats.unique_dates.size}`);
-        console.log(`Unique Dates: ${this.entry_stats.unique_dates}`);
+    
     }
 }
