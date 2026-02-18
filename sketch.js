@@ -3,10 +3,10 @@ let entryManager;
 let canvasDim = {
     'height': 500,
     'width':  250
-}
+};
 
 function preload() {
-    media_data_json = loadJSON('res/individual_data.json')
+    media_data_json = loadJSON('res/individual_data.json');
 }
 
 function setup() {
