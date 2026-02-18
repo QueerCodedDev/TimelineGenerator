@@ -14,9 +14,10 @@ function setup() {
     entryManager = new EntryManager(media_data_json.media);
     entryManager.render();
 
-    createCanvas(canvasDim.height, canvasDim.width);
+    createCanvas(canvasDim.width, canvasDim.height);
 }
 
 function draw() {
+    background(255,0,0);
     noLoop();
 }
