@@ -57,7 +57,7 @@ class EntryManager {
     }
 
     render() {
-        let timelineDIV = createDiv().addClass('timeline');
+        let timelineDIV = createDiv().addClass('timeline').center();
         for (let e of this.entries_arr) {
             timelineDIV.child(e.view);
             timelineDIV.child(createElement('br'));
