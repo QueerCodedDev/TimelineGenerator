@@ -10,11 +10,6 @@ class TVEntry extends MediaEntry {
     }
 
     format_entry() {
-        let titleDIV = createDiv(`${this.season}.${this.episode} ${this.title}`).addClass('title');
-        let nameDIV  = createDiv(`${this.name}`).addClass('name');
-        let airDIV   = createDiv(`${this.air_date}`).addClass('air_date');
-        this.view.child(titleDIV);
-        this.view.child(nameDIV);
-        this.view.child(airDIV);
+
     }
 }
