@@ -2,6 +2,11 @@ class EntryManager {
     constructor(entries_data) {
         // Array of all entries involved
         this.entries_arr = this.parse_entries_data(entries_data);
+        this.entry_stats = {
+            'movie_count': null,
+            'episode_count': null,
+            'unique_dates': null
+        };
         this.format_entries();
     }
 
@@ -23,8 +28,10 @@ class EntryManager {
             }
         }
 
-        // Output gathered data
-        console.log(`Movies: ${movie_count}\nEpisodes: ${tv_count}`);
+        // Store gathered data
+        this.entry_stats.movie_count = movie_count;
+        this.entry_stats.episode_count = episode_count;
+
         // Sort Entries by air_date and then return
         return this.sort(temp_arr);
     }
@@ -56,6 +63,14 @@ class EntryManager {
             arr.splice(arr.indexOf(min), 1);
         }
 
+        // Collect dates to get unique date list
+        let dates = []
+        for (let e of sorted_arr) {
+            dates.push(e.air_date);
+        }
+        // Convert array to list to remove duplicate values
+        this.entry_stats.unique_dates = new Set(dates);
+
         return sorted_arr;
     }
 
@@ -66,11 +81,7 @@ class EntryManager {
     }
 
     render() {
-        let dates = [];
-        for (let e of this.entries_arr) {
-            dates.push(e.air_date);
-        }
-
-        console.log(`Unique Dates: ${new Set(dates).size}`);
+        console.log(`Unique Dates: ${this.entry_stats.unique_dates.size}`);
+        console.log(`Unique Dates: ${this.entry_stats.unique_dates}`);
     }
 }
