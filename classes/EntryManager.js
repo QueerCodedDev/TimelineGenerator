@@ -1,12 +1,12 @@
 class EntryManager {
     constructor(entries_data) {
-        // Array of all entries involved
-        this.entries_arr = this.parse_entries_data(entries_data);
         this.entry_stats = {
             'movie_count': null,
             'episode_count': null,
             'unique_dates': null
         };
+        // Array of all entries involved
+        this.entries_arr = this.parse_entries_data(entries_data);
         this.format_entries();
     }
 
