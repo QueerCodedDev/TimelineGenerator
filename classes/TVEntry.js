@@ -14,7 +14,6 @@ class TVEntry extends MediaEntry {
     }
 
     render() {
-        translate(canvasDim.width/2, 0);
         textAlign(CENTER);
 
         let x = 0;
@@ -22,7 +21,7 @@ class TVEntry extends MediaEntry {
         let main_font_size = 15;
         let s1 = `${this.season}.${this.episode} ${this.title}\n${this.air_date}`;
         let s2 = `${this.name}`;
-        translate(canvasDim.width, 0);
+        translate(canvasDim.width/2, 0);
         
         textSize(main_font_size)
         strokeWeight(5);
