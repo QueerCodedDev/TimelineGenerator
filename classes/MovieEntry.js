@@ -10,6 +10,17 @@ class MovieEntry extends MediaEntry {
     }
 
     render() {
+        textAlign(CENTER);
+        textSize(this.point);
+        strokeWeight(this.weight);
+
+        let header   = `${this.name}\n${this.air_date}`;
+        let rect_wid = textWidth(header) + this.point;
+        let rect_hig = textAscent() * 4;
         
+        rect(this.pos.x, this.pos.y, rect_wid, rect_hig, this.point);
+        text(header, this.pos.x, this.pos.y);
+
+        translate(0, rect_hig * 2);
     }
 }
