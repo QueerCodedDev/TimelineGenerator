@@ -21,7 +21,7 @@ function setup() {
 }
 
 function draw() {
-    background(255,0,0);
+    background(55, 55, 55);
     translate(canvasDim.width/2, 0);
     entryManager.render();
     noLoop();
