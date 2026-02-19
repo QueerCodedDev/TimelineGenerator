@@ -7,7 +7,7 @@ class TVEntry extends MediaEntry {
         this.season  = data.season;
         this.episode = data.episode;
         this.title   = data.title;
-        this._point  = 10;
+        this._point  = 12;
         this.listing = `${this.season}.${this.episode} ${this.title}`;
     }
 
@@ -27,8 +27,8 @@ class TVEntry extends MediaEntry {
         stroke(this.color);
         fill(100,100,100);
         rect(this.pos.x, this.pos.y, rect_wid, rect_hig, this.point);
-        fill(this.color);
-        stroke('black');
+        stroke(this.color);
+        fill('black');
         strokeWeight(2);
         text(header, this.pos.x, this.pos.y);
 

@@ -4,7 +4,7 @@ class MediaEntry {
         this.universe  = data.universe;
         this.air_date  = data.air_date;
         this.color     = ColorManager.colors[this.universe];
-        this.point     = 15;
+        this.point     = 18;
         this.weight    = 5;
         this.pos       = {
             'x': 0,
