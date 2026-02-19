@@ -4,6 +4,12 @@ class MediaEntry {
         this.universe  = data.universe;
         this.air_date  = data.air_date;
         this.color     = ColorManager.colors[this.universe];
-        this.font_size = 15;
+        this.point     = 15;
+        this.weight    = 5;
+        this.pos       = {
+            'x': 0,
+            'y': 100,
+
+        };
     }
 }
