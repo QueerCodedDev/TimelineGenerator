@@ -12,4 +12,23 @@ class TVEntry extends MediaEntry {
     format_entry() {
 
     }
+
+    render() {
+        translate(canvasDim.width/2, 0);
+        textAlign(CENTER);
+
+        let x = 0;
+        let y = 100;
+        let main_font_size = 15;
+        let s1 = `${this.season}.${this.episode} ${this.title}\n${this.air_date}`;
+        let s2 = `${this.name}`;
+        translate(canvasDim.width/2, 0);
+        
+        textSize(main_font_size)
+        strokeWeight(5);
+        rect(x, y, textWidth(s1)+main_font_size, textAscent()*4, main_font_size);
+        text(s1, x, y);
+        textSize(10)
+        text(s2, x, y-main_font_size);
+    }
 }

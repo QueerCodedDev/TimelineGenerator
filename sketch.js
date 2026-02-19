@@ -17,7 +17,6 @@ function setup() {
     entryManager.render();
 
     createCanvas(canvasDim.width, canvasDim.height);
-    translate(canvasDim.width/2, 0);
     rectMode(CENTER);
 }
 
