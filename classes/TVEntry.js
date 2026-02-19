@@ -21,9 +21,10 @@ class TVEntry extends MediaEntry {
         let y = 100;
         let s1 = `${this.listing}\n${this.air_date}`;
         let s2 = `${this.name}`;
+        textSize(this.font_size)
         let rect_wid = textWidth(s1)+this.font_size;
         let rect_hig = textAscent()*4;
-        textSize(this.font_size)
+        
         strokeWeight(5);
         rect(x, y, rect_wid, rect_hig, this.font_size);
         text(s1, x, y);
