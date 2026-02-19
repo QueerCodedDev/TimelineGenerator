@@ -29,6 +29,6 @@ class TVEntry extends MediaEntry {
         textSize(10)
         text(s2, x, y-main_font_size);
 
-        translate(0, textAscent()*5)
+        translate(0, textAscent()*8)
     }
 }
