@@ -19,8 +19,11 @@ class MovieEntry extends MediaEntry {
         let rect_hig = textAscent() * 4;
         
         stroke(this.color);
+        fill(100,100,100);
         rect(this.pos.x, this.pos.y, rect_wid, rect_hig, this.point);
         stroke('black');
+        strokeWeight(2);
+        fill(this.color);
         text(header, this.pos.x, this.pos.y);
 
         translate(0, rect_hig * 2);

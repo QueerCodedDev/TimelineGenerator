@@ -25,8 +25,11 @@ class TVEntry extends MediaEntry {
         let rect_hig = textAscent() * 4;
         
         stroke(this.color);
+        fill(100,100,100);
         rect(this.pos.x, this.pos.y, rect_wid, rect_hig, this.point);
+        fill(this.color);
         stroke('black');
+        strokeWeight(2);
         text(header, this.pos.x, this.pos.y);
 
         textSize(this._point);

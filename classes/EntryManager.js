@@ -75,7 +75,6 @@ class EntryManager {
     }
 
     render() {
-        fill(100,100,100);
         for (let e of this.entries_arr) {
             e.render();
         }
