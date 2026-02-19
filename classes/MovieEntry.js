@@ -8,4 +8,8 @@ class MovieEntry extends MediaEntry {
     format_entry() {
 
     }
+
+    render() {
+        
+    }
 }
