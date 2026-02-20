@@ -21,9 +21,9 @@ class MovieEntry extends MediaEntry {
         stroke(this.color);
         fill(100,100,100);
         rect(this.pos.x, this.pos.y, rect_wid, rect_hig, this.point);
-        fill('black');
+        stroke('black');
         strokeWeight(2);
-        stroke(this.color);
+        fill(this.color);
         text(header, this.pos.x, this.pos.y);
 
         translate(0, rect_hig * 2);
