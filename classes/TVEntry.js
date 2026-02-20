@@ -33,6 +33,7 @@ class TVEntry extends MediaEntry {
         text(header, this.pos.x, this.pos.y);
 
         textSize(this._point);
+        noStroke();
         text(this.name, this.pos.x, this.pos.y-this.point);
 
         translate(0, rect_hig * 2);
