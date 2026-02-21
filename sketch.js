@@ -18,6 +18,7 @@ function setup() {
 
     createCanvas(canvasDim.width, canvasDim.height);
     rectMode(CENTER);
+    textAlign(CENTER);
 }
 
 function draw() {
