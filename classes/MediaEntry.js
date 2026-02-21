@@ -32,8 +32,8 @@ class MediaEntry {
         rect(
             this.dims.x, 
             this.dims.y, 
-            this.rect_wid, 
-            this.rect_hig, 
+            this.dims.w, 
+            this.dims.h, 
             this.point
         );
     }
