@@ -15,6 +15,6 @@ class TVEntry extends MediaEntry {
     renderSubtext() {
         textSize(this._point);
         noStroke();
-        text(this.name, this.pos.x, this.pos.y-this.point);
+        text(this.name, this.dims.x, this.dims.y-this.point);
     }
 }

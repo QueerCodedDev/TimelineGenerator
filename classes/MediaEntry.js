@@ -6,12 +6,13 @@ class MediaEntry {
         this.color     = ColorManager.colors[this.universe];
         this.point     = 25;
         this.weight    = 5;
-        this.pos       = {
+        this.header;
+        this.dims      = {
             'x': 0,
             'y': 100,
-
+            'w': textWidth(this.header) + this.point,
+            'h': textAscent() * 4
         };
-        this.header;
     }
 
     render() {
@@ -20,19 +21,23 @@ class MediaEntry {
         fill(this.color);
         stroke('black');
         strokeWeight(2);
-        text(this.header, this.pos.x, this.pos.y);
+        text(this.header, this.dims.x, this.dims.y);
         this.renderSubtext();
-        
-        translate(0, rect_hig * 2);
+
+        translate(0, this.rect_hig * 2);
     }
 
     renderRect() {
         strokeWeight(this.weight);
-        let rect_wid = textWidth(this.header) + this.point;
-        let rect_hig = textAscent() * 4;
         stroke(this.color);
         fill(100, 100, 100);
-        rect(this.pos.x, this.pos.y, rect_wid, rect_hig, this.point);
+        rect(
+            this.dims.x, 
+            this.dims.y, 
+            this.rect_wid, 
+            this.rect_hig, 
+            this.point
+        );
     }
 
     renderSubtext() {}
