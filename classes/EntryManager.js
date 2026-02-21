@@ -68,12 +68,6 @@ class EntryManager {
         return sorted_arr;
     }
 
-    format_entries() {
-        for (let e of this.entries_arr) {
-            e.format_entry();
-        }
-    }
-
     render() {
         for (let e of this.entries_arr) {
             e.render();
