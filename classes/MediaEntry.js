@@ -9,9 +9,7 @@ class MediaEntry {
         this.header;
         this.dims      = {
             'x': 0,
-            'y': 100,
-            'w': textWidth(this.header) + this.point,
-            'h': textAscent() * 4
+            'y': 100
         };
     }
 
