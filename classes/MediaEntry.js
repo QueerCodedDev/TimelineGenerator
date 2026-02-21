@@ -9,7 +9,9 @@ class MediaEntry {
         this.header    = '';
         this.dims      = {
             'x': 0,
-            'y': 100
+            'y': 100,
+            'w': textWidth(this.header) + this.point,
+            'h': textAscent() * 4
         };
     }
 
@@ -22,7 +24,7 @@ class MediaEntry {
         text(this.header, this.dims.x, this.dims.y);
         this.renderSubtext();
 
-        translate(0, this.rect_hig * 2);
+        translate(0, this.dims.h * 2);
     }
 
     renderRect() {
