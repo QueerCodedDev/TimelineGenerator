@@ -6,7 +6,7 @@ class MediaEntry {
         this.color     = ColorManager.colors[this.universe];
         this.point     = 25;
         this.weight    = 5;
-        this.header;
+        this.header    = '';
         this.dims      = {
             'x': 0,
             'y': 100
