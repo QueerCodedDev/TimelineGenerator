@@ -21,8 +21,8 @@ function setup() {
 }
 
 function draw() {
-    if (canvasDim.height < 100000) canvasDim.height++;
-    createCanvas(canvasDim.width, canvasDim.height);
+    // if (canvasDim.height < 100000) canvasDim.height++;
+    //createCanvas(canvasDim.width, canvasDim.height); <-- this works but is awful
     translate(canvasDim.width/2, 0);
     entryManager.render();
 }
