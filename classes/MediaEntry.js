@@ -13,7 +13,7 @@ class MediaEntry {
     formatEntry() {
         textSize(this.point);
 
-        return {
+        this.dims = {
             'x': 0,
             'y': 100,
             'w': textWidth(this.header) + this.point,
