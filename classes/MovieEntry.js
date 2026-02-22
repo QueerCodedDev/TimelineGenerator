@@ -3,6 +3,6 @@
 class MovieEntry extends MediaEntry {
     constructor(data) {
         super(data);
-        this.heading = `${this.name}\n${this.air_date}`;
+        this.header = `${this.name}\n${this.air_date}`;
     }
 }
