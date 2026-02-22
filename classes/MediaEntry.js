@@ -7,12 +7,12 @@ class MediaEntry {
         this.point     = 25;
         this.weight    = 5;
         this.header    = '';
-        this.dims      = this.formatEntry();
+        this.dims;
     }
 
     formatEntry() {
         textSize(this.point);
-        
+
         return {
             'x': 0,
             'y': 100,

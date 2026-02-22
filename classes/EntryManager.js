@@ -9,6 +9,7 @@ class EntryManager {
         };
         // Array of all entries involved
         this.entries_arr = this.parse_entries_data(entries_data);
+        this.format_entries();
     }
 
     // Parse data, create entries, and then sort entries by air_date
@@ -67,6 +68,11 @@ class EntryManager {
         return sorted_arr;
     }
 
+    formatEntries() {
+        for (let e of this.entries_arr) {
+            e.formatEntry();
+        }
+    }
     render() {
         for (let e of this.entries_arr) {
             e.render();
