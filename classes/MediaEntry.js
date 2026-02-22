@@ -24,7 +24,7 @@ class MediaEntry {
     render() {
         this.renderRect();
         textSize(this.point);
-        fill(this.color);
+        fill('white');
         stroke('black');
         strokeWeight(2);
         text(this.header, this.dims.x, this.dims.y);
