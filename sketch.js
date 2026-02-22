@@ -1,7 +1,7 @@
 let media_data_json;
 let entryManager;
 let canvasDim = {
-    'height': 100000,
+    'height': 50000,
     'width':  1000
 };
 
@@ -21,6 +21,7 @@ function setup() {
 }
 
 function draw() {
+    if (canvasDim.height < 100000) canvasDim.height++;
     translate(canvasDim.width/2, 0);
     entryManager.render();
 }
