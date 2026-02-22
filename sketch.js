@@ -22,6 +22,7 @@ function setup() {
 
 function draw() {
     if (canvasDim.height < 100000) canvasDim.height++;
+    createCanvas(canvasDim.width, canvasDim.height);
     translate(canvasDim.width/2, 0);
     entryManager.render();
 }
