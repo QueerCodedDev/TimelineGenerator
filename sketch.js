@@ -1,7 +1,7 @@
 let media_data_json;
 let entryManager;
 let canvasDim = {
-    'height': 1000,
+    'height': 50000,
     'width':  500
 };
 
@@ -15,7 +15,6 @@ function setup() {
     // Create an EntryManager using the json data provided
     entryManager = new EntryManager(media_data_json.media);
     
-
     createCanvas(canvasDim.width, canvasDim.height);
     rectMode(CENTER);
     textAlign(CENTER);
