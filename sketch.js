@@ -23,5 +23,4 @@ function setup() {
 function draw() {
     translate(canvasDim.width/2, 0);
     entryManager.render();
-    noLoop();
 }
