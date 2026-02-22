@@ -36,7 +36,7 @@ class MediaEntry {
     renderRect() {
         strokeWeight(this.weight);
         stroke(this.color);
-        fill(100, 100, 100);
+        fill('black');
         rect(
             this.dims.x, 
             this.dims.y, 
