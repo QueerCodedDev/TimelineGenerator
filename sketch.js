@@ -25,4 +25,5 @@ function draw() {
     //createCanvas(canvasDim.width, canvasDim.height); <-- this works but is awful
     translate(canvasDim.width/2, 0);
     entryManager.render();
+    noLoop();
 }
