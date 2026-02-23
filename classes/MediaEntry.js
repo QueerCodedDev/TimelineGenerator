@@ -1,3 +1,6 @@
+// Might be able to totally combine Movie and TV Entries at some point,
+// but priority is elsewhere currently.
+
 class MediaEntry {
     constructor(data) {
         this.name      = data.name;
@@ -8,6 +11,8 @@ class MediaEntry {
         this.weight    = 5;
         this.header    = '';
         this.dims;
+
+        // a variable the points to the previous/next/both entries? might make it easier to figure out when entries need to be displayed side-by-side
     }
 
     formatEntry() {
