@@ -48,7 +48,7 @@ class MediaEntry {
 
         translate(0, this.dims.h * 2);
 
-        console.log(`Prev: ${this.prev.air_date} | Curr: ${this.air_date} | Next: ${this.next.air_date}`);
+        console.log(`Prev: ${this.prev.air_date || null} | Curr: ${this.air_date} | Next: ${this.next.air_date || null}`);
     }
 
     renderRect() {
