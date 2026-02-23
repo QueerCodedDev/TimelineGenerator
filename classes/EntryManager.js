@@ -9,7 +9,6 @@ class EntryManager {
         };
         // Array of all entries involved
         this.entries_arr = this.parse_entries_data(entries_data);
-        this.formatEntries();
     }
 
     // Parse data, create entries, and then sort entries by air_date
@@ -26,8 +25,11 @@ class EntryManager {
             }
         }
 
-        // Sort Entries by air_date and then return
-        return this.sort(temp_arr);
+        // Sort Entries by air_date
+        let sorted_arr = this.sort(temp_arr);
+        this.formatEntries(sorted_arr);
+
+        return sorted_arr;
     }
 
     // Sorting Entries by air_date
@@ -68,10 +70,17 @@ class EntryManager {
         return sorted_arr;
     }
 
-    formatEntries() {
-        for (let e of this.entries_arr) {
-            e.formatEntry();
+    formatEntries(arr) {
+        // Special formatting for the first entry
+        arr[0].formatEntry(null, arr[i+1]);
+
+        // Normal formatting for the rest of the entries
+        for (let i = 1; i < arr.length - 2; i++) {
+            arr[i].formatEntry(arr[i-1], arr[i+1]);
         }
+
+        //special formatting for the last entry
+        arr[arr.length-1].formatEntry(arr[i-1], null);
     }
     render() {
         for (let e of this.entries_arr) {

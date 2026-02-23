@@ -12,10 +12,13 @@ class MediaEntry {
         this.header    = '';
         this.dims;
 
-        // a variable the points to the previous/next/both entries? might make it easier to figure out when entries need to be displayed side-by-side
+        // Vars for previous and next entries.
+        // Mostly this is for knowing if entries need to be rendered side-by-side
+        this.prev;
+        this.next;
     }
 
-    formatEntry() {
+    formatEntry(prev, next) {
         textSize(this.point);
 
         this.dims = {
@@ -24,6 +27,9 @@ class MediaEntry {
             'w': textWidth(this.header) + this.point,
             'h': textAscent() * 4
         };
+
+        this.prev = prev;
+        this.next = next;
     }
 
     render() {
@@ -38,6 +44,8 @@ class MediaEntry {
         this.renderSubtext();
 
         translate(0, this.dims.h * 2);
+
+        console.log(`Prev: ${this.prev.air_date} | Curr: ${this.air_date} | Next: ${this.next.air_date}`);
     }
 
     renderRect() {
