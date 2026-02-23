@@ -19,8 +19,10 @@ class MediaEntry {
     }
 
     formatEntry(prev, next) {
+        // Make sure text size is set before calculating dimensions
         textSize(this.point);
 
+        // Calculate dimensions
         this.dims = {
             'x': 0,
             'y': 100,
@@ -28,6 +30,7 @@ class MediaEntry {
             'h': textAscent() * 4
         };
 
+        // Set pointers for previous and next Entries
         this.prev = prev;
         this.next = next;
     }
