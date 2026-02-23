@@ -71,16 +71,17 @@ class EntryManager {
     }
 
     formatEntries(arr) {
+        let arr_len = arr.length;
         // Special formatting for the first entry
-        arr[0].formatEntry(null, arr[i+1]);
+        arr[0].formatEntry(null, arr[1]);
 
         // Normal formatting for the rest of the entries
-        for (let i = 1; i < arr.length - 2; i++) {
+        for (let i = 1; i < arr_len - 2; i++) {
             arr[i].formatEntry(arr[i-1], arr[i+1]);
         }
 
         //special formatting for the last entry
-        arr[arr.length-1].formatEntry(arr[i-1], null);
+        arr[arr_len-1].formatEntry(arr[arr_len-2], null);
     }
     render() {
         for (let e of this.entries_arr) {
