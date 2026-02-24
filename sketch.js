@@ -11,7 +11,7 @@ function preload() {
 
 function setup() {
     textFont('Consolas'); //fixed width font
-    pixelDensity(1);
+    console.log(pixelDensity());
 
     // Create an EntryManager using the json data provided
     entryManager = new EntryManager(media_data_json.media);
