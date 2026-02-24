@@ -69,7 +69,7 @@ class MediaEntry {
 
     reposition() {
         if (!this.grouped()) return;
-        
+
         if (this.left()) { // JUST left of center
             this.dims.x = (this.dims.w / -2) - 20;
             if (this.next.center()) {
@@ -93,7 +93,8 @@ class MediaEntry {
             strokeWeight(6);
             line(this.dims.x, this.dims.y, this.next.dims.x, this.next.dims.y);
         }
-        //this.renderRect();
+        
+        this.renderRect();
 
         textSize(this.point);
         fill('white');
