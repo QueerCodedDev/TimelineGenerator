@@ -35,6 +35,10 @@ class MediaEntry {
         // Set pointers for previous and next Entries
         this.prev = prev;
         this.next = next;
+
+        if (this.grouped()) {
+            this.determineGroupSize();
+        }
     }
 
     buddy(a, b) {
@@ -42,14 +46,14 @@ class MediaEntry {
         return a.air_date == b.air_date;
     }
 
-    needsRepositioning() {
+    grouped() {
         if (this.buddy(this, this.next)) return true;
         if (this.buddy(this, this.prev)) return true;
 
         return false;
     }
 
-    reposition() {
+    determineGroupSize() {
         let curr = this;
         while (this.buddy(curr, curr.prev)) {
             this.before++;
@@ -61,12 +65,14 @@ class MediaEntry {
             this.after++;
             curr = curr.next;
         }
+    }
 
+    reposition() {
         if (this.left()) { // JUST left of center
             this.dims.x = (this.dims.w / -2) - 20;
-            // if (this.next.center()) {
-            //     this.dims.x += this.next.dims.w / -2;
-            // }
+            if (this.next.center()) {
+                this.dims.x += this.next.dims.w / -2;
+            }
         } else if (this.right()) { // JUST right of center
             this.dims.x = (this.dims.w /  2) + 20;
             if (this.prev.center()) {
@@ -80,7 +86,7 @@ class MediaEntry {
     center() { return this.before == this.after; }
 
     render() {
-        if (this.needsRepositioning()) {
+        if (this.grouped()) {
             this.reposition();
         }
 
