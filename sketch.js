@@ -22,7 +22,7 @@ function setup() {
 
 function draw() {
     if (canvasDim.height < 5725000) canvasDim.height+=10000;
-    createCanvas(canvasDim.width, canvasDim.height); //<-- this works but is awful
+    resizeCanvas(canvasDim.width, canvasDim.height); //<-- this works but is awful
     translate(canvasDim.width/2, 0);
     stroke(100);
     strokeWeight(6);
