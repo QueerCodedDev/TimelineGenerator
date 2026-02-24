@@ -32,6 +32,7 @@ function draw() {
     bigCanvas.line(0, 0, 0, canvasDim.height);
     entryManager.render();
     noLoop();
+    console.log('ready to save');
 }
 
 function keyTyped() {
