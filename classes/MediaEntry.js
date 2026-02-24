@@ -53,13 +53,13 @@ class MediaEntry {
         let group  = 0;
 
         let curr = this;
-        while (buddy(curr, curr.prev)) {
+        while (this.buddy(curr, curr.prev)) {
             before++;
             curr = curr.prev;
         }
 
         curr = this;
-        while (buddy(curr, curr.next)) {
+        while (this.buddy(curr, curr.next)) {
             after++;
             curr = curr.next;
         }
