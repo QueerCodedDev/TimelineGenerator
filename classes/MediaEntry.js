@@ -68,10 +68,10 @@ class MediaEntry {
 
         if (before < after) {//left;
             let offset  = (after - before + 1) / 2;
-            this.dims.x = (offset / group) * entryManager.entry_stats.max_w; // I think the w needs to be divided by the group, not the offset, but let's see how this goes.
+            this.dims.x = offset * (entryManager.entry_stats.max_w / -group);
         } else if (before > after) {//right;
             let offset  = (before - after + 1) / 2;
-            this.dims.x = (offset / group) * entryManager.entry_stats.max_w;
+            this.dims.x = offset * (entryManager.entry_stats.max_w / group);
         } else {} //center;
     }
 
