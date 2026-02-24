@@ -13,7 +13,7 @@ function preload() {
 function setup() {
     bigCanvas = createGraphics(canvasDim.width, canvasDim.height);
     bigCanvas.textFont('Consolas'); //fixed width font
-    bigCanvas.pixelDensity(2);
+    //bigCanvas.pixelDensity(2);
 
     // Create an EntryManager using the json data provided
     entryManager = new EntryManager(media_data_json.media);
@@ -38,6 +38,6 @@ function draw() {
 
 function keyTyped() {
     if (key === 's') {
-        bigCanvas.save('myLargeImage.png'); // Saves the 4000x4000 image
+        bigCanvas.save('myLargeImage.png');
     }
 }
