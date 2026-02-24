@@ -93,7 +93,7 @@ class MediaEntry {
         if (this.buddy(this, this.next)) {
             stroke(100);
             strokeWeight(6);
-            line (this.dims.x, this.dims.y, 0, this.dims.y);
+            line (this.dims.x, this.dims.y, this.next.dims.x, this.next.dims.y);
         }
         this.renderRect();
 
