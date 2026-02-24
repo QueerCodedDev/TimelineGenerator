@@ -35,7 +35,51 @@ class MediaEntry {
         this.next = next;
     }
 
+    buddy(a, b) {
+        if (b == null) return false;
+        return a.air_date == b.air_date;
+    }
+
+    needsRepositioning() {
+        if (this.buddy(this, this.next)) return true;
+        if (this.buddy(this, this.prev)) return true;
+
+        return false;
+    }
+
+    reposition() {
+        let before = 0;
+        let after  = 0;
+        let group  = 0;
+
+        let curr = this;
+        while (buddy(curr, curr.prev)) {
+            before++;
+            curr = curr.prev;
+        }
+
+        curr = this;
+        while (buddy(curr, curr.next)) {
+            after++;
+            curr = curr.next;
+        }
+
+        group = before + 1 + after;
+
+        if (before < after) {//left;
+            this.dims.x = canvasDim.width / -4;
+        }
+        if (before > after) {//right;
+            this.dims.x = canvasDim.width / 4;
+        }
+        if (before == after); //center;
+    }
+
     render() {
+        if (this.needsRepositioning()) {
+            this.reposition();
+        }
+
         this.renderRect();
 
         textSize(this.point);
@@ -46,9 +90,7 @@ class MediaEntry {
         text(this.header, this.dims.x, this.dims.y);
         this.renderSubtext();
 
-        translate(0, this.dims.h * 2);
-
-        if (this.prev && this.next) console.log(`Prev: ${this.prev.air_date} | Curr: ${this.air_date} | Next: ${this.next.air_date}`);
+        if (this.next == null) translate(0, this.dims.h * 2);
     }
 
     renderRect() {

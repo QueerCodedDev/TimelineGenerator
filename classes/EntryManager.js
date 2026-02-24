@@ -5,7 +5,8 @@ class EntryManager {
         this.entry_stats = {
             'movie_count': 0,
             'episode_count': 0,
-            'unique_dates': null
+            'unique_dates': null,
+            'max_w': 0
         };
         // Array of all entries involved
         this.entries_arr = this.parse_entries_data(entries_data);
@@ -74,14 +75,21 @@ class EntryManager {
         let arr_len = arr.length;
         // Special formatting for the first entry
         arr[0].formatEntry(null, arr[1]);
+        this.entry_stats.max_w = arr[0].dims.w;
 
         // Normal formatting for the rest of the entries
         for (let i = 1; i <= arr_len - 2; i++) {
             arr[i].formatEntry(arr[i-1], arr[i+1]);
+            if (arr[i].dims.w > this.entry_stats.max_w) {
+                this.entry_stats.max_w = arr[i].dims.w;
+            }
         }
 
         //special formatting for the last entry
         arr[arr_len-1].formatEntry(arr[arr_len-2], null);
+        if (arr[0].dims.w > this.entry_stats.max_w) {
+            this.entry_stats.max_w = arr[0].dims.w;
+        }
     }
 
     render() {
