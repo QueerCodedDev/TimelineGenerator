@@ -91,7 +91,7 @@ class MediaEntry {
         if (this.buddy(this, this.next)) {
             stroke(100);
             strokeWeight(6);
-            line(this.dims.x, this.dims.y, this.next.dims.x, this.next.dims.y);
+            bigCanvas.line(this.dims.x, this.dims.y, this.next.dims.x, this.next.dims.y);
         }
         
         this.renderRect();
@@ -101,7 +101,7 @@ class MediaEntry {
         stroke('black');
         strokeWeight(2);
 
-        text(this.header, this.dims.x, this.dims.y);
+        bigCanvas.text(this.header, this.dims.x, this.dims.y);
         this.renderSubtext();
 
         if (!this.buddy(this, this.next)) translate(0, this.dims.h * 2);
@@ -111,7 +111,7 @@ class MediaEntry {
         strokeWeight(this.weight);
         stroke(this.color);
         fill('black');
-        rect(
+        bigCanvas.rect(
             this.dims.x, 
             this.dims.y, 
             this.dims.w, 

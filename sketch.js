@@ -1,9 +1,10 @@
 let media_data_json;
 let entryManager;
 let canvasDim = {
-    'height': 5000,
+    'height': 5725000,
     'width':  1000
 };
+let bigCanvas;
 
 function preload() {
     media_data_json = loadJSON('res/individual_data.json');
@@ -16,9 +17,10 @@ function setup() {
     // Create an EntryManager using the json data provided
     entryManager = new EntryManager(media_data_json.media);
     
-    createCanvas(canvasDim.width, canvasDim.height);
+    //createCanvas(canvasDim.width, canvasDim.height);
     rectMode(CENTER);
     textAlign(CENTER);
+    bigCanvas = createGraphics(canvasDim.width, canvasDim.height);
 }
 
 function draw() {
@@ -27,7 +29,8 @@ function draw() {
     translate(canvasDim.width/2, 0);
     stroke(100);
     strokeWeight(6);
-    line(0, 0, 0, canvasDim.height)
+    bigCanvas.line(0, 0, 0, canvasDim.height);
     entryManager.render();
-    //noLoop();
+    noLoop();
+    bigCanvas.save('timeline_test.png');
 }

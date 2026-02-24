@@ -16,6 +16,6 @@ class TVEntry extends MediaEntry {
         textSize(this._point);
         noStroke();
         fill(this.color);
-        text(this.name, this.dims.x, this.dims.y-this.point);
+        bigCanvas.text(this.name, this.dims.x, this.dims.y-this.point);
     }
 }
