@@ -1,7 +1,7 @@
 let media_data_json;
 let entryManager;
 let canvasDim = {
-    'height': 5725000,
+    'height': 5000,
     'width':  1000
 };
 let bigCanvas;
