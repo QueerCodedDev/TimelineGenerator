@@ -66,10 +66,14 @@ class MediaEntry {
 
         group = before + 1 + after;
 
-        if (before < after) {//left;
+        if (before == 0 && after == 1) { // JUST left of center
+            this.dims.x = this.dims.w / -2;
+        } else if (before == 1 && after == 0) { // JUST right of center
+            this.dims.x = this.dims.w / 2;
+        } else if (before < after) { // Generally left of center;
             let offset  = (after - before + 1) / 2;
             this.dims.x = offset * (entryManager.entry_stats.max_w / -group / 2);
-        } else if (before > after) {//right;
+        } else if (before > after) { // Generally right of center;
             let offset  = (before - after + 1) / 2;
             this.dims.x = offset * (entryManager.entry_stats.max_w / group / 2);
         } else {} //center;
