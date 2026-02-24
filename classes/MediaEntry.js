@@ -65,7 +65,7 @@ class MediaEntry {
         if (this.left()) { // JUST left of center
             this.dims.x = (this.dims.w / -2) - 20;
             if (this.next.center()) {
-                this.dims.x += this.next.dims.w / -2;
+                this.dims.x -= this.next.dims.w / 2;
             }
         } else if (this.right()) { // JUST right of center
             this.dims.x = (this.dims.w /  2) + 20;
