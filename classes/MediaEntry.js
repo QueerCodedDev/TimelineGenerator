@@ -16,6 +16,8 @@ class MediaEntry {
         // Mostly this is for knowing if entries need to be rendered side-by-side
         this.prev;
         this.next;
+        this.before = 0;
+        this.after = 0;
     }
 
     formatEntry(prev, next) {
@@ -48,36 +50,28 @@ class MediaEntry {
     }
 
     reposition() {
-        let before = 0;
-        let after  = 0;
-        let group  = 0;
-
         let curr = this;
         while (this.buddy(curr, curr.prev)) {
-            before++;
+            this.before++;
             curr = curr.prev;
         }
 
         curr = this;
         while (this.buddy(curr, curr.next)) {
-            after++;
+            this.after++;
             curr = curr.next;
         }
 
-        group = before + 1 + after;
-
-        if (before == 0 && after == 1) { // JUST left of center
-            this.dims.x = (this.dims.w / -2) - 10;
-        } else if (before == 1 && after == 0) { // JUST right of center
-            this.dims.x = (this.dims.w / 2) + 10;
-        } else if (before < after) { // Generally left of center;
-            let offset  = (after - before + 1) / 2;
-            this.dims.x = offset * (entryManager.entry_stats.max_w / -group / 2);
-        } else if (before > after) { // Generally right of center;
-            let offset  = (before - after + 1) / 2;
-            this.dims.x = offset * (entryManager.entry_stats.max_w / group / 2);
-        } else {} //center;
+        if (this.left()) { // JUST left of center
+            this.dims.x = (this.dims.w / -2) - 20;
+        } else if (this.right()) { // JUST right of center
+            this.dims.x = (this.dims.w /  2) + 20;
+        } else if (this.center()) {} //center;
     }
+
+    left()   { return this.before  < this.after; }
+    right()  { return this.before  > this.after; }
+    center() { return this.before == this.after; }
 
     render() {
         if (this.needsRepositioning()) {
