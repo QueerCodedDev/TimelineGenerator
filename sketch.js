@@ -1,3 +1,8 @@
+// Might have to ditch the large canvas size thing, and make several smaller
+// canvases and stitch them together using Aesprite or something.
+// There might be another way to maintain the large canvas size idea,
+// but it very well may be more work than it is worth.
+
 let media_data_json;
 let entryManager;
 let canvasDim = {
