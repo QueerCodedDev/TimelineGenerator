@@ -29,6 +29,7 @@ class EntryManager {
         // Sort Entries by air_date
         let sorted_arr = this.sort(temp_arr);
         this.formatEntries(sorted_arr);
+        this.repositionEntries(sorted_arr);
 
         return sorted_arr;
     }
@@ -92,6 +93,11 @@ class EntryManager {
         }
     }
 
+    repositionEntries(arr) {
+        for (let e of arr) {
+            e.reposition();
+        }
+    }
     render() {
         for (let e of this.entries_arr) {
             e.render();

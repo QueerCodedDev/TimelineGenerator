@@ -68,6 +68,8 @@ class MediaEntry {
     }
 
     reposition() {
+        if (!this.grouped()) return;
+        
         if (this.left()) { // JUST left of center
             this.dims.x = (this.dims.w / -2) - 20;
             if (this.next.center()) {
@@ -86,10 +88,6 @@ class MediaEntry {
     center() { return this.before == this.after; }
 
     render() {
-        if (this.grouped()) {
-            this.reposition();
-        }
-        
         if (this.buddy(this, this.next)) {
             stroke(100);
             strokeWeight(6);
