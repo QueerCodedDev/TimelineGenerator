@@ -68,10 +68,10 @@ class MediaEntry {
 
         if (before < after) {//left;
             let offset  = (after - before + 1) / 2;
-            this.dims.x = offset * (entryManager.entry_stats.max_w / -group);
+            this.dims.x = offset * (entryManager.entry_stats.max_w / -group / 2);
         } else if (before > after) {//right;
             let offset  = (before - after + 1) / 2;
-            this.dims.x = offset * (entryManager.entry_stats.max_w / group);
+            this.dims.x = offset * (entryManager.entry_stats.max_w / group / 2);
         } else {} //center;
     }
 
