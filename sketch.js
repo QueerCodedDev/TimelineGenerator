@@ -28,5 +28,5 @@ function draw() {
     strokeWeight(6);
     line(0, 0, 0, canvasDim.height)
     entryManager.render();
-    noLoop();
+    //noLoop();
 }
