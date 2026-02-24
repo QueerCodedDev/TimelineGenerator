@@ -11,6 +11,7 @@ function preload() {
 
 function setup() {
     textFont('Consolas'); //fixed width font
+    pixelDensity(1);
 
     // Create an EntryManager using the json data provided
     entryManager = new EntryManager(media_data_json.media);
@@ -21,8 +22,8 @@ function setup() {
 }
 
 function draw() {
-    if (canvasDim.height < 5725000) canvasDim.height+=10000;
-    resizeCanvas(canvasDim.width, canvasDim.height); //<-- this works but is awful
+    //if (canvasDim.height < 5725000) canvasDim.height+=10000;
+    //resizeCanvas(canvasDim.width, canvasDim.height); //<-- this works but is awful
     translate(canvasDim.width/2, 0);
     stroke(100);
     strokeWeight(6);
