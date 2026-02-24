@@ -89,7 +89,11 @@ class MediaEntry {
         if (this.grouped()) {
             this.reposition();
         }
-
+        
+        if (this.buddy(this, this.next) || this.buddy(this, this.prev)) {
+            stroke(100);
+            line (this.dims.x, this.dims.y, 0, this.dims.y);
+        }
         this.renderRect();
 
         textSize(this.point);
