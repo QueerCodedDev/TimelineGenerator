@@ -90,8 +90,9 @@ class MediaEntry {
             this.reposition();
         }
         
-        if (this.buddy(this, this.next) || this.buddy(this, this.prev)) {
+        if (this.buddy(this, this.next)) {
             stroke(100);
+            strokeWeight(6);
             line (this.dims.x, this.dims.y, 0, this.dims.y);
         }
         this.renderRect();
