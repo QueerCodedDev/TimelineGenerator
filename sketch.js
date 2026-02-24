@@ -11,24 +11,25 @@ function preload() {
 }
 
 function setup() {
-    textFont('Consolas'); //fixed width font
-    pixelDensity(2);
+    bigCanvas = createGraphics(canvasDim.width, canvasDim.height);
+    bigCanvas.textFont('Consolas'); //fixed width font
+    bigCanvas.pixelDensity(2);
 
     // Create an EntryManager using the json data provided
     entryManager = new EntryManager(media_data_json.media);
     
     //createCanvas(canvasDim.width, canvasDim.height);
-    rectMode(CENTER);
-    textAlign(CENTER);
-    bigCanvas = createGraphics(canvasDim.width, canvasDim.height);
+    bigCanvas.rectMode(CENTER);
+    bigCanvas.textAlign(CENTER);
+    
 }
 
 function draw() {
     //if (canvasDim.height < 5725000) canvasDim.height+=10000;
     //resizeCanvas(canvasDim.width, canvasDim.height); //<-- this works but is awful
-    translate(canvasDim.width/2, 0);
-    stroke(100);
-    strokeWeight(6);
+    bigCanvas.translate(canvasDim.width/2, 0);
+    bigCanvas.stroke(100);
+    bigCanvas.strokeWeight(6);
     bigCanvas.line(0, 0, 0, canvasDim.height);
     entryManager.render();
     noLoop();
