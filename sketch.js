@@ -24,6 +24,9 @@ function draw() {
     // if (canvasDim.height < 100000) canvasDim.height++;
     //createCanvas(canvasDim.width, canvasDim.height); <-- this works but is awful
     translate(canvasDim.width/2, 0);
+    stroke(100);
+    strokeWeight(6);
+    line(0, 0, 0, canvasDim.height)
     entryManager.render();
     noLoop();
 }
