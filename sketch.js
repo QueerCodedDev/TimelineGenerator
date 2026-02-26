@@ -38,12 +38,12 @@ function draw() {
     bigCanvas.line(0, 0, 0, canvasDim.height);
     entryManager.render();
     console.log('ready to save');
-    bigCanvas.save(`canvas${entryManager.render_count}.png`);
+
     noLoop();
 }
 
 function keyTyped() {
     if (key === 's') {
-        
+            bigCanvas.save(`canvas${entryManager.render_count}.png`);
     }
 }
