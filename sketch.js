@@ -7,7 +7,7 @@ let media_data_json;
 let entryManager;
 let canvasDim = {
     'height': 50000,
-    'width':  1000
+    'width':  5000
 };
 let bigCanvas;
 
@@ -32,17 +32,17 @@ function setup() {
 function draw() {
     //if (canvasDim.height < 5725000) canvasDim.height+=10000;
     //resizeCanvas(canvasDim.width, canvasDim.height); //<-- this works but is awful
-    bigCanvas.translate(canvasDim.width/2, 0);
+    bigCanvas.translate(canvasDim.width/2, canvasDim.height * entryManager.render_count);
     bigCanvas.stroke(100);
     bigCanvas.strokeWeight(6);
     bigCanvas.line(0, 0, 0, canvasDim.height);
     entryManager.render();
-    noLoop();
     console.log('ready to save');
+    bigCanvas.save(`'canvas${entryManager.render_count}.png'`);
 }
 
 function keyTyped() {
     if (key === 's') {
-        bigCanvas.save('myLargeImage.png');
+        
     }
 }
