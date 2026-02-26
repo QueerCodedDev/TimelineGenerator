@@ -39,6 +39,7 @@ function draw() {
     entryManager.render();
     console.log('ready to save');
     bigCanvas.save(`canvas${entryManager.render_count}.png`);
+    noLoop();
 }
 
 function keyTyped() {
