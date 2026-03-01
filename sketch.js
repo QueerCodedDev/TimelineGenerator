@@ -3,6 +3,10 @@
 // There might be another way to maintain the large canvas size idea,
 // but it very well may be more work than it is worth.
 
+// Ignore above. No longer save image, just render a smaller canvas and have a search function to 
+// find episodes to save from scrolling. For recording auto scroll with increment. 
+// Only render the entries that would fit to the canvas.
+
 let media_data_json;
 let entryManager;
 let canvasDim = {
