@@ -24,7 +24,7 @@ function setup() {
     //pixelDensity(2);
 
     // Create an EntryManager using the json data provided
-    entryManager = new EntryManager(media_data_json.media, compress=true);
+    entryManager = new EntryManager(media_data_json.media, false, true);
     
     //createCanvas(canvasDim.width, canvasDim.height);
     rectMode(CENTER);
