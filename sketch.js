@@ -6,7 +6,7 @@ let media_data_json;
 let entryManager;
 let canvasDim = {
     'height': 50000,
-    'width':  2000
+    'width':  1000
 };
 
 function preload() {
