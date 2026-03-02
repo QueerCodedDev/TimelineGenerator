@@ -27,11 +27,10 @@ function setup() {
     //createCanvas(canvasDim.width, canvasDim.height);
     rectMode(CENTER);
     textAlign(CENTER);
-    
+    translate(canvasDim.width/2, 0);
 }
 
 function draw() {
-    translate(canvasDim.width/2, 0);
     stroke(100);
     strokeWeight(6);
     line(0, 0, 0, canvasDim.height);
