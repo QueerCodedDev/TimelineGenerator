@@ -22,14 +22,14 @@ class MediaEntry {
 
     formatEntry(prev, next) {
         // Make sure text size is set before calculating dimensions
-        bigCanvas.textSize(this.point);
+        textSize(this.point);
 
         // Calculate dimensions
         this.dims = {
             'x': 0,
             'y': 100,
-            'w': bigCanvas.textWidth(this.header) + this.point,
-            'h': bigCanvas.textAscent() * 4
+            'w': textWidth(this.header) + this.point,
+            'h': textAscent() * 4
         };
 
         // Set pointers for previous and next Entries
@@ -89,29 +89,29 @@ class MediaEntry {
 
     render() {
         if (this.buddy(this, this.next)) {
-            bigCanvas.stroke(100);
-            bigCanvas.strokeWeight(6);
-            bigCanvas.line(this.dims.x, this.dims.y, this.next.dims.x, this.next.dims.y);
+            stroke(100);
+            strokeWeight(6);
+            line(this.dims.x, this.dims.y, this.next.dims.x, this.next.dims.y);
         }
         
         this.renderRect();
 
-        bigCanvas.textSize(this.point);
-        bigCanvas.fill('white');
-        bigCanvas.stroke('black');
-        bigCanvas.strokeWeight(2);
+        textSize(this.point);
+        fill('white');
+        stroke('black');
+        strokeWeight(2);
 
-        bigCanvas.text(this.header, this.dims.x, this.dims.y);
+        text(this.header, this.dims.x, this.dims.y);
         this.renderSubtext();
 
-        if (!this.buddy(this, this.next)) bigCanvas.translate(0, this.dims.h * 2);
+        if (!this.buddy(this, this.next)) translate(0, this.dims.h * 2);
     }
 
     renderRect() {
-        bigCanvas.strokeWeight(this.weight);
-        bigCanvas.stroke(this.color);
-        bigCanvas.fill('black');
-        bigCanvas.rect(
+        strokeWeight(this.weight);
+        stroke(this.color);
+        fill('black');
+        rect(
             this.dims.x, 
             this.dims.y, 
             this.dims.w, 
