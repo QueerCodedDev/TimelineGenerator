@@ -9,9 +9,10 @@ let canvasDim = {
     'width':  1000
 };
 
-let scroll_speed = 0;
-let auto_scroll  = false;
-let first_pass   = true;
+// Auto scroll attempts
+// let scroll_speed = 0;
+// let auto_scroll  = false;
+// let first_pass   = true;
 
 function preload() {
     media_data_json = loadJSON('res/individual_data.json');
@@ -31,15 +32,19 @@ function setup() {
 }
 
 function draw() {
-    if (first_pass) {
-        translate(canvasDim.width/2, 0);
-        first_pass = false;
-    }
+    // Autoscroll attempt
+    // if (first_pass) {
+    //     translate(canvasDim.width/2, 0);
+    //     first_pass = false;
+    // }
+    translate(canvasDim.width / 2, 0)
     stroke(100);
     strokeWeight(6);
     line(0, 0, 0, canvasDim.height);
     entryManager.render();
-    if (auto_scroll) translate(0, scroll_speed);
+
+    // Autoscroll attempt
+    // if (auto_scroll) translate(0, scroll_speed);
 }
 
 function autoScroll(speed) {
