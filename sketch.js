@@ -11,6 +11,7 @@ let canvasDim = {
 
 let scroll_speed = 0;
 let auto_scroll  = false;
+let first_pass   = true;
 
 function preload() {
     media_data_json = loadJSON('res/individual_data.json');
@@ -27,10 +28,13 @@ function setup() {
     //createCanvas(canvasDim.width, canvasDim.height);
     rectMode(CENTER);
     textAlign(CENTER);
-    translate(canvasDim.width/2, 0);
 }
 
 function draw() {
+    if (first_pass) {
+        translate(canvasDim.width/2, 0);
+        first_pass = false;
+    }
     stroke(100);
     strokeWeight(6);
     line(0, 0, 0, canvasDim.height);
