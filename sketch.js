@@ -24,7 +24,7 @@ function setup() {
     //pixelDensity(2);
 
     // Create an EntryManager using the json data provided
-    entryManager = new EntryManager(media_data_json.media);
+    entryManager = new EntryManager(media_data_json.media, true);
     
     //createCanvas(canvasDim.width, canvasDim.height);
     rectMode(CENTER);
@@ -37,7 +37,7 @@ function draw() {
     //     translate(canvasDim.width/2, 0);
     //     first_pass = false;
     // }
-    
+
     translate(canvasDim.width / 2, 0)
     stroke(100);
     strokeWeight(6);
