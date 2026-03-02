@@ -1,5 +1,5 @@
 class EntryManager {
-    constructor(entries_data) {
+    constructor(entries_data, compress=false) {
         // Collection of stats pertaining to the entries.
         // Bundled like this for easy access. May unbundle later.
         this.entry_stats = {
@@ -8,6 +8,10 @@ class EntryManager {
             'unique_dates': null,
             'max_w': 0
         };
+
+        // Boolean var for if related entries should be visually bundled together
+        this.compress = compress;
+
         // Array of all entries involved
         this.entries_arr = this.parse_entries_data(entries_data);
     }
@@ -99,6 +103,7 @@ class EntryManager {
         }
     }
     render() {
+        console.log(this.compress);
         for (let e of this.entries_arr) {
             e.render();
         }
