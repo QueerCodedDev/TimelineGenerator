@@ -28,7 +28,7 @@ function setup() {
 }
 
 function draw() {
-    translate(canvasDim.width/2, canvasDim.height);
+    translate(canvasDim.width/2, 0);
     stroke(100);
     strokeWeight(6);
     line(0, 0, 0, canvasDim.height);
