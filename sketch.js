@@ -24,7 +24,7 @@ function setup() {
     //pixelDensity(2);
 
     // Create an EntryManager using the json data provided
-    entryManager = new EntryManager(media_data_json.media, true);
+    entryManager = new EntryManager(media_data_json.media, compress=true);
     
     //createCanvas(canvasDim.width, canvasDim.height);
     rectMode(CENTER);
@@ -38,7 +38,7 @@ function draw() {
     //     first_pass = false;
     // }
 
-    translate(canvasDim.width / 2, 0)
+    translate(canvasDim.width/2, 0)
     stroke(100);
     strokeWeight(6);
     line(0, 0, 0, canvasDim.height);
@@ -48,7 +48,8 @@ function draw() {
     // if (auto_scroll) translate(0, scroll_speed);
 }
 
-function autoScroll(speed) {
-    auto_scroll = !auto_scroll;
-    scroll_speed = speed;
-}
+// Autoscroll attempt
+// function autoScroll(speed) {
+//     auto_scroll = !auto_scroll;
+//     scroll_speed = speed;
+// }
