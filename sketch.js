@@ -9,6 +9,9 @@ let canvasDim = {
     'width':  1000
 };
 
+let scroll_speed = 0;
+let auto_scroll  = false;
+
 function preload() {
     media_data_json = loadJSON('res/individual_data.json');
 }
@@ -33,6 +36,10 @@ function draw() {
     strokeWeight(6);
     line(0, 0, 0, canvasDim.height);
     entryManager.render();
+    if (auto_scroll) translate(0, scroll_speed);
+}
 
-    noLoop();
+function autoScroll(speed) {
+    auto_scroll = !auto_scroll;
+    scroll_speed = speed;
 }
