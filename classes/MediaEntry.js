@@ -88,7 +88,6 @@ class MediaEntry {
     center() { return this.before == this.after; }
 
     render() {
-        console.log(this.name)
         if (this.buddy(this, this.next)) {
             stroke(100);
             strokeWeight(6);
