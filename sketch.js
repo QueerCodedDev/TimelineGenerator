@@ -24,7 +24,7 @@ function setup() {
     //pixelDensity(2);
 
     // Create an EntryManager using the json data provided
-    entryManager = new EntryManager(media_data_json.media, false, true);
+    entryManager = new EntryManager(media_data_json.media, false, true); // <- There might be an issue with this dealing with using entryManager vars too early???? not sure. just keeps telling me undefined.
     
     //createCanvas(canvasDim.width, canvasDim.height);
     rectMode(CENTER);
