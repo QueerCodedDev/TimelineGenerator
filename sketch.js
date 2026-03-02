@@ -28,14 +28,11 @@ function setup() {
 }
 
 function draw() {
-    //if (canvasDim.height < 5725000) canvasDim.height+=10000;
-    //resizeCanvas(canvasDim.width, canvasDim.height); //<-- this works but is awful
-    translate(canvasDim.width/2, canvasDim.height * entryManager.render_count);
+    translate(canvasDim.width/2, canvasDim.height);
     stroke(100);
     strokeWeight(6);
     line(0, 0, 0, canvasDim.height);
     entryManager.render();
-    console.log('ready to save');
 
     noLoop();
 }
