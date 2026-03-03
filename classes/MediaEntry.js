@@ -16,6 +16,8 @@ class MediaEntry {
         // Mostly this is for knowing if entries need to be rendered side-by-side
         this.prev;
         this.next;
+
+        // Vars for keeping track of how many entries are before and after this entry
         this.before = 0;
         this.after = 0;
     }
