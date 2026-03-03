@@ -2,7 +2,7 @@ let media_data_json;
 let entryManager;
 let canvasDim = {
     'height': 50000,
-    'width':  1000
+    'width':  1000 // canvas still too narrow, but only when grouped.
 };
 
 function preload() {
@@ -14,7 +14,7 @@ function setup() {
     textFont('Consolas'); //fixed width font
 
     // Create an EntryManager using the json data provided
-    entryManager = new EntryManager(media_data_json.media, group=true);
+    entryManager = new EntryManager(media_data_json.media, compress=true);
     entryManager.formatEntries();
     
     rectMode(CENTER);
@@ -22,7 +22,7 @@ function setup() {
 }
 
 function draw() {
-    translate(canvasDim.width/2, 0)
+    translate(canvasDim.width/2, 0);
     stroke(100);
     strokeWeight(6);
     line(0, 0, 0, canvasDim.height);

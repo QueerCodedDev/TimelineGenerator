@@ -84,19 +84,26 @@ class MediaEntry {
     }
 
     reposition() {
-        if (!this.grouped()) return;
+        // If there are no buddies, it does not need to be repositioned, so return
+        if (!this.buddied()) return;
 
-        if (this.left()) { // JUST left of center
-            this.dims.x = (this.dims.w / -2) - 20;
-            if (this.next.center()) {
-                this.dims.x += this.next.dims.w / -2;
-            }
-        } else if (this.right()) { // JUST right of center
-            this.dims.x = (this.dims.w /  2) + 20;
-            if (this.prev.center()) {
-                this.dims.x += this.prev.dims.w / 2;
-            }
-        } else if (this.center()) {} //center
+        if (this.grouped()) {
+            if (this.left()) { // JUST left of center
+                this.dims.x = (this.dims.w / -2) - 20;
+                if (this.next.center()) {
+                    this.dims.x += this.next.dims.w / -2;
+                }
+            } else if (this.right()) { // JUST right of center
+                this.dims.x = (this.dims.w /  2) + 20;
+                if (this.prev.center()) {
+                    this.dims.x += this.prev.dims.w / 2;
+                }
+            } else if (this.center()) {} //center
+        }
+
+        if (this.compressed()) {
+            this.dims.h *= this.after;
+        }
     }
 
     left()   { return this.before  < this.after; }
@@ -104,6 +111,7 @@ class MediaEntry {
     center() { return this.before == this.after; }
 
     render() {
+        if (this.compressed() && this.before > 0) return;
         if (this.grouped() && this.buddy(this, this.next)) {
             stroke(100);
             strokeWeight(6);
@@ -124,16 +132,18 @@ class MediaEntry {
     }
 
     renderRect() {
-        strokeWeight(this.weight);
-        stroke(this.color);
-        fill('black');
-        rect(
-            this.dims.x, 
-            this.dims.y, 
-            this.dims.w, 
-            this.dims.h, 
-            this.point
-        );
+        if (!this.buddied() || this.grouped()) {
+            strokeWeight(this.weight);
+            stroke(this.color);
+            fill('black');
+            rect(
+                this.dims.x, 
+                this.dims.y, 
+                this.dims.w, 
+                this.dims.h, 
+                this.point
+            );
+        }
     }
 
     renderSubtext() {}
