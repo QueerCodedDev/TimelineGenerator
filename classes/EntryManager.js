@@ -32,12 +32,7 @@ class EntryManager {
             }
         }
 
-        // Sort Entries by air_date
-        let sorted_arr = this.sort(temp_arr);
-        this.formatEntries(sorted_arr);
-        this.repositionEntries(sorted_arr);
-
-        return sorted_arr;
+        return temp_arr;
     }
 
     // Sorting Entries by air_date
@@ -78,25 +73,31 @@ class EntryManager {
         return sorted_arr;
     }
 
-    formatEntries(arr) {
-        let arr_len = arr.length;
+    formatEntries() {
+        // Sort Entries by air_date
+        let sorted_arr = this.sort(this.entries_arr);
+        
+        let arr_len = sorted_arr.length;
         // Special formatting for the first entry
-        arr[0].formatEntry(null, arr[1]);
-        this.entry_stats.max_w = arr[0].dims.w;
+        sorted_arr[0].formatEntry(null, sorted_arr[1]);
+        this.entry_stats.max_w = sorted_arr[0].dims.w;
 
         // Normal formatting for the rest of the entries
         for (let i = 1; i <= arr_len - 2; i++) {
-            arr[i].formatEntry(arr[i-1], arr[i+1]);
-            if (arr[i].dims.w > this.entry_stats.max_w) {
-                this.entry_stats.max_w = arr[i].dims.w;
+            sorted_arr[i].formatEntry(sorted_arr[i-1], sorted_arr[i+1]);
+            if (sorted_arr[i].dims.w > this.entry_stats.max_w) {
+                this.entry_stats.max_w = sorted_arr[i].dims.w;
             }
         }
 
         //special formatting for the last entry
-        arr[arr_len-1].formatEntry(arr[arr_len-2], null);
-        if (arr[0].dims.w > this.entry_stats.max_w) {
-            this.entry_stats.max_w = arr[0].dims.w;
+        sorted_arr[arr_len-1].formatEntry(sorted_arr[arr_len-2], null);
+        if (sorted_arr[0].dims.w > this.entry_stats.max_w) {
+            this.entry_stats.max_w = sorted_arr[0].dims.w;
         }
+
+        this.repositionEntries(sorted_arr);
+        this.entries_arr = sorted_arr;
     }
 
     repositionEntries(arr) {
