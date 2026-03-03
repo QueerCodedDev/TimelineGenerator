@@ -11,11 +11,4 @@ class TVEntry extends MediaEntry {
         this.listing = `${this.season}.${this.episode} ${this.title}`;
         this.header  = `${this.listing}\n${this.air_date}`;
     }
-
-    renderSubtext() {
-        textSize(this._point);
-        noStroke();
-        fill(this.color);
-        text(this.name, this.dims.x, this.dims.y-this.point);
-    }
 }
