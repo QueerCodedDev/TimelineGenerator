@@ -1,7 +1,7 @@
 let media_data_json;
 let entryManager;
 let canvasDim = {
-    'height': 50000,
+    'height': 50000, // even compressed mode takes up too much space to render everything
     'width':  1000 // canvas still too narrow, but only when grouped.
 };
 
