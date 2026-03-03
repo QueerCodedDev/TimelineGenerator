@@ -24,8 +24,6 @@ function setup() {
     // Create the appropriate entrymanager based on view_mode
     if (view_mode == Modes.GROUPING) activeEntryManager = new EntryManager(media_data_json.media); // <-- Will add specific entrymanagers again
     if (view_mode == Modes.COMPRESS) activeEntryManager = new EntryManager(media_data_json.media); // <-- Will add specific entrymanagers again
-
-    activeEntryManager.formatEntries();
     
     rectMode(CENTER);
     textAlign(CENTER);
