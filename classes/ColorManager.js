@@ -4,6 +4,9 @@ class ColorManager {
         'lev': '#27B0F5',
         'spn': '#C223BD',
         'psy': '#23C227',
-        'men': '#C22823'
+        'men': '#C22823',
+        'line': '#646464',
+        'black': '#000000',
+        'white': '#ffffff'
         }
 }

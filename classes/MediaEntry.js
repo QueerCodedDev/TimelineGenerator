@@ -115,7 +115,7 @@ class MediaEntry {
     render() {
         if (this.compressed() && this.before > 0) return;
         if (this.grouped() && this.buddy(this, this.next)) {
-            stroke(100);
+            stroke(ColorManager.line);
             strokeWeight(6);
             line(this.dims.x, this.dims.y, this.next.dims.x, this.next.dims.y);
         }
@@ -123,8 +123,8 @@ class MediaEntry {
         this.renderRect();
 
         textSize(this.point);
-        fill('white');
-        stroke('black');
+        fill(ColorManager.white);
+        stroke(ColorManager.black);
         strokeWeight(2);
 
         text(this.header, this.dims.x, this.dims.y);
@@ -137,7 +137,7 @@ class MediaEntry {
         if (!this.buddied() || this.grouped()) {
             strokeWeight(this.weight);
             stroke(this.color);
-            fill('black');
+            fill(ColorManager.black);
             rect(
                 this.dims.x, 
                 this.dims.y, 
