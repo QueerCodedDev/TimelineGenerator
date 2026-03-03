@@ -1361,18 +1361,21 @@
             "air_date": "08-04-2025"
         },
         {
-            "name": "The Librarian: Quest for the Spear",
+            "name": "The Librarian",
             "universe": "lib",
+            "title": "Quest for the Spear",
             "air_date": "12-05-2004"
         },
         {
-            "name": "The Librarian: Return to King Solomon's Mines",
+            "name": "The Librarian",
             "universe": "lib",
+            "title": "Return to King Solomon's Mines",
             "air_date": "12-03-2006"
         },
         {
-            "name": "The Librarian: Curse of the Judas Chalice",
+            "name": "The Librarian",
             "universe": "lib",
+            "title": "Curse of the Judas Chalice",
             "air_date": "12-07-2008"
         },
         {
@@ -6160,18 +6163,21 @@
             "air_date": "03-26-2014"
         },
         {
-            "name": "Psych: The Movie",
+            "name": "Psych",
             "universe": "psy",
+            "title": "The Movie",
             "air_date": "12-07-2017"
         },
         {
-            "name": "Psych 2: Lassie Come Home",
+            "name": "Psych 2",
             "universe": "psy",
+            "title": "Lassie Come Home",
             "air_date": "07-15-2020"
         },
         {
-            "name": "Psych 3: This Is Gus",
+            "name": "Psych 3",
             "universe": "psy",
+            "title": "This Is Gus",
             "air_date": "11-18-2021"
         }
     ]
