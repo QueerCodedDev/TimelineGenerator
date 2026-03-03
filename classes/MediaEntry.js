@@ -102,9 +102,7 @@ class MediaEntry {
         }
 
         if (this.compressed()) {
-            console.log(`${this.name}\nAfter: ${this.after}`)
             this.dims.h *= this.after;
-            console.log(`Dims.H: ${this.dims.h}`)
         }
     }
 
