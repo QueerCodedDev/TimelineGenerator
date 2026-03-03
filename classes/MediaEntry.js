@@ -22,27 +22,6 @@ class MediaEntry {
         this.after = 0;
     }
 
-    formatEntry(prev, next) {
-        // Make sure text size is set before calculating dimensions
-        textSize(this.point);
-
-        // Calculate dimensions
-        this.dims = {
-            'x': 0,
-            'y': 100,
-            'w': textWidth(this.header) + this.point,
-            'h': textAscent() * 4
-        };
-
-        // Set pointers for previous and next Entries
-        this.prev = prev;
-        this.next = next;
-
-        if (this.grouped()) {
-            this.determineGroupSize();
-        }
-    }
-
     buddy(a, b) {
         if (b == null) return false;
         return a.air_date == b.air_date;
@@ -67,22 +46,6 @@ class MediaEntry {
             this.after++;
             curr = curr.next;
         }
-    }
-
-    reposition() {
-        if (!this.grouped()) return;
-
-        if (this.left()) { // JUST left of center
-            this.dims.x = (this.dims.w / -2) - 20;
-            if (this.next.center()) {
-                this.dims.x += this.next.dims.w / -2;
-            }
-        } else if (this.right()) { // JUST right of center
-            this.dims.x = (this.dims.w /  2) + 20;
-            if (this.prev.center()) {
-                this.dims.x += this.prev.dims.w / 2;
-            }
-        } else if (this.center()) {} //center
     }
 
     left()   { return this.before  < this.after; }
