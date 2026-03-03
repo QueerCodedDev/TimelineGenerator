@@ -38,13 +38,19 @@ class MediaEntry {
         this.prev = prev;
         this.next = next;
 
-        if (this.grouped()) {
+        if (this.grouped() || this.compressed()) {
             this.determineGroupSize();
         }
     }
 
     buddy(a, b) {
+        // if b is null, no buddy
         if (b == null) return false;
+
+        // if compressed mode, buddy is based on name instead of air_date
+        if (this.compressed()) return a.name == b.name;
+
+        // if b is not false, and not compressed mode, buddy is based on air_date
         return a.air_date == b.air_date;
     }
 
@@ -54,6 +60,10 @@ class MediaEntry {
         if (this.buddy(this, this.prev)) return true;
 
         return false;
+    }
+
+    compressed() {
+        return entryManager.compress;
     }
 
     determineGroupSize() {
@@ -91,7 +101,7 @@ class MediaEntry {
     center() { return this.before == this.after; }
 
     render() {
-        if (this.buddy(this, this.next)) {
+        if (this.grouped() && this.buddy(this, this.next)) {
             stroke(100);
             strokeWeight(6);
             line(this.dims.x, this.dims.y, this.next.dims.x, this.next.dims.y);
