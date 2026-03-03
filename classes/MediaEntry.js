@@ -76,13 +76,15 @@ class MediaEntry {
         strokeWeight(this.weight);
         stroke(this.color);
         fill(ColorManager.colors.black);
-        rect(
-            this.dims.x, 
-            this.dims.y, 
-            this.dims.w, 
-            this.dims.h, 
-            this.point
-        );
+        if (view_mode == Modes.GROUPING) {
+            rect(
+                this.dims.x, 
+                this.dims.y, 
+                this.dims.w, 
+                this.dims.h, 
+                this.point
+            );
+        }
     }
 
     renderSubtext() {}
