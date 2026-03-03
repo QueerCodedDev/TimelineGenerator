@@ -6,7 +6,7 @@ const Modes = {
     GROUPING: 'group'
 }
 
-let view_mode = Modes.COMPRESS;
+let view_mode = Modes.GROUPING;
 
 let canvasDim = {
     'height': 50000, // even compressed mode takes up too much space to render everything

@@ -17,7 +17,11 @@ class EntryManager {
         }
 
         // Sort Entries by air_date
-        return this.sort(temp_arr);
+        let sorted_arr = this.sort(temp_arr);
+        this.formatEntries(sorted_arr);
+        this.repositionEntries(sorted_arr);
+
+        return sorted_arr;
     }
 
     // Sorting Entries by air_date
@@ -47,9 +51,34 @@ class EntryManager {
             arr.splice(arr.indexOf(min), 1);
         }
 
+        // Collect dates to get unique date list
+        let dates = []
+        for (let e of sorted_arr) {
+            dates.push(e.air_date);
+        }
+
         return sorted_arr;
     }
 
+    formatEntries(arr) {
+        let arr_len = arr.length;
+        // Special formatting for the first entry
+        arr[0].formatEntry(null, arr[1]);
+
+        // Normal formatting for the rest of the entries
+        for (let i = 1; i <= arr_len - 2; i++) {
+            arr[i].formatEntry(arr[i-1], arr[i+1]);
+        }
+
+        //special formatting for the last entry
+        arr[arr_len-1].formatEntry(arr[arr_len-2], null);
+    }
+
+    repositionEntries(arr) {
+        for (let e of arr) {
+            e.reposition();
+        }
+    }
     render() {
         for (let e of this.entries_arr) {
             e.render();
