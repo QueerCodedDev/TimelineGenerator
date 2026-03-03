@@ -38,7 +38,7 @@ class MediaEntry {
         this.prev = prev;
         this.next = next;
 
-        if (this.grouped() || this.compressed()) {
+        if (this.buddied()) {
             this.determineGroupSize();
         }
     }
@@ -54,12 +54,15 @@ class MediaEntry {
         return a.air_date == b.air_date;
     }
 
-    grouped() {
-        if (!entryManager.group) return false;
+    buddied() {
         if (this.buddy(this, this.next)) return true;
         if (this.buddy(this, this.prev)) return true;
 
         return false;
+    }
+
+    grouped() {
+        return entryManager.group;
     }
 
     compressed() {
