@@ -143,6 +143,17 @@ class MediaEntry {
                 this.dims.h, 
                 this.point
             );
+        } else {
+            strokeWeight(this.weight);
+            stroke(this.color);
+            fill('black');
+            rect(
+                this.dims.x, 
+                this.dims.y, 
+                this.dims.w, 
+                this.dims.h, 
+                this.point
+            );
         }
     }
 
