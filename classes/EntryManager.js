@@ -1,5 +1,5 @@
 class EntryManager {
-    constructor(entries_data, group=false, compress=false) {
+    constructor(entries_data) {
         // Collection of stats pertaining to the entries.
         // Bundled like this for easy access. May unbundle later.
         this.entry_stats = {
@@ -8,11 +8,6 @@ class EntryManager {
             'unique_dates': null,
             'max_w': 0
         };
-
-        // Boolean var for if same-day entries should be rendered side-by-side
-        this.group = group;
-        // Boolean var for if related entries should be visually bundled together
-        this.compress = compress;
 
         // Array of all entries involved
         this.entries_arr = this.parse_entries_data(entries_data);
@@ -32,7 +27,12 @@ class EntryManager {
             }
         }
 
-        return temp_arr;
+        // Sort Entries by air_date
+        let sorted_arr = this.sort(temp_arr);
+        this.formatEntries(sorted_arr);
+        this.repositionEntries(sorted_arr);
+
+        return sorted_arr;
     }
 
     // Sorting Entries by air_date
@@ -73,31 +73,25 @@ class EntryManager {
         return sorted_arr;
     }
 
-    formatEntries() {
-        // Sort Entries by air_date
-        let sorted_arr = this.sort(this.entries_arr);
-        
-        let arr_len = sorted_arr.length;
+    formatEntries(arr) {
+        let arr_len = arr.length;
         // Special formatting for the first entry
-        sorted_arr[0].formatEntry(null, sorted_arr[1]);
-        this.entry_stats.max_w = sorted_arr[0].dims.w;
+        arr[0].formatEntry(null, arr[1]);
+        this.entry_stats.max_w = arr[0].dims.w;
 
         // Normal formatting for the rest of the entries
         for (let i = 1; i <= arr_len - 2; i++) {
-            sorted_arr[i].formatEntry(sorted_arr[i-1], sorted_arr[i+1]);
-            if (sorted_arr[i].dims.w > this.entry_stats.max_w) {
-                this.entry_stats.max_w = sorted_arr[i].dims.w;
+            arr[i].formatEntry(arr[i-1], arr[i+1]);
+            if (arr[i].dims.w > this.entry_stats.max_w) {
+                this.entry_stats.max_w = arr[i].dims.w;
             }
         }
 
         //special formatting for the last entry
-        sorted_arr[arr_len-1].formatEntry(sorted_arr[arr_len-2], null);
-        if (sorted_arr[0].dims.w > this.entry_stats.max_w) {
-            this.entry_stats.max_w = sorted_arr[0].dims.w;
+        arr[arr_len-1].formatEntry(arr[arr_len-2], null);
+        if (arr[0].dims.w > this.entry_stats.max_w) {
+            this.entry_stats.max_w = arr[0].dims.w;
         }
-
-        this.repositionEntries(sorted_arr);
-        this.entries_arr = sorted_arr;
     }
 
     repositionEntries(arr) {

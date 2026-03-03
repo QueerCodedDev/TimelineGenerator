@@ -1,5 +1,13 @@
 let media_data_json;
-let entryManager;
+let activeEntryManager;
+
+const Modes = {
+    COMPRESS: 'compress',
+    GROUPING: 'group'
+}
+
+let view_mode = Modes.GROUPING;
+
 let canvasDim = {
     'height': 50000, // even compressed mode takes up too much space to render everything
     'width':  1000 // canvas still too narrow, but only when grouped.
@@ -13,9 +21,11 @@ function setup() {
     createCanvas(canvasDim.width, canvasDim.height);
     textFont('Consolas'); //fixed width font
 
-    // Create an EntryManager using the json data provided
-    entryManager = new EntryManager(media_data_json.media, group=false, compress=true);
-    entryManager.formatEntries();
+    // Create the appropriate entrymanager based on view_mode
+    if (view_mode == Modes.GROUPING) activeEntryManager = new EntryManager(media_data_json.media); // <-- Will add specific entrymanagers again
+    if (view_mode == Modes.COMPRESS) activeEntryManager = new EntryManager(media_data_json.media); // <-- Will add specific entrymanagers again
+
+    activeEntryManager.formatEntries();
     
     rectMode(CENTER);
     textAlign(CENTER);
@@ -26,5 +36,5 @@ function draw() {
     stroke(ColorManager.colors.line);
     strokeWeight(6);
     line(0, 0, 0, canvasDim.height);
-    entryManager.render();
+    activeEntryManager.render();
 }

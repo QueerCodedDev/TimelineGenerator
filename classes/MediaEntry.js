@@ -38,35 +38,21 @@ class MediaEntry {
         this.prev = prev;
         this.next = next;
 
-        if (this.buddied()) {
+        if (this.grouped()) {
             this.determineGroupSize();
         }
     }
 
     buddy(a, b) {
-        // if b is null, no buddy
         if (b == null) return false;
-
-        // if compressed mode, buddy is based on name instead of air_date
-        if (this.compressed()) return a.name == b.name;
-
-        // if b is not false, and not compressed mode, buddy is based on air_date
         return a.air_date == b.air_date;
     }
 
-    buddied() {
+    grouped() {
         if (this.buddy(this, this.next)) return true;
         if (this.buddy(this, this.prev)) return true;
 
         return false;
-    }
-
-    grouped() {
-        return entryManager.group;
-    }
-
-    compressed() {
-        return entryManager.compress;
     }
 
     determineGroupSize() {
@@ -84,26 +70,19 @@ class MediaEntry {
     }
 
     reposition() {
-        // If there are no buddies, it does not need to be repositioned, so return
-        if (!this.buddied()) return;
+        if (!this.grouped()) return;
 
-        if (this.grouped()) {
-            if (this.left()) { // JUST left of center
-                this.dims.x = (this.dims.w / -2) - 20;
-                if (this.next.center()) {
-                    this.dims.x += this.next.dims.w / -2;
-                }
-            } else if (this.right()) { // JUST right of center
-                this.dims.x = (this.dims.w /  2) + 20;
-                if (this.prev.center()) {
-                    this.dims.x += this.prev.dims.w / 2;
-                }
-            } else if (this.center()) {} //center
-        }
-
-        if (this.compressed()) {
-            this.dims.h *= this.after;
-        }
+        if (this.left()) { // JUST left of center
+            this.dims.x = (this.dims.w / -2) - 20;
+            if (this.next.center()) {
+                this.dims.x += this.next.dims.w / -2;
+            }
+        } else if (this.right()) { // JUST right of center
+            this.dims.x = (this.dims.w /  2) + 20;
+            if (this.prev.center()) {
+                this.dims.x += this.prev.dims.w / 2;
+            }
+        } else if (this.center()) {} //center
     }
 
     left()   { return this.before  < this.after; }
@@ -111,8 +90,7 @@ class MediaEntry {
     center() { return this.before == this.after; }
 
     render() {
-        if (this.compressed() && this.before > 0) return;
-        if (this.grouped() && this.buddy(this, this.next)) {
+        if (this.buddy(this, this.next)) {
             stroke(ColorManager.colors.line);
             strokeWeight(6);
             line(this.dims.x, this.dims.y, this.next.dims.x, this.next.dims.y);
@@ -128,33 +106,20 @@ class MediaEntry {
         text(this.header, this.dims.x, this.dims.y);
         this.renderSubtext();
 
-        if (!this.grouped() || !this.buddy(this, this.next)) translate(0, this.dims.h * 2);
+        if (!this.buddy(this, this.next)) translate(0, this.dims.h * 2);
     }
 
     renderRect() {
-        if (!this.buddied() || this.grouped()) {
-            strokeWeight(this.weight);
-            stroke(this.color);
-            fill(ColorManager.colors.black);
-            rect(
-                this.dims.x, 
-                this.dims.y, 
-                this.dims.w, 
-                this.dims.h, 
-                this.point
-            );
-        } else {
-            strokeWeight(this.weight);
-            stroke(this.color);
-            fill(ColorManager.colors.black);
-            rect(
-                this.dims.x, 
-                this.dims.y, 
-                this.dims.w, 
-                this.dims.h, 
-                this.point
-            );
-        }
+        strokeWeight(this.weight);
+        stroke(this.color);
+        fill(ColorManager.colors.black);
+        rect(
+            this.dims.x, 
+            this.dims.y, 
+            this.dims.w, 
+            this.dims.h, 
+            this.point
+        );
     }
 
     renderSubtext() {}
