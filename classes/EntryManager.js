@@ -1,13 +1,7 @@
 class EntryManager {
     constructor(entries_data) {
-        // Collection of stats pertaining to the entries.
-        // Bundled like this for easy access. May unbundle later.
-        this.entry_stats = {
-            'movie_count': 0,
-            'episode_count': 0,
-            'unique_dates': null,
-            'max_w': 0
-        };
+        // width of widest entry
+        this.max_w = 0;
 
         // Array of all entries involved
         this.entries_arr = this.parse_entries_data(entries_data);
@@ -20,10 +14,8 @@ class EntryManager {
         for (let d of data) {
             if (d.season == null) { // If no season data
                 temp_arr.push(new MovieEntry(d)); // Create as MovieEntry
-                this.entry_stats.movie_count++;
             } else { // otherwise (it has season data)
                 temp_arr.push(new TVEntry(d)); // Create as TVEntry
-                this.entry_stats.episode_count++;
             }
         }
 
@@ -67,8 +59,6 @@ class EntryManager {
         for (let e of sorted_arr) {
             dates.push(e.air_date);
         }
-        // Convert array to list to remove duplicate values
-        this.entry_stats.unique_dates = new Set(dates);
 
         return sorted_arr;
     }
@@ -77,20 +67,20 @@ class EntryManager {
         let arr_len = arr.length;
         // Special formatting for the first entry
         arr[0].formatEntry(null, arr[1]);
-        this.entry_stats.max_w = arr[0].dims.w;
+        this.max_w = arr[0].dims.w;
 
         // Normal formatting for the rest of the entries
         for (let i = 1; i <= arr_len - 2; i++) {
             arr[i].formatEntry(arr[i-1], arr[i+1]);
-            if (arr[i].dims.w > this.entry_stats.max_w) {
-                this.entry_stats.max_w = arr[i].dims.w;
+            if (arr[i].dims.w > this.max_w) {
+                this.max_w = arr[i].dims.w;
             }
         }
 
         //special formatting for the last entry
         arr[arr_len-1].formatEntry(arr[arr_len-2], null);
-        if (arr[0].dims.w > this.entry_stats.max_w) {
-            this.entry_stats.max_w = arr[0].dims.w;
+        if (arr[0].dims.w > this.max_w) {
+            this.max_w = arr[0].dims.w;
         }
     }
 
