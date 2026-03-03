@@ -49,7 +49,6 @@ class MediaEntry {
     }
 
     grouped() {
-        console.log(`From grouped: ${entryManager.group}`)
         if (!entryManager.group) return false;
         if (this.buddy(this, this.next)) return true;
         if (this.buddy(this, this.prev)) return true;
