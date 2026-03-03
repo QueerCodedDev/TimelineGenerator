@@ -42,19 +42,19 @@ class GroupedEntryManager extends EntryManager {
 
     repositionEntries(arr) {
         for (let e of arr) {
-            if (!e.grouped()) return;
+            if (!e.grouped()) continue;
 
-        if (e.left()) { // JUST left of center
-            e.dims.x = (e.dims.w / -2) - 20;
-            if (e.next.center()) {
-                e.dims.x += e.next.dims.w / -2;
-            }
-        } else if (e.right()) { // JUST right of center
-            e.dims.x = (e.dims.w /  2) + 20;
-            if (e.prev.center()) {
-                e.dims.x += e.prev.dims.w / 2;
-            }
-        } else if (e.center()) {} //center
+            if (e.left()) { // JUST left of center
+                e.dims.x = (e.dims.w / -2) - 20;
+                if (e.next.center()) {
+                    e.dims.x += e.next.dims.w / -2;
+                }
+            } else if (e.right()) { // JUST right of center
+                e.dims.x = (e.dims.w /  2) + 20;
+                if (e.prev.center()) {
+                    e.dims.x += e.prev.dims.w / 2;
+                }
+            } else if (e.center()) {} //center
         }
     }
 }
