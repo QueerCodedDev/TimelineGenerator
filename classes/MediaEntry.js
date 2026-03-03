@@ -8,6 +8,7 @@ class MediaEntry {
         this.air_date  = data.air_date;
         this.color     = ColorManager.colors[this.universe];
         this.point     = 25;
+        this._point    = 20;
         this.weight    = 5;
         this.header    = '';
         this.dims;
