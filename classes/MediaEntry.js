@@ -5,6 +5,7 @@ class MediaEntry {
     constructor(data) {
         this.name      = data.name;
         this.universe  = data.universe;
+        this.title     = data.title;
         this.air_date  = data.air_date;
         this.color     = ColorManager.colors[this.universe];
         this.point     = 25;
