@@ -38,7 +38,7 @@ class MediaEntry {
         this.prev = prev;
         this.next = next;
 
-        if (entryManager.group && this.grouped()) {
+        if (this.grouped()) {
             this.determineGroupSize();
         }
     }
@@ -49,6 +49,7 @@ class MediaEntry {
     }
 
     grouped() {
+        if (!entryManager.group) return false;
         if (this.buddy(this, this.next)) return true;
         if (this.buddy(this, this.prev)) return true;
 
@@ -70,7 +71,7 @@ class MediaEntry {
     }
 
     reposition() {
-        if (!entryManager.group || !this.grouped()) return;
+        if (!this.grouped()) return;
 
         if (this.left()) { // JUST left of center
             this.dims.x = (this.dims.w / -2) - 20;
