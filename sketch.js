@@ -14,7 +14,7 @@ function setup() {
     textFont('Consolas'); //fixed width font
 
     // Create an EntryManager using the json data provided
-    entryManager = new EntryManager(media_data_json.media, false, true);
+    entryManager = new EntryManager(media_data_json.media, group=true);
     entryManager.formatEntries();
     
     rectMode(CENTER);
