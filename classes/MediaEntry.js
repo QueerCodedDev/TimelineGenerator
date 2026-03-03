@@ -108,7 +108,7 @@ class MediaEntry {
         text(this.header, this.dims.x, this.dims.y);
         this.renderSubtext();
 
-        if (!this.buddy(this, this.next)) translate(0, this.dims.h * 2);
+        if (!this.grouped() || !this.buddy(this, this.next)) translate(0, this.dims.h * 2);
     }
 
     renderRect() {
