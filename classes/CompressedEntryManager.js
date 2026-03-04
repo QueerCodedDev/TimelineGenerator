@@ -33,5 +33,6 @@ class CompressedEntryManager extends EntryManager {
         }
 
         console.log(this.compressed_entries);
+        console.log(this.entries_arr);
     }
 }
