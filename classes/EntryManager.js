@@ -17,7 +17,7 @@ class EntryManager {
         return sort_by_airdate(temp_arr);
     }
 
-    connectEntries() {
+    connectEntries(arr) {
         let arr_len = arr.length;
 
         this.connectEntry(arr[0], null, arr[1]);
