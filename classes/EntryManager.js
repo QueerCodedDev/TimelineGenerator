@@ -19,7 +19,21 @@ class EntryManager {
     
     render() {
         for (let e of this.entries_arr) {
-            e.render();
+            Renderer.render(e);
+        }
+    }
+
+    determineGroupSize(c) {
+        let curr = c;
+        while (curr.buddy(curr, curr.prev)) {
+            this.before++;
+            curr = curr.prev;
+        }
+
+        curr = c;
+        while (curr.buddy(curr, curr.next)) {
+            this.after++;
+            curr = curr.next;
         }
     }
 }

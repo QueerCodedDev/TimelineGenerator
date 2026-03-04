@@ -36,13 +36,33 @@ class GroupedEntryManager extends EntryManager {
         curr.next = next;
 
         if (curr.grouped()) {
-            curr.determineGroupSize();
+            determineGroupSize(curr);
         }
+    }
+
+    reposition(e) {
+        if (!e.grouped()) return;
+
+        if (this.isLeft(e)) { // JUST left of center
+            e.dims.x = (e.dims.w / -2) - 20;
+            if (isCenter(e.next)) {
+                e.dims.x += e.next.dims.w / -2;
+            }
+        } else if (isRight(e)) { // JUST right of center
+            e.dims.x = (e.dims.w /  2) + 20;
+            if (isCenter(e.prev)) {
+                e.dims.x += e.prev.dims.w / 2;
+            }
+        } else if (isCenter(e)) {} //center
     }
 
     repositionEntries(arr) {
         for (let e of arr) {
-            e.reposition();
+            this.reposition(e);
         }
     }
+
+    isLeft(e)   { return e.before  < e.after; }
+    isRight(e)  { return e.before  > e.after; }
+    isCenter(e) { return e.before == e.after; }
 }
