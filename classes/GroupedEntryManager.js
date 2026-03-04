@@ -43,7 +43,7 @@ class GroupedEntryManager extends EntryManager {
 
     reposition(e) {
         if (!e.grouped()) return;
-        console.log(e.dims)
+        
 
         if (this.isLeft(e)) { // JUST left of center
             e.dims.x = (e.dims.w / -2) - 20;
@@ -56,6 +56,8 @@ class GroupedEntryManager extends EntryManager {
                 e.dims.x += e.prev.dims.w / 2;
             }
         } else if (this.isCenter(e)) {} //center
+
+        console.log(e.dims)
     }
 
     repositionEntries(arr) {
