@@ -36,12 +36,14 @@ class GroupedEntryManager extends EntryManager {
         curr.next = next;
 
         if (curr.grouped()) {
+            console.log('grouped')
             this.determineGroupSize(curr);
         }
     }
 
     reposition(e) {
         if (!e.grouped()) return;
+        console.log('repositioning')
 
         if (this.isLeft(e)) { // JUST left of center
             e.dims.x = (e.dims.w / -2) - 20;
