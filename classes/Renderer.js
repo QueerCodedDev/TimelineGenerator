@@ -42,6 +42,6 @@ class Renderer {
         textSize(this._point);
         noStroke();
         fill(e.color);
-        text(e.name, e.dims.x, e.dims.y-e.point);
+        text(e.name, e.dims.x, e.dims.y-Renderer.point);
     }
 }
