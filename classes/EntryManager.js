@@ -10,7 +10,7 @@ class EntryManager {
         let temp_arr = [];
 
         for (let d of data) {
-            temp_arr.push(new MediaEntry(d));
+            temp_arr.push(new Entry(d));
         }
 
         // Sort Entries by air_date

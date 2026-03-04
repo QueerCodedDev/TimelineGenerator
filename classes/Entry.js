@@ -1,7 +1,7 @@
 // Might be able to totally combine Movie and TV Entries at some point,
 // but priority is elsewhere currently.
 
-class MediaEntry {
+class Entry {
     constructor(data) {
         this.name     = data.name;
         this.universe = data.universe;
@@ -35,7 +35,7 @@ class MediaEntry {
     buddy(a, b) {
         if (b == null) return false;
         if (VIEW_MODE == Modes.GROUPING) return a.air_date == b.air_date;
-        if (VIEW_MODE == Modes.COMPRESS) return a.name == a.name;
+        if (VIEW_MODE == Modes.COMPRESS) return a.name == b.name;
     }
 
     grouped() {
