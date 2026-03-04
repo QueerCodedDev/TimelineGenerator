@@ -9,11 +9,12 @@ class EntryManager {
         let temp_arr = [];
 
         for (let d of data) {
-            if (d.season == null) { // If no season data
-                temp_arr.push(new MovieEntry(d)); // Create as MovieEntry
-            } else { // otherwise (it has season data)
-                temp_arr.push(new TVEntry(d)); // Create as TVEntry
-            }
+            // if (d.season == null) { // If no season data
+            //     temp_arr.push(new MovieEntry(d)); // Create as MovieEntry
+            // } else { // otherwise (it has season data)
+            //     temp_arr.push(new TVEntry(d)); // Create as TVEntry
+            // }
+            temp_arr.push(new MediaEntry(d));
         }
 
         // Sort Entries by air_date

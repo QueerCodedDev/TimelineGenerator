@@ -6,7 +6,6 @@ class TVEntry extends MediaEntry {
         super(data);
         this.season  = data.season;
         this.episode = data.episode;
-        this.title   = data.title;
         this.listing = `${this.season}.${this.episode} ${this.title}`;
         this.header  = `${this.listing}\n${this.air_date}`;
     }

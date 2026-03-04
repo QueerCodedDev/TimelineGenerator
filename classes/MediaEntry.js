@@ -7,11 +7,19 @@ class MediaEntry {
         this.universe  = data.universe;
         this.title     = data.title;
         this.air_date  = data.air_date;
+        this.listing = `${data.title}`;
+        
+        if (data.season) {
+            this.season  = data.season;
+            this.episode = data.episode;
+            this.listing = `${this.season}.${this.episode} ${this.title}`;
+        }
+
+        this.header    = `${this.listing}\n${data.air_date}`;
         this.color     = ColorManager.colors[this.universe];
         this.point     = 25;
         this._point    = 20;
         this.weight    = 5;
-        this.header    = '';
         this.dims;
 
         // Vars for previous and next entries.
