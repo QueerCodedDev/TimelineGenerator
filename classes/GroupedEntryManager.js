@@ -50,7 +50,7 @@ class GroupedEntryManager extends EntryManager {
             }
         } else if (this.isRight(e)) { // JUST right of center
             e.dims.x = (e.dims.w /  2) + 20;
-            if (this.formatEntryisCenter(e.prev)) {
+            if (this.isCenter(e.prev)) {
                 e.dims.x += e.prev.dims.w / 2;
             }
         } else if (this.isCenter(e)) {} //center
