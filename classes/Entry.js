@@ -28,6 +28,8 @@ class MediaEntry {
         // Vars for keeping track of how many entries are before and after this entry
         this.before = 0;
         this.after  = 0;
+
+        this.compressed = false;
     }
 
     buddy(a, b) {
