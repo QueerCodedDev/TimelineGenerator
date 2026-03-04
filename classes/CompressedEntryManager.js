@@ -17,7 +17,6 @@ class CompressedEntryManager extends EntryManager {
     }
 
     compressEntry(e) {
-        if (e.compressed = true) return;
         let temp_arr = [e];
 
         if (e.buddy(e, e.next)) {
