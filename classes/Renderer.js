@@ -25,7 +25,7 @@ class Renderer {
         text(e.header, e.dims.x, e.dims.y);
     }
 
-    static renderRect() {
+    static renderRect(e) {
         strokeWeight(this.weight);
         stroke(e.color);
         fill(ColorManager.colors.black);
