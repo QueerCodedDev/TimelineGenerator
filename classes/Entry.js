@@ -27,12 +27,13 @@ class MediaEntry {
 
         // Vars for keeping track of how many entries are before and after this entry
         this.before = 0;
-        this.after = 0;
+        this.after  = 0;
     }
 
     buddy(a, b) {
         if (b == null) return false;
-        return a.air_date == b.air_date;
+        if (VIEW_MODE == Modes.GROUPING) return a.air_date == b.air_date;
+        if (VIEW_MODE == Modes.COMPRESS) return a.name == a.name;
     }
 
     grouped() {
