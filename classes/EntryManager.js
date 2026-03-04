@@ -26,13 +26,13 @@ class EntryManager {
     determineGroupSize(c) {
         let curr = c;
         while (curr.buddy(curr, curr.prev)) {
-            this.before++;
+            c.before++;
             curr = curr.prev;
         }
 
         curr = c;
         while (curr.buddy(curr, curr.next)) {
-            this.after++;
+            c.after++;
             curr = curr.next;
         }
     }
