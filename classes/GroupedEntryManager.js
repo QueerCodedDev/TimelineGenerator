@@ -45,15 +45,15 @@ class GroupedEntryManager extends EntryManager {
 
         if (this.isLeft(e)) { // JUST left of center
             e.dims.x = (e.dims.w / -2) - 20;
-            if (isCenter(e.next)) {
+            if (this.isCenter(e.next)) {
                 e.dims.x += e.next.dims.w / -2;
             }
-        } else if (isRight(e)) { // JUST right of center
+        } else if (this.isRight(e)) { // JUST right of center
             e.dims.x = (e.dims.w /  2) + 20;
-            if (isCenter(e.prev)) {
+            if (this.formatEntryisCenter(e.prev)) {
                 e.dims.x += e.prev.dims.w / 2;
             }
-        } else if (isCenter(e)) {} //center
+        } else if (this.isCenter(e)) {} //center
     }
 
     repositionEntries(arr) {
