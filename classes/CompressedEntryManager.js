@@ -1,8 +1,8 @@
 class CompressedEntryManager extends EntryManager {
     constructor(entries_data) {
         super(entries_data);
+        this.compressed_entries = [];
         this.compressEntries(this.entries_arr);
-        this.compressed_entries = []
     }
 
     _compressEntries(arr) {
