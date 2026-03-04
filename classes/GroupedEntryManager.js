@@ -21,13 +21,13 @@ class GroupedEntryManager extends EntryManager {
 
     formatEntry(curr, prev, next) {
         // Make sure text size is set before calculating dimensions
-        textSize(curr.point);
+        textSize(Renderer.point);
 
         // Calculate dimensions
         curr.dims = {
             'x': 0,
             'y': 100,
-            'w': textWidth(curr.header) + curr.point,
+            'w': textWidth(curr.header) + Renderer.point,
             'h': textAscent() * 4
         };
 
@@ -36,7 +36,7 @@ class GroupedEntryManager extends EntryManager {
         curr.next = next;
 
         if (curr.grouped()) {
-            determineGroupSize(curr);
+            this.determineGroupSize(curr);
         }
     }
 
