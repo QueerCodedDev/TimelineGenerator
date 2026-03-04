@@ -5,19 +5,19 @@ class CompressedEntryManager extends EntryManager {
         this.compressEntries(this.entries_arr);
     }
 
-    compressEntry(e) {
-        let temp_arr = [e];
+    compressEntry(arr, e) {
+        arr.push(e);
 
         if (e.buddy(e, e.next)) {
-            temp_arr.push(e.next);
+            this.compressEntry(arr, e.next);
         }
 
-        return temp_arr;
+        return arr;
     }
 
     compressEntries(arr) {
         for (let e of arr) {
-            this.compressed_entries.push(this.compressEntry(e));
+            this.compressed_entries.push(this.compressEntry([], e));
         }
 
         console.log(this.compressed_entries);
