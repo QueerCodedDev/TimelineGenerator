@@ -33,14 +33,14 @@ class CompressedEntryManager extends EntryManager {
             }
 
             
-            let dims = {
+            ce.dims = {
                 'x': 0,
                 'y': 100,
                 'w': textWidth(compressed_header) + Renderer.point,
                 'h': textAscent() * 4 * ce.length
             }
             if (prev != null) {
-                dims.y = prev.dims.h;
+                ce.dims.y = prev.dims.h;
             }
 
             strokeWeight(Renderer.weight);
