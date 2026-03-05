@@ -65,7 +65,7 @@ class CompressedEntryManager extends EntryManager {
             fill(ce[0].color);
             text(ce[0].name, dims.x, dims.y-Renderer.point);
 
-            translate(0, dims.y * 2);
+            translate(0, dims.y);
 
             prev = dims;
         }
