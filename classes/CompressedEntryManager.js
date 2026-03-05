@@ -33,7 +33,7 @@ class CompressedEntryManager extends EntryManager {
 
             let dims = {
                 'x': 0,
-                'y': 100,
+                'y': 500,
                 'w': textWidth(compressed_header) + Renderer.point,
                 'h': textAscent() * 4 * ce.length
             }
