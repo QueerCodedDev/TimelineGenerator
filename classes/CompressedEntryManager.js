@@ -40,7 +40,7 @@ class CompressedEntryManager extends EntryManager {
                 'h': textAscent() * 4 * ce.length
             }
             if (prev != null) {
-                dims.y = prev.h;
+                dims.h = prev.h;
             }
 
             strokeWeight(Renderer.weight);
