@@ -28,7 +28,7 @@ class CompressedEntryManager extends EntryManager {
         for (let ce of this.compressed_entries) {
             let compressed_header = ``;
             for (let e of ce) {
-                compressed_header = `${compressed_header}${e}\n`
+                compressed_header = `${compressed_header}${e.header}\n`
             }
 
             let dims = {
