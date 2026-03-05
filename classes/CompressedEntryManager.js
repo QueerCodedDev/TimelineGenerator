@@ -25,17 +25,22 @@ class CompressedEntryManager extends EntryManager {
     }
 
     render() {
+        let prev = null;
         for (let ce of this.compressed_entries) {
             let compressed_header = ``;
             for (let e of ce) {
                 compressed_header = `${compressed_header}${e.header}\n`
             }
 
+            
             let dims = {
                 'x': 0,
-                'y': 500,
+                'y': 100,
                 'w': textWidth(compressed_header) + Renderer.point,
                 'h': textAscent() * 4 * ce.length
+            }
+            if (prev != null) {
+                dims.y = prev.dims.h;
             }
 
             strokeWeight(Renderer.weight);
@@ -61,6 +66,8 @@ class CompressedEntryManager extends EntryManager {
             text(ce[0].name, dims.x, dims.y-Renderer.point);
 
             translate(0, e.dims.h * 2);
+
+            prev = ce;
         }
     }
 }
