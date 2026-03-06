@@ -37,8 +37,8 @@ class DataEntryManager {
         let a = new Date(min.date);
         let b = new Date(cur.date);
 
-        if (a > b) return b;
-        if (a < b) return a;
+        if (a > b) return cur;
+        if (a < b) return min;
 
         return null;
     }
