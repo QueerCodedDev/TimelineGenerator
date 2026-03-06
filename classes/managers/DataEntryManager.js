@@ -1,7 +1,13 @@
 class DataEntryManager {
     constructor(dataJSON) {
+        // Create data entries and store them in a master array that should NOT be altered
         this.dataEntries = this.createDataEntries(dataJSON);
-        this.dataEntriesByAirDate = this.sort(this.dataEntries);
+        // Create an array of entries sorted by date
+        this.dataEntriesByAirDate = this.sort(this.dataEntries.slice());
+        // Create an array of entries sorted by universe?
+        // Create an array of entries sorted alphabetically by title?
+
+        console.log(this.dataEntriesByAirDate);
     }
 
     createDataEntries(data) {
@@ -23,10 +29,13 @@ class DataEntryManager {
 
             // For each item in arr
             for (let i = 0; i < arr.length; i++) {
+                // Compare it against the current minimum
                 minItem = this.compare(minItem, arr[i]);
             }
 
+            // Push new minimum to sortedArr
             sortedArr.push(minItem);
+            // Remove new minimum from the array being sorted
             arr.splice(arr.indexOf(minItem), 1);
         }
 

@@ -8,9 +8,6 @@ function preload() {
 function setup() {
     timeline = new Timeline(dataJSON);
     createCanvas(100, 100);
-
-    console.log(timeline.dataEntryManager.dataEntries);
-
     noLoop();
 }
 
