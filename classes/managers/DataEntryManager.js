@@ -8,5 +8,7 @@ class DataEntryManager {
         for (let d of data) {
             dataEntries.push(new DataEntry(d));
         }
+
+        return dataEntries;
     }
 }
