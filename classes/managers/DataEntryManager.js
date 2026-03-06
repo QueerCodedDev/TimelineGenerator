@@ -38,10 +38,11 @@ class DataEntryManager {
      * Sort the array of DataEntries passed in, in ascending order.
      * Calls helper function compare() to determine which value should be added next.
      * 
-     * @param {Array} arr - Unsorted array of DataEntries
-     * @returns {Array}   - Sorted array of DataEntries
+     * @param {Array} arr     - Unsorted array of DataEntries
+     * @param {String} sortBy - Sort method. Date by defualt
+     * @returns {Array}       - Sorted array of DataEntries
      */
-    sort(arr) { // by air date
+    sort(arr, sortBy=SORT_OPTIONS.DATE) { // by air date
         let sortedArr = [];
 
         // While there is at least 1 item that needs to be sorted
@@ -52,7 +53,7 @@ class DataEntryManager {
             // For each item in arr
             for (let i = 0; i < arr.length; i++) {
                 // Compare it against the current minimum
-                minItem = this.compare(minItem, arr[i]);
+                minItem = this.compare(minItem, arr[i], sortBy);
             }
 
             // Push new minimum to sortedArr
@@ -73,14 +74,19 @@ class DataEntryManager {
      * 
      * @param {DataEntry} min - DataEntry with the current min
      * @param {DataEntry} cur - DataEntry that is being compared against the current min
+     * @param {String} sortBy - Sorting method. Date by defualt
      * @returns {DataEntry}   - Whichever DataEntry has the actual min
      */ 
-    compare(min, cur) {
-        // Create vars to hold Dates for readibility
-        let a = new Date(min.date);
-        let b = new Date(cur.date);
+    compare(min, cur, sortBy) {
+        let a, b;
 
-        // If Date of min is larger than Date of cur, return cur
+        if (sortBy == SORT_OPTIONS.DATE) {
+        // Create vars to hold Dates for readibility
+            a = new Date(min.date);
+            b = new Date(cur.date);
+        }
+
+        // If val of min is larger than val of cur, return cur
         if (a > b) return cur; 
 
         // Return the current min by default
