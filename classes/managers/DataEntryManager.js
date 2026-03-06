@@ -1,8 +1,8 @@
 class DataEntryManager {
-    static SORT_OPTIONS = {
+    static SORT_OPTIONS = Object.freeze({
         DATE: 'date',
         UNIVERSE: 'universe'
-    }
+    });
 
     constructor(dataJSON) {
         // Create data entries and store them in a master array that should NOT be altered
