@@ -34,6 +34,7 @@ class DataEntryManager {
     }
 
     compare(min, cur) {
+        console.log(`min: ${min}\ncur: ${cur}`)
         let a = new Date(min.date);
         let b = new Date(cur.date);
 
