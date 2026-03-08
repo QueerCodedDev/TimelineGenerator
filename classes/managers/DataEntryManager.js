@@ -84,25 +84,4 @@ class DataEntryManager {
 
         return min;
     }
-
-
-
-
-
-
-        if (sortBy == SORT_OPTIONS.DATE) {
-        // Create vars to hold Dates for readibility
-            a = new Date(min.date);
-            b = new Date(cur.date);
-        } else if (sortBy == SORT_OPTIONS.UNIVERSE) {
-            a = min.universe;
-            b = cur.universe;
-        }
-
-        // If val of min is larger than val of cur, return cur
-        if (a > b) return cur; 
-
-        // Return the current min by default
-        return min;
-    }
 }
