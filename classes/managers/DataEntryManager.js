@@ -74,7 +74,19 @@ class DataEntryManager {
      * @returns {DataEntry}   - Whichever DataEntry has the actual min
      */ 
     compare(min, cur, sortBy) {
-        let a, b;
+        switch(sortBy) {
+            case SORT_OPTIONS.DATE:
+                if (min.dateOBJ > cur.dateOBJ) return cur;
+            case SORT_OPTIONS.UNIVERSE:
+                if (min.universe > cur.universe && min.dateOBJ > cur.dateOBJ) return cur;
+            default:
+                return min;
+        }
+
+
+
+
+
 
         if (sortBy == SORT_OPTIONS.DATE) {
         // Create vars to hold Dates for readibility
