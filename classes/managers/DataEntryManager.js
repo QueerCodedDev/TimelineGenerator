@@ -65,7 +65,7 @@ class DataEntryManager {
                     }
 
                     for (let a of uniEnArr) {
-                        sortedArr.push(...this.sort(a, SORT_OPTIONS.DATE));
+                        sortedArr.push(...sort(a, SORT_OPTIONS.DATE));
                     }
                 }
             }
