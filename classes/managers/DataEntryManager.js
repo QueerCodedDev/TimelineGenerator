@@ -15,7 +15,7 @@ class DataEntryManager {
 
     static getStarted(dataJSON) {
         // Create data entries and store them in a master array that should NOT be altered
-        dataEntries = createDataEntries(dataJSON);
+        dataEntries = this.createDataEntries(dataJSON);
         // Create an array of entries sorted by date
         dataEntriesByAirDate = sort(dataEntries.slice(), SORT_OPTIONS.DATE);
         // Create an array of entries sorted by universe?
