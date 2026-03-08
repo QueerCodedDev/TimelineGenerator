@@ -76,7 +76,7 @@ class DataEntryManager {
             arr.splice(arr.indexOf(minItem), 1);
         }
 
-        if (!this.isSorted(sortedArr, sortBy)) this.sort(sortedArr, sortBy);
+        //if (!this.isSorted(sortedArr, sortBy)) this.sort(sortedArr, sortBy);
 
         // Return the sorted array
         return sortedArr;
