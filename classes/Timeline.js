@@ -1,5 +1,5 @@
 class Timeline {
     constructor(dataJSON) {
-        DataEntryManager.getStarted(dataJSON.media);
+        this.dataEntryManager = new DataEntryManager(dataJSON.media);
     }
 }

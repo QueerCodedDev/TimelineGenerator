@@ -1,25 +1,13 @@
 class DataEntryManager {
-    static SORT_OPTIONS = {
-        DATE: 'date',
-        UNIVERSE: 'universe'
-    }
-
-
-    // Create data entries and store them in a master array that should NOT be altered
-    static dataEntries;
-    // Create an array of entries sorted by date
-    static dataEntriesByAirDate;
-    // Create an array of entries sorted by universe?
-    // Create an array of entries sorted alphabetically by title?
-
-
-    static getStarted(dataJSON) {
+    constructor(dataJSON) {
         // Create data entries and store them in a master array that should NOT be altered
         this.dataEntries = this.createDataEntries(dataJSON);
         // Create an array of entries sorted by date
-        this.dataEntriesByAirDate = this.sort(dataEntries.slice(), SORT_OPTIONS.DATE);
+        this.dataEntriesByAirDate = this.sort(this.dataEntries.slice(), SORT_OPTIONS.DATE);
         // Create an array of entries sorted by universe?
         // Create an array of entries sorted alphabetically by title?
+
+        console.log(this.dataEntriesByAirDate);
     }
 
 
@@ -30,7 +18,7 @@ class DataEntryManager {
      * @param {Array} data - Array of data that will be made into DataEntries
      * @returns {Array}    - Array of DataEntries
      */
-    static createDataEntries(data) {
+    createDataEntries(data) {
         let dataEntries = [];
         for (let d of data) {
             dataEntries.push(new DataEntry(d));
@@ -49,7 +37,7 @@ class DataEntryManager {
      * @param {String} sortBy - Sort method. Date by defualt
      * @returns {Array}       - Sorted array of DataEntries
      */
-    static sort(arr, sortBy=SORT_OPTIONS.DATE) { // by air date
+    sort(arr, sortBy=SORT_OPTIONS.DATE) { // by air date
         let sortedArr = [];
 
         // While there is at least 1 item that needs to be sorted
@@ -84,7 +72,7 @@ class DataEntryManager {
      * @param {String} sortBy - Sorting method. Date by defualt
      * @returns {DataEntry}   - Whichever DataEntry has the actual min
      */ 
-    static compare(min, cur, sortBy) {
+    compare(min, cur, sortBy) {
         let a, b;
 
         if (sortBy == SORT_OPTIONS.DATE) {
