@@ -1,19 +1,15 @@
 class DataEntryManager {
-    static SORT_OPTIONS = Object.freeze({
+    static SORT_OPTIONS = {
         DATE: 'date',
         UNIVERSE: 'universe'
-    });
-
-    constructor(dataJSON) {
-        // Create data entries and store them in a master array that should NOT be altered
-        this.dataEntries = this.createDataEntries(dataJSON);
-        // Create an array of entries sorted by date
-        this.dataEntriesByAirDate = this.sort(this.dataEntries.slice(), SORT_OPTIONS.DATE);
-        // Create an array of entries sorted by universe?
-        // Create an array of entries sorted alphabetically by title?
-
-        console.log(this.dataEntriesByAirDate);
     }
+
+    // Create data entries and store them in a master array that should NOT be altered
+    static dataEntries = createDataEntries(dataJSON);
+    // Create an array of entries sorted by date
+    static dataEntriesByAirDate = sort(dataEntries.slice(), SORT_OPTIONS.DATE);
+    // Create an array of entries sorted by universe?
+    // Create an array of entries sorted alphabetically by title?
 
 
     /////////////////////////////////////////////////////////////////////////////////
@@ -23,7 +19,7 @@ class DataEntryManager {
      * @param {Array} data - Array of data that will be made into DataEntries
      * @returns {Array}    - Array of DataEntries
      */
-    createDataEntries(data) {
+    static createDataEntries(data) {
         let dataEntries = [];
         for (let d of data) {
             dataEntries.push(new DataEntry(d));
@@ -42,7 +38,7 @@ class DataEntryManager {
      * @param {String} sortBy - Sort method. Date by defualt
      * @returns {Array}       - Sorted array of DataEntries
      */
-    sort(arr, sortBy=SORT_OPTIONS.DATE) { // by air date
+    static sort(arr, sortBy=SORT_OPTIONS.DATE) { // by air date
         let sortedArr = [];
 
         // While there is at least 1 item that needs to be sorted
@@ -77,7 +73,7 @@ class DataEntryManager {
      * @param {String} sortBy - Sorting method. Date by defualt
      * @returns {DataEntry}   - Whichever DataEntry has the actual min
      */ 
-    compare(min, cur, sortBy) {
+    static compare(min, cur, sortBy) {
         let a, b;
 
         if (sortBy == SORT_OPTIONS.DATE) {
