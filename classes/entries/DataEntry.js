@@ -5,6 +5,7 @@ class DataEntry {
         this.universe = data.universe
         this.title    = data.title;
         this.date     = data.air_date;
+        this.dateOBJ  = new Date(data.air_date);
 
 
         // Get circumstantial data
