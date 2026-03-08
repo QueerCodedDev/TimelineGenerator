@@ -4,12 +4,23 @@ class DataEntryManager {
         UNIVERSE: 'universe'
     }
 
+
     // Create data entries and store them in a master array that should NOT be altered
-    static dataEntries = createDataEntries(dataJSON);
+    static dataEntries;
     // Create an array of entries sorted by date
-    static dataEntriesByAirDate = sort(dataEntries.slice(), SORT_OPTIONS.DATE);
+    static dataEntriesByAirDate;
     // Create an array of entries sorted by universe?
     // Create an array of entries sorted alphabetically by title?
+
+
+    static getStarted(dataJSON) {
+        // Create data entries and store them in a master array that should NOT be altered
+        dataEntries = createDataEntries(dataJSON);
+        // Create an array of entries sorted by date
+        dataEntriesByAirDate = sort(dataEntries.slice(), SORT_OPTIONS.DATE);
+        // Create an array of entries sorted by universe?
+        // Create an array of entries sorted alphabetically by title?
+    }
 
 
     /////////////////////////////////////////////////////////////////////////////////
