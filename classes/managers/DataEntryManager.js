@@ -5,6 +5,7 @@ class DataEntryManager {
         // Create an array of entries sorted by date
         this.dataEntriesByAirDate = this.sort(this.dataEntries.slice(), SORT_OPTIONS.DATE);
         // Create an array of entries sorted by universe?
+        this.dataEntriesByAirDate = this.sort(this.dataEntries.slice(), SORT_OPTIONS.UNIVERSE);
         // Create an array of entries sorted alphabetically by title?
 
         console.log(this.dataEntriesByAirDate);
@@ -37,7 +38,7 @@ class DataEntryManager {
      * @param {String} sortBy - Sort method. Date by defualt
      * @returns {Array}       - Sorted array of DataEntries
      */
-    sort(arr, sortBy=SORT_OPTIONS.DATE) { // by air date
+    sort(arr, sortBy=SORT_OPTIONS.DATE) {
         let sortedArr = [];
 
         // While there is at least 1 item that needs to be sorted
@@ -79,6 +80,9 @@ class DataEntryManager {
         // Create vars to hold Dates for readibility
             a = new Date(min.date);
             b = new Date(cur.date);
+        } else if (sortBy == SORT_OPTIONS.UNIVERSE) {
+            a = min.universe;
+            b = cur.universe;
         }
 
         // If val of min is larger than val of cur, return cur
