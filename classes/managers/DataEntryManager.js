@@ -5,7 +5,7 @@ class DataEntryManager {
         // Create an array of entries sorted by date
         this.dataEntriesByAirDate = this.sort(this.dataEntries.slice(), SORT_OPTIONS.DATE);
         // Create an array of entries sorted by universe?
-        this.dataEntriesByAirDate = this.sort(this.dataEntries.slice(), SORT_OPTIONS.UNIVERSE);
+        this.dataEntriesByUniverseByAirDate = this.sort(this.dataEntries.slice(), SORT_OPTIONS.UNIVERSE);
         // Create an array of entries sorted alphabetically by title?
 
         console.log(this.dataEntriesByAirDate);
@@ -80,7 +80,7 @@ class DataEntryManager {
             case SORT_OPTIONS.DATE:
                 if (min.dateOBJ > cur.dateOBJ) return cur;
             case SORT_OPTIONS.UNIVERSE:
-                if (min.universe > cur.universe && min.dateOBJ > cur.dateOBJ) return cur;
+                if (min.universe >= cur.universe && min.dateOBJ > cur.dateOBJ) return cur;
             
         }
 
