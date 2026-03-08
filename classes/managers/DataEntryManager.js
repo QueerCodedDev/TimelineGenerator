@@ -48,26 +48,8 @@ class DataEntryManager {
 
             // For each item in arr
             for (let i = 0; i < arr.length; i++) {
-                if (sortBy == SORT_OPTIONS.DATE) {
-                    // Compare it against the current minimum
-                    minItem = this.compare(minItem, arr[i], sortBy);
-                } else if (sortBy == SORT_OPTIONS.UNIVERSE) {
-                    let uniArr = [];
-                    let uniEnArr = [];
-
-                    for (let a of arr) {
-                        if (uniArr.indexOf(a.universe) == -1) {
-                            uniArr.push(a.universe);
-                            uniEnArr.push([]);
-                        }
-
-                        uniEnArr[uniArr.indexOf(a.universe)].push(a);
-                    }
-
-                    for (let a of uniEnArr) {
-                        sortedArr.push(...sort(a, SORT_OPTIONS.DATE));
-                    }
-                }
+                // Compare it against the current minimum
+                minItem = this.compare(minItem, arr[i], sortBy);
             }
 
             // Push new minimum to sortedArr
@@ -76,7 +58,7 @@ class DataEntryManager {
             arr.splice(arr.indexOf(minItem), 1);
         }
 
-        //if (!this.isSorted(sortedArr, sortBy)) this.sort(sortedArr, sortBy);
+        if (!this.isSorted(sortedArr, sortBy)) this.sort(sortedArr, sortBy);
 
         // Return the sorted array
         return sortedArr;
@@ -98,7 +80,7 @@ class DataEntryManager {
             case SORT_OPTIONS.DATE:
                 if (min.dateOBJ > cur.dateOBJ) return cur;
             case SORT_OPTIONS.UNIVERSE:
-                if (min.universe > cur.universe) return cur;
+                if (min.universe >= cur.universe && min.dateOBJ > cur.dateOBJ) return cur;
             
         }
 
