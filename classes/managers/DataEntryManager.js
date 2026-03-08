@@ -79,9 +79,11 @@ class DataEntryManager {
                 if (min.dateOBJ > cur.dateOBJ) return cur;
             case SORT_OPTIONS.UNIVERSE:
                 if (min.universe > cur.universe && min.dateOBJ > cur.dateOBJ) return cur;
-            default:
-                return min;
+            
         }
+
+        return min;
+    }
 
 
 
