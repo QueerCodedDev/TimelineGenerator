@@ -15,6 +15,7 @@ class CompressedEntryManager {
             }
         }
 
+        // NEED TO ACTUALLY MAKE THE COMPRESSED ENTRIES HERE OR SOMETHING
         return compArr;
     }
 }

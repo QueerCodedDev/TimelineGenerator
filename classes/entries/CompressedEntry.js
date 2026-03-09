@@ -5,6 +5,7 @@ class CompressedEntry {
 
         this.entry  = entry;
         this.output = this.formatEntry();
+        this.render();
     }
 
     formatEntry() {
