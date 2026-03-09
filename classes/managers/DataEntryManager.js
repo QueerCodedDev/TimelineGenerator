@@ -68,20 +68,21 @@ class DataEntryManager {
 
     sortTEMP(arr, sortBy=SORT_OPTIONS.UNIVERSE) {
         let uniArr = [];
+        let divArr = [];
         let sortedArr = [];
         for (let e of arr) {
             if (uniArr.indexOf(e.universe) == -1) {
                 uniArr.push(e.universe);
-                sortedArr.push([]);
+                divArr.push([]);
             }
-            sortedArr[uniArr.indexOf(e.universe)].push(e);
+            divArr[uniArr.indexOf(e.universe)].push(e);
         }
 
-        for (let a of sortedArr) {
-            a = this.sort(a);
+        for (let a of divArr) {
+            sortedArr.push(this.sort(a));
         }
 
-        return sortedArr;
+        return divArr;
     }
     /////////////////////////////////////////////////////////////////////////////////
     /********************************************************************************
