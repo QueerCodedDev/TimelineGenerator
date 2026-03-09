@@ -4,6 +4,7 @@ const SORT_OPTIONS = {
         DATE: 'date',
         UNIVERSE: 'universe'
 }
+
 function preload() {
     dataJSON = loadJSON('res/individual_data.json');
 }

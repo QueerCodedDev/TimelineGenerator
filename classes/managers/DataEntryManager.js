@@ -5,10 +5,11 @@ class DataEntryManager {
         // Create an array of entries sorted by date
         this.dataEntriesByAirDate = this.sort(this.dataEntries.slice(), SORT_OPTIONS.DATE);
         // Create an array of entries sorted by universe?
-        this.dataEntriesByUniverseByAirDate = this.sort(this.dataEntries.slice(), SORT_OPTIONS.UNIVERSE);
+        this.dataEntriesByUniverseByAirDate = this.sortTEMP(this.dataEntries.slice(), SORT_OPTIONS.UNIVERSE);
         // Create an array of entries sorted alphabetically by title?
 
         console.log(this.dataEntriesByAirDate);
+        console.log(this.dataEntriesByUniverseByAirDate);
     }
 
 
@@ -65,6 +66,23 @@ class DataEntryManager {
     }
 
 
+    sortTEMP(arr, sortBy=SORT_OPTIONS.UNIVERSE) {
+        let uniArr = [];
+        let sortedArr = [];
+        for (let e of arr) {
+            if (uniArr.indexOf(e.universe) == -1) {
+                uniArr.push(e.universe);
+                sortedArr.push([]);
+            }
+            sortedArr[uniArr.indexOf(e.universe)].push(e);
+        }
+
+        for (let a of sortedArr) {
+            a = this.sort(a);
+        }
+
+        return sortedArr;
+    }
     /////////////////////////////////////////////////////////////////////////////////
     /********************************************************************************
      * Compare the selected value (date by default) of the two DataEntries passed in.
