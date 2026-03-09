@@ -5,13 +5,16 @@ const SORT_OPTIONS = {
         UNIVERSE: 'universe'
 }
 
+let canvasW = 500;
+let canvasH = 1000
+
 function preload() {
     dataJSON = loadJSON('res/individual_data.json');
 }
 
 function setup() {
     timeline = new Timeline(dataJSON);
-    createCanvas(500, 500);
+    createCanvas(canvasW, canvasH);
     noLoop();
 }
 
