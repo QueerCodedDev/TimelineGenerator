@@ -7,7 +7,7 @@ class CompressedEntryManager {
 
     compressEntries(arr) {
         let compArr = [[arr[0]]]; // Store first entry in array by default
-        for (let i = 1; i < arr.length-1; i++) {
+        for (let i = 1; i < arr.length; i++) {
             if (arr[i].universe == compArr[compArr.length-1].universe) {
                 compArr[compArr.length-1].push(arr[i]);
             } else {
