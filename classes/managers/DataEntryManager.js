@@ -78,11 +78,14 @@ class DataEntryManager {
             divArr[uniArr.indexOf(e.universe)].push(e);
         }
 
+        console.log(uniArr);
+        console.log(divArr);
+
         for (let a of divArr) {
             sortedArr.push(this.sort(a));
         }
 
-        return divArr;
+        return sortedArr;
     }
     /////////////////////////////////////////////////////////////////////////////////
     /********************************************************************************
