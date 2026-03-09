@@ -6,19 +6,20 @@ class CompressedEntryManager {
     }
 
     compressEntries(arr) {
-        let compArr = [[arr[0]]]; // Store first entry in array by default
+        let compArr = [];
+        let tempArr = [[arr[0]]]; // Store first entry in array by default
         for (let i = 1; i < arr.length; i++) {
-            if (arr[i].universe == compArr[compArr.length-1][0].universe) {
-                compArr[compArr.length-1].push(arr[i]);
+            if (arr[i].universe == tempArr[tempArr.length-1][0].universe) {
+                tempArr[tempArr.length-1].push(arr[i]);
             } else {
-                compArr.push([arr[i]]);
+                tempArr.push([arr[i]]);
             }
         }
 
-        for (let e of compArr) {
-            e = new CompressedEntry(e);
+        for (let e of tempArr) {
+            compArr.push(new CompressedEntry(e));
         }
-        
+
         return compArr;
     }
 }
