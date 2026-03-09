@@ -2,14 +2,12 @@ class DataEntryManager {
     constructor(dataJSON) {
         // Create data entries and store them in a master array that should NOT be altered
         this.dataEntries = this.createDataEntries(dataJSON);
+
         // Create an array of entries sorted by date
         this.dataEntriesByAirDate = this.sort(this.dataEntries.slice(), SORT_OPTIONS.DATE);
+
         // Create an array of entries sorted by universe?
         this.dataEntriesByUniverseByAirDate = this.sort(this.dataEntries.slice(), SORT_OPTIONS.UNIVERSE);
-        // Create an array of entries sorted alphabetically by title?
-
-        console.log(this.dataEntriesByAirDate);
-        console.log(this.dataEntriesByUniverseByAirDate);
     }
 
 
@@ -46,7 +44,7 @@ class DataEntryManager {
 
     /////////////////////////////////////////////////////////////////////////////////
     /********************************************************************************
-     * Sort the array of DataEntries passed in, in ascending order.
+     * Sort the array of DataEntries passed in, by date, in ascending order.
      * Calls helper function compare() to determine which value should be added next.
      * 
      * @param   {Array}  arr     - Unsorted array of DataEntries
@@ -80,6 +78,16 @@ class DataEntryManager {
     }
 
 
+    /////////////////////////////////////////////////////////////////////////////////
+    /********************************************************************************
+     * Sort the array of DataEntries passed in, by universe, then by date, in
+     * ascending order. Calls helper function compare() to determine which value
+     * should be added next.
+     * 
+     * @param   {Array}  arr     - Unsorted array of DataEntries
+     * @param   {String} sortBy  - Sort method. Universe by defualt
+     * @returns {Array}          - Sorted array of DataEntries
+     */
     sortByUniverseByDate(arr, sortBy=SORT_OPTIONS.UNIVERSE) {
         let uniArr = [];
         let divArr = [];
