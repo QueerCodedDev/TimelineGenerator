@@ -5,7 +5,6 @@ class CompressedEntry {
 
         this.entry  = entry;
         this.output = this.formatEntry();
-        this.render();
     }
 
     formatEntry() {
@@ -18,6 +17,7 @@ class CompressedEntry {
     }
 
     render() {
-        console.log(this.output)
+        rect(0, 0, textWidth(this.output), textAscent() * this.entry.length * 2);
+        text(this.output);
     }
 }
