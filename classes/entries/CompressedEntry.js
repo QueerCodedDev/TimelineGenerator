@@ -17,6 +17,7 @@ class CompressedEntry {
     }
 
     render() {
+        stroke(255)
         rect(0, 0, textWidth(this.output), textAscent() * this.entry.length * 2);
         text(this.output, 0, 0);
     }
