@@ -11,10 +11,10 @@ function preload() {
 
 function setup() {
     timeline = new Timeline(dataJSON);
-    createCanvas(100, 100);
+    createCanvas(500, 500);
     noLoop();
 }
 
 function draw() {
-    background(255, 0, 0);
+    
 }
