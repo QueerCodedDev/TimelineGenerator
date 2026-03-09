@@ -4,7 +4,7 @@ const SORT_OPTIONS = {
         DATE: 'date',
         UNIVERSE: 'universe'
 }
-
+let i = 0;
 let canvasW = 500;
 let canvasH = 1000
 
@@ -15,11 +15,13 @@ function preload() {
 function setup() {
     timeline = new Timeline(dataJSON);
     createCanvas(canvasW, canvasH);
-    noLoop();
 }
 
 function draw() {
     background(255,0,0);
-    // timeline.compEM.compEntries[0].render();
-    timeline.compEM.compEntries[1].render();
+    timeline.compEM.compEntries[i].render();
+}
+
+function mouseClicked() {
+    i++;
 }
