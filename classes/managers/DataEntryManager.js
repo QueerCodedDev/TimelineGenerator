@@ -17,8 +17,8 @@ class DataEntryManager {
     /********************************************************************************
      * Take the JSON data passed in and create DataEntries with that data.
      * 
-     * @param {Array} data - Array of data that will be made into DataEntries
-     * @returns {Array}    - Array of DataEntries
+     * @param   {Array}  data - Array of data that will be made into DataEntries
+     * @returns {Array}       - Array of DataEntries
      */
     createDataEntries(data) {
         let dataEntries = [];
@@ -30,9 +30,17 @@ class DataEntryManager {
     }
 
 
+    /////////////////////////////////////////////////////////////////////////////////
+    /********************************************************************************
+     * Take array and sort style, and call the appropriate sort function.
+     * 
+     * @param   {Array}  arr    - Array of DataEntries
+     * @param   {String} sortBy - Designated sorting method
+     * @returns {Array}         - Array of DataEntries, sorted as designated
+     */
     sort(arr, sortBy=SORT_OPTIONS.DATE) {
-        if (sortBy == SORT_OPTIONS.DATE) this.sortByDate(arr);
-        if (sortBy == SORT_OPTIONS.UNIVERSE) this.sortByUniverseByDate(arr);
+        if (sortBy == SORT_OPTIONS.DATE) return this.sortByDate(arr);
+        if (sortBy == SORT_OPTIONS.UNIVERSE) return this.sortByUniverseByDate(arr);
     }
 
 
@@ -41,11 +49,11 @@ class DataEntryManager {
      * Sort the array of DataEntries passed in, in ascending order.
      * Calls helper function compare() to determine which value should be added next.
      * 
-     * @param {Array} arr     - Unsorted array of DataEntries
-     * @param {String} sortBy - Sort method. Date by defualt
-     * @returns {Array}       - Sorted array of DataEntries
+     * @param   {Array}  arr     - Unsorted array of DataEntries
+     * @param   {String} sortBy  - Sort method. Date by defualt
+     * @returns {Array}          - Sorted array of DataEntries
      */
-    sortByDate(arr) {
+    sortByDate(arr, sortBy=SORT_OPTIONS.DATE) {
         let sortedArr = [];
 
         // While there is at least 1 item that needs to be sorted
@@ -72,7 +80,7 @@ class DataEntryManager {
     }
 
 
-    sortByUniverseByDate(arr) {
+    sortByUniverseByDate(arr, sortBy=SORT_OPTIONS.UNIVERSE) {
         let uniArr = [];
         let divArr = [];
         let sortedArr = [];
@@ -90,15 +98,17 @@ class DataEntryManager {
 
         return sortedArr;
     }
+
+
     /////////////////////////////////////////////////////////////////////////////////
     /********************************************************************************
      * Compare the selected value (date by default) of the two DataEntries passed in.
      * Return the DataEntry that has the lowest value of the two.
      * 
-     * @param {DataEntry} min - DataEntry with the current min
-     * @param {DataEntry} cur - DataEntry that is being compared against the current min
-     * @param {String} sortBy - Sorting method. Date by defualt
-     * @returns {DataEntry}   - Whichever DataEntry has the actual min
+     * @param   {DataEntry} min    - DataEntry with the current min
+     * @param   {DataEntry} cur    - DataEntry that is being compared against the current min
+     * @param   {String}    sortBy - Sorting method. Date by defualt
+     * @returns {DataEntry}        - Whichever DataEntry has the actual min
      */ 
     compare(min, cur, sortBy) {
         switch(sortBy) {
@@ -118,9 +128,9 @@ class DataEntryManager {
      * Go through the potentially sorted array and make sure things are actually
      * sorted.
      * 
-     * @param {Array} arr - Array being checking if sorted
-     * @param {String} sortBy - Sorting method. Date by defualt
-     * @returns {Boolean}   - Whether arr is sorted or not
+     * @param   {Array}   arr    - Array being checking if sorted
+     * @param   {String}  sortBy - Sorting method. Date by defualt
+     * @returns {Boolean}        - Whether arr is sorted or not
      */ 
     isSorted(arr, sortBy) {
         for (let i = 0; i < arr.length-1; i++) {
