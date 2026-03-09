@@ -5,7 +5,7 @@ class DataEntryManager {
         // Create an array of entries sorted by date
         this.dataEntriesByAirDate = this.sort(this.dataEntries.slice(), SORT_OPTIONS.DATE);
         // Create an array of entries sorted by universe?
-        this.dataEntriesByUniverseByAirDate = this.sortTEMP(this.dataEntries.slice(), SORT_OPTIONS.UNIVERSE);
+        this.dataEntriesByUniverseByAirDate = this.sort(this.dataEntries.slice(), SORT_OPTIONS.UNIVERSE);
         // Create an array of entries sorted alphabetically by title?
 
         console.log(this.dataEntriesByAirDate);
@@ -30,6 +30,12 @@ class DataEntryManager {
     }
 
 
+    sort(arr, sortBy=SORT_OPTIONS.DATE) {
+        if (sortBy == SORT_OPTIONS.DATE) this.sortByDate(arr);
+        if (sortBy == SORT_OPTIONS.UNIVERSE) this.sortByUniverseByDate(arr);
+    }
+
+    
     /////////////////////////////////////////////////////////////////////////////////
     /********************************************************************************
      * Sort the array of DataEntries passed in, in ascending order.
@@ -39,17 +45,8 @@ class DataEntryManager {
      * @param {String} sortBy - Sort method. Date by defualt
      * @returns {Array}       - Sorted array of DataEntries
      */
-    sort(arr, sortBy=SORT_OPTIONS.DATE) {
+    sortByDate(arr) {
         let sortedArr = [];
-
-        if (sortBy == SORT_OPTIONS.UNIVERSE) {
-            let groupedArr = this.groupEntriesByUniverse(arr);
-            for (let g of groupedArr) {
-                sortedArr.push(this.sort(g));
-            }
-
-            return sortedArr;
-        }
 
         // While there is at least 1 item that needs to be sorted
         while (arr.length >= 1) {
@@ -75,10 +72,10 @@ class DataEntryManager {
     }
 
 
-    groupEntriesByUniverse(arr) {
+    sortByUniverseByDate(arr) {
         let uniArr = [];
         let divArr = [];
-
+        let sortedArr = [];
         for (let e of arr) {
             if (uniArr.indexOf(e.universe) == -1) {
                 uniArr.push(e.universe);
@@ -87,7 +84,11 @@ class DataEntryManager {
             divArr[uniArr.indexOf(e.universe)].push(e);
         }
 
-        return divArr;
+        for (let a of divArr) {
+            sortedArr.push(this.sort(a));
+        }
+
+        return sortedArr;
     }
     /////////////////////////////////////////////////////////////////////////////////
     /********************************************************************************
@@ -104,7 +105,7 @@ class DataEntryManager {
             case SORT_OPTIONS.DATE:
                 if (min.dateOBJ > cur.dateOBJ) return cur;
             case SORT_OPTIONS.UNIVERSE:
-                if (min.universe > cur.universe) return cur;
+                if (min.universe >= cur.universe && min.dateOBJ > cur.dateOBJ) return cur;
             
         }
 
