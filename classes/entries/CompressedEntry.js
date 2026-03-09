@@ -20,7 +20,8 @@ class CompressedEntry {
         translate(canvasW / 2, canvasH / 2)
         rectMode(CENTER);
         textAlign(CENTER, CENTER);
-        rect(0, 0, textWidth(this.output), textAscent() * this.entry.length * 2);
+        let height = textAscent() + textDescent();
+        rect(0, 0, textWidth(this.output), height * this.entry.length * 2);
         text(this.output, 0, 0);
     }
 }
