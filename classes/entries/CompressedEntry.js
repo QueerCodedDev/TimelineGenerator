@@ -21,7 +21,7 @@ class CompressedEntry {
         rectMode(CENTER);
         textAlign(CENTER, CENTER);
         let height = textAscent() + textDescent();
-        rect(0, 0, textWidth(this.output), height * this.entry.length * 2);
+        rect(0, 0, textWidth(this.output), height * (this.entry.length+1) * 2);
         text(this.output, 0, 0);
     }
 }
