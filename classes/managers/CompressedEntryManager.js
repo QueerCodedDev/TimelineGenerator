@@ -15,7 +15,10 @@ class CompressedEntryManager {
             }
         }
 
-        // NEED TO ACTUALLY MAKE THE COMPRESSED ENTRIES HERE OR SOMETHING
+        for (let e of compArr) {
+            e = new CompressedEntry(e);
+        }
+        
         return compArr;
     }
 }
