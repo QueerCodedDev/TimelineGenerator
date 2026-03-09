@@ -3,7 +3,8 @@ class Timeline {
         this.dataEM = new DataEntryManager(dataJSON.media);
         this.compEM = new CompressedEntryManager(this.dataEM);
 
-        this.compEM.compEntries[0].render();
-        this.compEM.compEntries[1].render();
+        console.log(this.compEM.compEntries[0]);
+        // this.compEM.compEntries[0].render();
+        // this.compEM.compEntries[1].render();
     }
 }
