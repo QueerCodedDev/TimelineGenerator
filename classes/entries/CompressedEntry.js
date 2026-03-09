@@ -10,7 +10,7 @@ class CompressedEntry {
     formatEntry() {
         let output = '';
         for (let e of this.entry) {
-            output += `${e.title}\n${e.date}\n`
+            output += `\n${e.title}\n${e.date}`
         }
 
         return output;
