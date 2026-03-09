@@ -16,5 +16,7 @@ function setup() {
 }
 
 function draw() {
-    background(255,0,0)
+    background(255,0,0);
+    timeline.compEM.compEntries[0].render();
+    timeline.compEM.compEntries[1].render();
 }
