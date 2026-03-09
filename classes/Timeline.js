@@ -1,5 +1,6 @@
 class Timeline {
     constructor(dataJSON) {
-        this.dataEntryManager = new DataEntryManager(dataJSON.media);
+        this.dataEM = new DataEntryManager(dataJSON.media);
+        this.compEM = new CompressedEntryManager(this.dataEM);
     }
 }
