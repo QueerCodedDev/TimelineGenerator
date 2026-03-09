@@ -42,6 +42,15 @@ class DataEntryManager {
     sort(arr, sortBy=SORT_OPTIONS.DATE) {
         let sortedArr = [];
 
+        if (sortBy == SORT_OPTIONS.UNIVERSE) {
+            let groupedArr = this.groupEntriesByUniverse(arr);
+            for (let g of groupedArr) {
+                sortedArr.push(this.sort(g));
+            }
+
+            return sortedArr;
+        }
+
         // While there is at least 1 item that needs to be sorted
         while (arr.length >= 1) {
             // Assume the first value in the array is the minimum
@@ -66,10 +75,10 @@ class DataEntryManager {
     }
 
 
-    sortTEMP(arr, sortBy=SORT_OPTIONS.UNIVERSE) {
+    groupEntriesByUniverse(arr) {
         let uniArr = [];
         let divArr = [];
-        let sortedArr = [];
+
         for (let e of arr) {
             if (uniArr.indexOf(e.universe) == -1) {
                 uniArr.push(e.universe);
@@ -78,14 +87,7 @@ class DataEntryManager {
             divArr[uniArr.indexOf(e.universe)].push(e);
         }
 
-        console.log(uniArr);
-        console.log(divArr);
-
-        for (let a of divArr) {
-            sortedArr.push(this.sort(a));
-        }
-
-        return sortedArr;
+        return divArr;
     }
     /////////////////////////////////////////////////////////////////////////////////
     /********************************************************************************
@@ -102,7 +104,7 @@ class DataEntryManager {
             case SORT_OPTIONS.DATE:
                 if (min.dateOBJ > cur.dateOBJ) return cur;
             case SORT_OPTIONS.UNIVERSE:
-                if (min.universe >= cur.universe && min.dateOBJ > cur.dateOBJ) return cur;
+                if (min.universe > cur.universe) return cur;
             
         }
 
