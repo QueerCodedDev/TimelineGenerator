@@ -17,7 +17,7 @@ class CompressedEntry {
     }
 
     render() {
-        translate(0, 0, 250, 250)
+        translate(250, 250)
         rectMode(CENTER);
         textAlign(CENTER);
         rect(0, 0, textWidth(this.output), textAscent() * this.entry.length * 2);
