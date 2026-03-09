@@ -35,7 +35,7 @@ class DataEntryManager {
         if (sortBy == SORT_OPTIONS.UNIVERSE) this.sortByUniverseByDate(arr);
     }
 
-    
+
     /////////////////////////////////////////////////////////////////////////////////
     /********************************************************************************
      * Sort the array of DataEntries passed in, in ascending order.
@@ -105,7 +105,7 @@ class DataEntryManager {
             case SORT_OPTIONS.DATE:
                 if (min.dateOBJ > cur.dateOBJ) return cur;
             case SORT_OPTIONS.UNIVERSE:
-                if (min.universe >= cur.universe && min.dateOBJ > cur.dateOBJ) return cur;
+                if (min.universe > cur.universe && min.dateOBJ > cur.dateOBJ) return cur;
             
         }
 
