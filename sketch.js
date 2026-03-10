@@ -5,8 +5,8 @@ const SORT_OPTIONS = {
         UNIVERSE: 'universe'
 }
 let i = 0;
-let canvasW = 500;
-let canvasH = 1000
+let canvasW = 1000;
+let canvasH = 2000
 
 function preload() {
     dataJSON = loadJSON('res/individual_data.json');
