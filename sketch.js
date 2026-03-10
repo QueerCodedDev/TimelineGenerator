@@ -1,4 +1,5 @@
 let dataJSON;
+let font;
 let timeline;
 const SORT_OPTIONS = {
         DATE: 'date',
@@ -10,6 +11,7 @@ let canvasH = 2000
 
 function preload() {
     dataJSON = loadJSON('res/individual_data.json');
+    font = loadFont('res/Consolas.ttf');
 }
 
 function setup() {

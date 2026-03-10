@@ -26,9 +26,8 @@ class CompressedEntry {
         rectMode(CENTER);
         textAlign(CENTER, CENTER);
         textSize(25);
-        
 
-        let height = (textSize() * this.entry.length) * 3;
+        let height = font.textBounds(this.output).h;
 
         strokeWeight(5);
         stroke(ColorManager.colors[this.entry[0].universe]);
@@ -39,7 +38,6 @@ class CompressedEntry {
         stroke(ColorManager.colors.black);
         strokeWeight(2);
         text(this.output.titles, 0, 0);
-        textSize(20);
         text(this.output.dates, 0, 0);
 
         textSize(20);
