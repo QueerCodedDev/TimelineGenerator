@@ -20,7 +20,7 @@ class CompressedEntry {
         }
 
         let boundsTitle = font.textBounds(this.titles, 0, 0, timeline.point);
-        let boundsDates = font.textBounds(this.dates,  0, 0, timeline.point);
+        let boundsDates = font.textBounds(this.dates,  0, 0, timeline.point); //< ----- Can't do this because timeline isn't done being made by the time this is called
         this.w = max(boundsTitle.w, boundsDates.w) + timeline.point;
         this.h = max(boundsTitle.h, boundsDates.h) + (timeline.point * 3);
     }
