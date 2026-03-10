@@ -14,8 +14,8 @@ class CompressedEntry {
         };
 
         for (let e of this.entry) {
-            output.titles += `\n${e.title}\n\n`;
-            output.dates  += `\n\n\n${e.date}`;
+            output.titles += `\n${e.title}\n`;
+            output.dates  += `\n\n${e.date}`;
         }
 
         return output;
