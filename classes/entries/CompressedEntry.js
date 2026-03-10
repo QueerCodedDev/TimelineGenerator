@@ -17,7 +17,7 @@ class CompressedEntry {
     }
 
     render() {
-        translate(canvasW / 2, 10) // <-- Will likely need to get rid of/move/change
+        translate(canvasW / 2, canvasW / 2) // <-- Will likely need to get rid of/move/change
         rectMode(CENTER);
         textAlign(CENTER, CENTER);
         textSize(25);
