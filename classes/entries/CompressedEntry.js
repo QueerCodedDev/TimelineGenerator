@@ -23,8 +23,9 @@ class CompressedEntry {
         textSize(25);
         
 
-        let height = (textAscent() + textDescent()) * this.entry.length * 2;
-        height += textLeading() * (this.entry.length-1);
+        // let height = (textAscent() + textDescent()) * this.entry.length * 2;
+        // height += textLeading() * (this.entry.length-1);
+        let height = textAscent() + textDescent() + textLeading();
 
         strokeWeight(5);
         stroke(ColorManager.colors[this.entry[0].universe]);
