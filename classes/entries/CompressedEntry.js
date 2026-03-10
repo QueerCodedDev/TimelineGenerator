@@ -23,12 +23,12 @@ class CompressedEntry {
         textSize(25);
         
 
-        let height = (25 + 25) * this.entry.length
+        let height = (25 + 25) * (this.entry.length + 1)
 
         strokeWeight(5);
         stroke(ColorManager.colors[this.entry[0].universe]);
         fill(ColorManager.colors.black);
-        rect(0, 0, textWidth(this.output), height, 25); // <-- Change height bs here to use textLeading()
+        rect(0, 0, textWidth(this.output), height, 25);
         
         fill(ColorManager.colors.white)
         stroke(ColorManager.colors.black);
