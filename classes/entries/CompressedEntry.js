@@ -27,7 +27,7 @@ class CompressedEntry {
         textAlign(CENTER, CENTER);
         textSize(25);
 
-        let bounds = font.textBounds(this.output, 0, 0, textSize());
+        let bounds = font.textBounds(this.output.titles, 0, 0, textSize());
         let height = bounds.h
         console.log(bounds);
 
