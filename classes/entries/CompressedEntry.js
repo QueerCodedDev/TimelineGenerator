@@ -50,6 +50,6 @@ class CompressedEntry {
         textSize(20);
         noStroke();
         fill(ColorManager.colors[this.entry[0].universe]);
-        text(this.entry[0].name, 0, (-height/2) + textSize());
+        text(this.entry[0].name, 0, (-this.output.h/2) + textSize());
     }
 }
