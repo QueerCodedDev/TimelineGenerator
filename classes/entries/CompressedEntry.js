@@ -10,7 +10,7 @@ class CompressedEntry {
         this.h;
         this.color  = ColorManager.colors[this.entry[0].universe];
         
-        formatEntry();
+        this.formatEntry();
     }
 
     formatEntry() {
