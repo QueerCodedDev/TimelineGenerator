@@ -8,9 +8,14 @@ class CompressedEntry {
     }
 
     formatEntry() {
-        let output = '';
+        let output = {
+            'titles': '',
+            'dates': ''
+        };
+
         for (let e of this.entry) {
-            output += `\n${e.title}\n${e.date}`
+            output.titles += `\n${e.title}\n\n`;
+            output.dates  += `\n\n\n${e.date}`;
         }
 
         return output;
@@ -33,7 +38,8 @@ class CompressedEntry {
         fill(ColorManager.colors.white)
         stroke(ColorManager.colors.black);
         strokeWeight(2);
-        text(this.output, 0, 0);
+        text(this.output.titles, 0, 0);
+        text(this.output.dates, 0, 0);
 
         textSize(20);
         noStroke();
