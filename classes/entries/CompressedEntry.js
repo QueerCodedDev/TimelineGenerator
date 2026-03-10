@@ -39,6 +39,7 @@ class CompressedEntry {
         stroke(ColorManager.colors.black);
         strokeWeight(2);
         text(this.output.titles, 0, 0);
+        stroke(ColorManager.colors.line)
         text(this.output.dates, 0, 0);
 
         textSize(20);
