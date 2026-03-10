@@ -28,7 +28,7 @@ class CompressedEntry {
         textSize(25);
 
         let bounds = font.textBounds(this.output.titles, 0, 0, textSize());
-        let height = bounds.h
+        let height = bounds.h + textSize();
         console.log(bounds);
 
         strokeWeight(5);
