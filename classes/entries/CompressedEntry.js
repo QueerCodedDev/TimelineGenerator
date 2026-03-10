@@ -28,12 +28,14 @@ class CompressedEntry {
         textSize(25);
 
         let bounds = font.textBounds(this.output.titles, 0, 0, textSize());
-        let height = bounds.h + (textSize() * 3);
+        let dateBounds = font.textBounds(this.output.dates, 0, 0, textSize());
+
+        let height = max(bounds.h, dateBounds.h) + (textSize() * 3);
 
         strokeWeight(5);
         stroke(ColorManager.colors[this.entry[0].universe]);
         fill(ColorManager.colors.black);
-        rect(0, 0, bounds.w+textSize(), height, 25);
+        rect(0, 0, max(bounds.w, dateBounds.w)+textSize(), height, 25);
         
         fill(ColorManager.colors.white)
         stroke(ColorManager.colors.black);
