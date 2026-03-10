@@ -33,7 +33,7 @@ class CompressedEntry {
         strokeWeight(5);
         stroke(ColorManager.colors[this.entry[0].universe]);
         fill(ColorManager.colors.black);
-        rect(0, 0, bounds.w, height, 25);
+        rect(0, 0, bounds.w+textSize(), height, 25);
         
         fill(ColorManager.colors.white)
         stroke(ColorManager.colors.black);
@@ -44,6 +44,6 @@ class CompressedEntry {
         textSize(20);
         noStroke();
         fill(ColorManager.colors[this.entry[0].universe]);
-        //text(this.entry[0].name, 0, (-height/2) + textSize());
+        text(this.entry[0].name, 0, (-height/2) + textSize());
     }
 }
