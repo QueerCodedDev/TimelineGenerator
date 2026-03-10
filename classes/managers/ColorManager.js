@@ -8,5 +8,5 @@ class ColorManager {
         'line': '#646464',
         'black': '#000000',
         'white': '#ffffff'
-        }
+    }
 }
