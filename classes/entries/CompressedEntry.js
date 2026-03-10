@@ -28,6 +28,7 @@ class CompressedEntry {
         textSize(25);
 
         let height = font.textBounds(this.output).h;
+        console.log(height);
 
         strokeWeight(5);
         stroke(ColorManager.colors[this.entry[0].universe]);
