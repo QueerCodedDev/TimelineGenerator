@@ -10,13 +10,21 @@ class CompressedEntry {
     formatEntry() {
         let output = {
             'titles': '',
-            'dates': ''
+            'dates': '',
+            'w': 0,
+            'h': 0
         };
 
         for (let e of this.entry) {
             output.titles += `\n${e.title}\n`;
             output.dates  += `\n\n${e.date}`;
         }
+
+        textSize(25);
+        let boundsTitle = font.textBounds(output.titles, 0, 0, textSize());
+        let boundsDates = font.textBounds(output.dates,  0, 0, textSize());
+        output.w = max(boundsTitle.w, boundsDates.w) + textSize();
+        output.h = max(boundsTitle.h, boundsDates.h) + (textSize() * 3);
 
         return output;
     }
@@ -27,15 +35,10 @@ class CompressedEntry {
         textAlign(CENTER, CENTER);
         textSize(25);
 
-        let bounds = font.textBounds(this.output.titles, 0, 0, textSize());
-        let dateBounds = font.textBounds(this.output.dates, 0, 0, textSize());
-
-        let height = max(bounds.h, dateBounds.h) + (textSize() * 3);
-
         strokeWeight(5);
         stroke(ColorManager.colors[this.entry[0].universe]);
         fill(ColorManager.colors.black);
-        rect(0, 0, max(bounds.w, dateBounds.w)+textSize(), height, 25);
+        rect(0, 0, this.output.w, this.output.h, 25);
         
         fill(ColorManager.colors.white)
         stroke(ColorManager.colors.black);
