@@ -16,5 +16,5 @@ class Renderer {
     static white    = '#ffffff';
     static grey     = '#646464';
     static darkGrey = '#1b1b1b';
-    static scroll   = true;
+    static scroll   = false;
 }
