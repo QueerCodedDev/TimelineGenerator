@@ -7,7 +7,7 @@ const SORT_OPTIONS = {
 }
 let i = 0;
 let canvasW = 1000;
-let canvasH = 2000
+let canvasH = 5000
 
 function preload() {
     dataJSON = loadJSON('res/individual_data.json');
@@ -24,7 +24,7 @@ function draw() {
     background(255,0,0);
     // Move origin so that it is in the middle, and 20 pixels from the top
     translate(canvasW / 2, Renderer.offset)
-    timeline.compEM.compEntries[i].render();
+    timeline.render();
 }
 
 function mouseClicked() {

@@ -21,4 +21,10 @@ class CompressedEntryManager {
 
         return compArr;
     }
+
+    render() {
+        for (let ce of this.compEntries) {
+            ce.render();
+        }
+    }
 }
