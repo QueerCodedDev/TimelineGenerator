@@ -6,7 +6,7 @@ class DataEntryManager {
         // Create an array of entries sorted by date
         this.dataEntriesByAirDate = this.sort(this.dataEntries.slice(), SORT_OPTIONS.DATE);
 
-        // Create an array of entries sorted by universe?
+        // Create an array of entries sorted by universe
         this.dataEntriesByUniverseByAirDate = this.sort(this.dataEntries.slice(), SORT_OPTIONS.UNIVERSE);
     }
 
