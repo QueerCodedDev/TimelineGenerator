@@ -41,7 +41,7 @@ class CompressedEntry {
         strokeWeight(Renderer.rectWeight);
 
         // Render rectangle/entry backer
-        rect(0, this.h/2 - 20, this.w, this.h, Renderer.point);
+        rect(0, (this.h/2) - Renderer.offset, this.w, this.h, Renderer.point);
     }
 
     renderBody() {
