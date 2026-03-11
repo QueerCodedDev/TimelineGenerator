@@ -1,29 +1,40 @@
 class CompressedEntry {
     constructor(entry) {
-        this.prev;
-        this.next;
-
+        // Array of entries to be compressed
         this.entry  = entry;
-        this.w;
-        this.h;
+
+        // Output strings
         this.dates  = '';
         this.titles = '';
+
+        // Rendering color
         this.color  = Renderer.UNI_COLORS[this.entry[0].universe];
+        
+        // Bounds to be used for rendering
+        this.w;
+        this.h;
+
+        // Format the entry for rendering
         this.formatEntry();
     }
 
     formatEntry() {
+        // Get and compile all the titles and dates
         for (let e of this.entry) {
             this.titles += `\n${e.title}\n`;
             this.dates  += `\n\n${e.date}`;
         }
 
+        // Make sure textSize is set appropriately for bounds calculation
         textSize(Renderer.point);
 
+        // Get bounds for both titles string and dates string
         let textBounds = font.textBounds(this.titles, 0, 0, Renderer.point);
         let dateBounds = font.textBounds(this.dates,  0, 0, Renderer.point);
 
+        // Set h to be the tallest of the two bounds, and add buffer
         this.h = max(textBounds.h, dateBounds.h) + (Renderer.point * 3) + 10;
+        // Set w to be the widest of the two bounds, and add buffer
         this.w = max(textBounds.w, dateBounds.w) +  Renderer.point;
     }
 
@@ -38,7 +49,6 @@ class CompressedEntry {
     renderRect() {
         // Configure render settings
         fill(Renderer.black);
-        rectMode(CENTER);
         stroke(this.color);
         strokeWeight(Renderer.rectWeight);
 
@@ -51,7 +61,6 @@ class CompressedEntry {
         fill(Renderer.white);
         stroke(Renderer.black);
         strokeWeight(Renderer.textWeight);
-        textAlign(CENTER);
         textSize(Renderer.point);
         
         // Render titles

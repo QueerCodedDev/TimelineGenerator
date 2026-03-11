@@ -1,5 +1,8 @@
 class Timeline {
     constructor(dataJSON) {
+        // Configure rect render and text render settings
+        rectMode(CENTER);
+        textAlign(CENTER);
         this.dataEM   = new DataEntryManager(dataJSON.media);
         this.compEM   = new CompressedEntryManager(this.dataEM);
     }
