@@ -31,11 +31,12 @@ class CompressedEntry {
         let dateBounds = font.textBounds(this.output.dates, 0, 0, Renderer.point);
 
         let height = max(bounds.h, dateBounds.h) + (Renderer.point * 3);
+        let width  = max(bounds.w, dateBounds.w) + Renderer.point;
 
         strokeWeight(5);
         stroke(ColorManager.colors[this.entry[0].universe]);
         fill(ColorManager.colors.black);
-        rect(0, 0, max(bounds.w, dateBounds.w)+Renderer.point, height, 25);
+        rect(0, 0, width, height, 25);
         
         fill(ColorManager.colors.white)
         stroke(ColorManager.colors.black);
