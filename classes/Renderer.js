@@ -1,7 +1,7 @@
 class Renderer {
     static point      = 25;
     static _point     = 20;
-    static offset     = 25;
+    static offset     = 30;
     static textWeight =  2;
     static rectWeight =  5;
     static UNI_COLORS = {
