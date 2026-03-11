@@ -69,6 +69,6 @@ class CompressedEntry {
         textSize(Renderer._point);
 
         // render header
-        text(this.entry[0].name, 0, 0);
+        text(this.entry[0].name, 0, Renderer.offset);
     }
 }
