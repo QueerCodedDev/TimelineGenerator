@@ -6,9 +6,10 @@ class CompressedEntry {
         // Output strings
         this.dates  = '';
         this.titles = '';
+        this.header = this.entry[0].universe;
 
         // Rendering color
-        this.color  = Settings.UNI_COLORS[this.entry[0].universe];
+        this.color  = Settings.UNI_COLORS[this.header];
         
         // Bounds to be used for rendering
         this.w;
@@ -28,14 +29,15 @@ class CompressedEntry {
         // Make sure textSize is set appropriately for bounds calculation
         textSize(Settings.point);
 
-        // Get bounds for both titles string and dates string
+        // Get bounds for titles string, dates string, and header string
         let textBounds = Settings.font.textBounds(this.titles, 0, 0);
         let dateBounds = Settings.font.textBounds(this.dates,  0, 0);
+        let headBounds = Settings.font.textBounds(this.header, 0, 0);
 
         // Set h to be the tallest of the two bounds, and add buffer
         this.h = max(textBounds.h, dateBounds.h) + (Settings.point * 3) + 10;
         // Set w to be the widest of the two bounds, and add buffer
-        this.w = max(textBounds.w, dateBounds.w) +  Settings.point;
+        this.w = max(textBounds.w, dateBounds.w, headBounds.w) +  Settings.point;
     }
 
     render() {
