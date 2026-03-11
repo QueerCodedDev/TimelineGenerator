@@ -1,51 +1,52 @@
 class CompressedEntry {
-    constructor(entriesArr) {
+    constructor(entry) {
         this.prev;
         this.next;
 
-        this.entry  = entriesArr;
-        this.titles = '';
-        this.dates  = '';
-        this.w;
-        this.h;
-        this.color  = ColorManager.colors[this.entry[0].universe];
-        
-        this.formatEntry();
+        this.entry  = entry;
+        this.output = this.formatEntry();
     }
 
     formatEntry() {
+        let output = {
+            'titles': '',
+            'dates': ''
+        };
+
         for (let e of this.entry) {
-            this.titles += `\n${e.title}\n`;
-            this.dates  += `\n\n${e.date}`;
+            output.titles += `\n${e.title}\n`;
+            output.dates  += `\n\n${e.date}`;
         }
 
-        let boundsTitle = font.textBounds(this.titles, 0, 0, Renderer.point);
-        let boundsDates = font.textBounds(this.dates,  0, 0, Renderer.point);
-        this.w = max(boundsTitle.w, boundsDates.w) +  Renderer.point;
-        this.h = max(boundsTitle.h, boundsDates.h) + (Renderer.point * 3);
+        return output;
     }
 
     render() {
         translate(canvasW / 2, canvasH / 2) // <-- Will likely need to get rid of/move/change
         rectMode(CENTER);
         textAlign(CENTER, CENTER);
-        textSize(Renderer.point);
+        textSize(25);
 
-        strokeWeight(Renderer.rectWeight);
-        stroke(this.color);
+        let bounds = font.textBounds(this.output.titles, 0, 0, textSize());
+        let dateBounds = font.textBounds(this.output.dates, 0, 0, textSize());
+
+        let height = max(bounds.h, dateBounds.h) + (textSize() * 3);
+
+        strokeWeight(5);
+        stroke(ColorManager.colors[this.entry[0].universe]);
         fill(ColorManager.colors.black);
-        rect(0, 0, this.w, this.h, Renderer.point);
+        rect(0, 0, max(bounds.w, dateBounds.w)+textSize(), height, 25);
         
         fill(ColorManager.colors.white)
         stroke(ColorManager.colors.black);
-        strokeWeight(Renderer.textWeight);
-        text(this.titles, 0, 0);
+        strokeWeight(2);
+        text(this.output.titles, 0, 0);
         fill(ColorManager.colors.line)
-        text(this.dates, 0, 0);
+        text(this.output.dates, 0, 0);
 
-        textSize(Renderer._point);
+        textSize(20);
         noStroke();
-        fill(this.color);
-        text(this.entry[0].name, 0, (-this.h / 2) + Renderer._point);
+        fill(ColorManager.colors[this.entry[0].universe]);
+        text(this.entry[0].name, 0, (-height/2) + textSize());
     }
 }

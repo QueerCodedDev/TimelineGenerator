@@ -15,7 +15,7 @@ function preload() {
 }
 
 function setup() {
-    textFont(font);
+    textFont('Consolas');
     timeline = new Timeline(dataJSON);
     createCanvas(canvasW, canvasH);
 }
