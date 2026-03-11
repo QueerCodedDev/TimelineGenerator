@@ -19,10 +19,10 @@ class CompressedEntry {
             this.dates  += `\n\n${e.date}`;
         }
 
-        let boundsTitle = font.textBounds(this.titles, 0, 0, 25);
-        let boundsDates = font.textBounds(this.dates,  0, 0, 25);
-        this.w = max(boundsTitle.w, boundsDates.w) +  25;
-        this.h = max(boundsTitle.h, boundsDates.h) + (25 * 3);
+        let boundsTitle = font.textBounds(this.titles, 0, 0, Renderer.point);
+        let boundsDates = font.textBounds(this.dates,  0, 0, Renderer.point);
+        this.w = max(boundsTitle.w, boundsDates.w) +  Renderer.point;
+        this.h = max(boundsTitle.h, boundsDates.h) + (Renderer.point * 3);
     }
 
     render() {
