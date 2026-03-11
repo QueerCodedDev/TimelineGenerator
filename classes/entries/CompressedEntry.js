@@ -23,7 +23,7 @@ class CompressedEntry {
         let textBounds = font.textBounds(this.titles, 0, 0, Renderer.point);
         let dateBounds = font.textBounds(this.dates,  0, 0, Renderer.point);
 
-        this.h = max(textBounds.h, dateBounds.h) + (Renderer.point * 3);
+        this.h = max(textBounds.h, dateBounds.h) + (Renderer.point * 3) + 10;
         this.w = max(textBounds.w, dateBounds.w) +  Renderer.point;
     }
 
