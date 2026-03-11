@@ -53,13 +53,13 @@ class CompressedEntry {
         textSize(Renderer.point);
         
         // Render titles
-        text(this.titles, 0, 0);
+        text(this.titles, 0, Renderer.offset);
         
         // Set fill for rendering dates
         fill(Renderer.grey)
         
         // Render dates
-        text(this.dates, 0, 0);
+        text(this.dates, 0, Renderer.offset);
     }
 
     renderHeader() {
@@ -69,6 +69,6 @@ class CompressedEntry {
         textSize(Renderer._point);
 
         // render header
-        text(this.entry[0].name, 0, (-this.h/2) + Renderer._point);
+        text(this.entry[0].name, 0, 0);
     }
 }
