@@ -19,33 +19,33 @@ class CompressedEntry {
             this.dates  += `\n\n${e.date}`;
         }
 
-        let boundsTitle = font.textBounds(this.titles, 0, 0, timeline.point);
-        let boundsDates = font.textBounds(this.dates,  0, 0, timeline.point); //< ----- Can't do this because timeline isn't done being made by the time this is called
-        this.w = max(boundsTitle.w, boundsDates.w) + timeline.point;
-        this.h = max(boundsTitle.h, boundsDates.h) + (timeline.point * 3);
+        let boundsTitle = font.textBounds(this.titles, 0, 0, Renderer.point);
+        let boundsDates = font.textBounds(this.dates,  0, 0, Renderer.point);
+        this.w = max(boundsTitle.w, boundsDates.w) +  Renderer.point;
+        this.h = max(boundsTitle.h, boundsDates.h) + (Renderer.point * 3);
     }
 
     render() {
         translate(canvasW / 2, canvasH / 2) // <-- Will likely need to get rid of/move/change
         rectMode(CENTER);
         textAlign(CENTER, CENTER);
-        textSize(timeline.point);
+        textSize(Renderer.point);
 
-        strokeWeight(timeline.rectWeight);
+        strokeWeight(Renderer.rectWeight);
         stroke(this.color);
         fill(ColorManager.colors.black);
-        rect(0, 0, this.output.w, this.output.h, timeline.point);
+        rect(0, 0, this.output.w, this.output.h, Renderer.point);
         
         fill(ColorManager.colors.white)
         stroke(ColorManager.colors.black);
-        strokeWeight(timeline.textWeight);
+        strokeWeight(Renderer.textWeight);
         text(this.output.titles, 0, 0);
         fill(ColorManager.colors.line)
         text(this.output.dates, 0, 0);
 
-        textSize(timeline._point);
+        textSize(Renderer._point);
         noStroke();
         fill(this.color);
-        text(this.entry[0].name, 0, (-this.output.h / 2) + timeline._point);
+        text(this.entry[0].name, 0, (-this.output.h / 2) + Renderer._point);
     }
 }
