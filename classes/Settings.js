@@ -1,9 +1,11 @@
 class Settings {
-    static point      = 25;
-    static _point     = 20;
-    static offset     = 25;
-    static textWeight =  2;
-    static rectWeight =  5;
+    static canvasW    = 2000;
+    static canvasH    = 5000;
+    static point      =   25;
+    static _point     =   20;
+    static offset     =   25;
+    static textWeight =    2;
+    static rectWeight =    5;
     static UNI_COLORS = {
         'lib': '#F5D327',
         'lev': '#27B0F5',
@@ -17,4 +19,10 @@ class Settings {
     static grey     = '#646464';
     static darkGrey = '#1b1b1b';
     static scroll   = false;
+    static font;
+
+    static SORT = {
+        DATE: 'date',
+        UNIVERSE: 'universe'
+    }
 }

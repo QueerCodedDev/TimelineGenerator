@@ -4,10 +4,10 @@ class DataEntryManager {
         this.dataEntries = this.createDataEntries(dataJSON);
 
         // Create an array of entries sorted by date
-        this.dataEntriesByAirDate = this.sort(this.dataEntries.slice(), SORT_OPTIONS.DATE);
+        this.dataEntriesByAirDate = this.sort(this.dataEntries.slice(), Settings.SORT.DATE);
 
         // Create an array of entries sorted by universe
-        this.dataEntriesByUniverseByAirDate = this.sort(this.dataEntries.slice(), SORT_OPTIONS.UNIVERSE);
+        this.dataEntriesByUniverseByAirDate = this.sort(this.dataEntries.slice(), Settings.SORT.UNIVERSE);
     }
 
 
@@ -36,9 +36,9 @@ class DataEntryManager {
      * @param   {String} sortBy - Designated sorting method
      * @returns {Array}         - Array of DataEntries, sorted as designated
      */
-    sort(arr, sortBy=SORT_OPTIONS.DATE) {
-        if (sortBy == SORT_OPTIONS.DATE) return this.sortByDate(arr);
-        if (sortBy == SORT_OPTIONS.UNIVERSE) return this.sortByUniverseByDate(arr);
+    sort(arr, sortBy=Settings.SORT.DATE) {
+        if (sortBy == Settings.SORT.DATE)     return this.sortByDate(arr);
+        if (sortBy == Settings.SORT.UNIVERSE) return this.sortByUniverseByDate(arr);
     }
 
 
@@ -51,7 +51,7 @@ class DataEntryManager {
      * @param   {String} sortBy  - Sort method. Date by defualt
      * @returns {Array}          - Sorted array of DataEntries
      */
-    sortByDate(arr, sortBy=SORT_OPTIONS.DATE) {
+    sortByDate(arr, sortBy=Settings.SORT.DATE) {
         let sortedArr = [];
 
         // While there is at least 1 item that needs to be sorted
@@ -88,7 +88,7 @@ class DataEntryManager {
      * @param   {String} sortBy  - Sort method. Universe by defualt
      * @returns {Array}          - Sorted array of DataEntries
      */
-    sortByUniverseByDate(arr, sortBy=SORT_OPTIONS.UNIVERSE) {
+    sortByUniverseByDate(arr) {
         let uniArr = [];
         let divArr = [];
         let sortedArr = [];
@@ -120,9 +120,9 @@ class DataEntryManager {
      */ 
     compare(min, cur, sortBy) {
         switch(sortBy) {
-            case SORT_OPTIONS.DATE:
+            case Settings.SORT.DATE:
                 if (min.dateOBJ > cur.dateOBJ) return cur;
-            case SORT_OPTIONS.UNIVERSE:
+            case Settings.SORT.UNIVERSE:
                 if (min.universe > cur.universe && min.dateOBJ > cur.dateOBJ) return cur;
             
         }

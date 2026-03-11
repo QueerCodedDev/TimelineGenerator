@@ -29,8 +29,8 @@ class CompressedEntry {
         textSize(Settings.point);
 
         // Get bounds for both titles string and dates string
-        let textBounds = font.textBounds(this.titles, 0, 0);
-        let dateBounds = font.textBounds(this.dates,  0, 0);
+        let textBounds = Settings.font.textBounds(this.titles, 0, 0);
+        let dateBounds = Settings.font.textBounds(this.dates,  0, 0);
 
         // Set h to be the tallest of the two bounds, and add buffer
         this.h = max(textBounds.h, dateBounds.h) + (Settings.point * 3) + 10;
