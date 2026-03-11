@@ -1,5 +1,5 @@
 class Settings {
-    static canvasW    = 2000;
+    static canvasW    = 1000;
     static canvasH    = 5000;
     static point      =   25;
     static _point     =   20;
