@@ -49,7 +49,7 @@ class CompressedEntry {
         fill(Renderer.white);
         stroke(Renderer.black);
         strokeWeight(Renderer.textWeight);
-        textAlign(CENTER, CENTER);
+        textAlign(CENTER);
         textSize(Renderer.point);
         
         // Render titles
