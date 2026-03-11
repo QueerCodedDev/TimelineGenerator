@@ -31,6 +31,8 @@ class CompressedEntry {
         this.renderRect();
         this.renderBody();
         this.renderHeader();
+
+        tanslate(canvasW/2, this.h);
     }
 
     renderRect() {
