@@ -7,7 +7,7 @@ const SORT_OPTIONS = {
 }
 let i = 0;
 let canvasW = 1000;
-let canvasH = 5000
+let canvasH = 50000
 
 function preload() {
     dataJSON = loadJSON('res/individual_data.json');
