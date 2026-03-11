@@ -5,6 +5,9 @@ class Timeline {
     }
 
     render() {
+        stroke(Renderer.grey);
+        strokeWeight(Renderer.rectWeight);
+        line(0, 0, 0, canvasH)
         this.compEM.render();
     }
 }

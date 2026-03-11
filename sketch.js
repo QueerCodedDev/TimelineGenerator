@@ -21,7 +21,7 @@ function setup() {
 }
 
 function draw() {
-    background(255,0,0);
+    // background(255,0,0);
     // Move origin so that it is in the middle, and 20 pixels from the top
     translate(canvasW / 2, Renderer.offset)
     timeline.render();
