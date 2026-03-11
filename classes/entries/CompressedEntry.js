@@ -34,18 +34,18 @@ class CompressedEntry {
         strokeWeight(Renderer.rectWeight);
         stroke(this.color);
         fill(ColorManager.colors.black);
-        rect(0, 0, this.output.w, this.output.h, Renderer.point);
+        rect(0, 0, this.w, this.h, Renderer.point);
         
         fill(ColorManager.colors.white)
         stroke(ColorManager.colors.black);
         strokeWeight(Renderer.textWeight);
-        text(this.output.titles, 0, 0);
+        text(this.titles, 0, 0);
         fill(ColorManager.colors.line)
-        text(this.output.dates, 0, 0);
+        text(this.dates, 0, 0);
 
         textSize(Renderer._point);
         noStroke();
         fill(this.color);
-        text(this.entry[0].name, 0, (-this.output.h / 2) + Renderer._point);
+        text(this.entry[0].name, 0, (-this.h / 2) + Renderer._point);
     }
 }
