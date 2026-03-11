@@ -28,8 +28,6 @@ class CompressedEntry {
     }
 
     render() {
-        translate(canvasW / 2, canvasH / 2) // <-- Will likely need to get rid of/move/change
-        
         this.renderRect();
         this.renderBody();
         this.renderHeader();
