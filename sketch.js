@@ -10,7 +10,7 @@ let canvasW = 1000;
 let canvasH = 50000
 
 let i = 0;
-let inc = 50;
+let inc = 500;
 
 function preload() {
     dataJSON = loadJSON('res/individual_data.json');
