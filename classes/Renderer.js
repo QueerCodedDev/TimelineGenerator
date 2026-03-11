@@ -1,4 +1,4 @@
-class Renderer {
+class Settings {
     static point      = 25;
     static _point     = 20;
     static offset     = 25;
