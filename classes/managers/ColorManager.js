@@ -5,7 +5,7 @@ class ColorManager {
         'spn': '#C223BD',
         'psy': '#23C227',
         'men': '#C22823',
-        'line': '#646464',
+        'grey': '#646464',
         'black': '#000000',
         'white': '#ffffff'
     }

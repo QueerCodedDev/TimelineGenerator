@@ -8,6 +8,7 @@ class CompressedEntry {
         this.h;
         this.dates  = '';
         this.titles = '';
+        this.color  = Renderer.UNI_COLORS[this.entry[0].universe];
         this.formatEntry();
     }
 
@@ -28,25 +29,48 @@ class CompressedEntry {
 
     render() {
         translate(canvasW / 2, canvasH / 2) // <-- Will likely need to get rid of/move/change
+        
+        this.renderRect();
+        this.renderBody();
+        this.renderHeader();
+    }
+
+    renderRect() {
+        // Configure render settings
+        fill(Renderer.black);
         rectMode(CENTER);
+        stroke(this.color);
+        strokeWeight(Renderer.rectWeight);
+
+        // Render rectangle/entry backer
+        rect(0, 0, this.w, this.h, Renderer.point);
+    }
+
+    renderBody() {
+        // Configure render settings
+        fill(Renderer.white);
+        stroke(Renderer.black);
+        strokeWeight(Renderer.textWeight);
         textAlign(CENTER, CENTER);
         textSize(Renderer.point);
-
-        strokeWeight(Renderer.rectWeight);
-        stroke(ColorManager.colors[this.entry[0].universe]);
-        fill(ColorManager.colors.black);
-        rect(0, 0, this.w, this.h, 25);
         
-        fill(ColorManager.colors.white)
-        stroke(ColorManager.colors.black);
-        strokeWeight(Renderer.textWeight);
+        // Render titles
         text(this.titles, 0, 0);
-        fill(ColorManager.colors.line)
+        
+        // Set fill for rendering dates
+        fill(Renderer.grey)
+        
+        // Render dates
         text(this.dates, 0, 0);
+    }
 
-        textSize(Renderer._point);
+    renderHeader() {
+        // Configure render settings
+        fill(this.color);
         noStroke();
-        fill(ColorManager.colors[this.entry[0].universe]);
+        textSize(Renderer._point);
+
+        // render header
         text(this.entry[0].name, 0, (-this.h/2) + Renderer._point);
     }
 }
