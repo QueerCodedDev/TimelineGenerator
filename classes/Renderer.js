@@ -12,7 +12,8 @@ class Renderer {
         'men': '#C22823'
     }
 
-    static black = '#000000';
-    static white = '#ffffff';
-    static grey  = '#646464';
+    static black    = '#000000';
+    static white    = '#ffffff';
+    static grey     = '#646464';
+    static darkGrey = '#1b1b1b';
 }
