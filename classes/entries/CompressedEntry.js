@@ -6,10 +6,10 @@ class CompressedEntry {
         // Output strings
         this.dates  = '';
         this.titles = '';
-        this.header = this.entry[0].universe;
+        this.header = this.entry[0].name;
 
         // Rendering color
-        this.color  = Settings.UNI_COLORS[this.header];
+        this.color  = Settings.UNI_COLORS[this.entry[0].universe];
         
         // Bounds to be used for rendering
         this.w;
