@@ -27,15 +27,15 @@ class CompressedEntry {
         textAlign(CENTER, CENTER);
         textSize(Renderer.point);
 
-        let bounds = font.textBounds(this.output.titles, 0, 0, textSize());
-        let dateBounds = font.textBounds(this.output.dates, 0, 0, textSize());
+        let bounds = font.textBounds(this.output.titles, 0, 0, Renderer.point);
+        let dateBounds = font.textBounds(this.output.dates, 0, 0, Renderer.point);
 
-        let height = max(bounds.h, dateBounds.h) + (textSize() * 3);
+        let height = max(bounds.h, dateBounds.h) + (Renderer.point * 3);
 
         strokeWeight(5);
         stroke(ColorManager.colors[this.entry[0].universe]);
         fill(ColorManager.colors.black);
-        rect(0, 0, max(bounds.w, dateBounds.w)+textSize(), height, 25);
+        rect(0, 0, max(bounds.w, dateBounds.w)+Renderer.point, height, 25);
         
         fill(ColorManager.colors.white)
         stroke(ColorManager.colors.black);
@@ -47,6 +47,6 @@ class CompressedEntry {
         textSize(Renderer._point);
         noStroke();
         fill(ColorManager.colors[this.entry[0].universe]);
-        text(this.entry[0].name, 0, (-height/2) + textSize());
+        text(this.entry[0].name, 0, (-height/2) + Renderer._point);
     }
 }
