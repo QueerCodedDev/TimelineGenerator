@@ -32,7 +32,7 @@ class CompressedEntry {
         this.renderBody();
         this.renderHeader();
 
-        translate(canvasW/2, this.h);
+        translate(0, this.h);
     }
 
     renderRect() {
