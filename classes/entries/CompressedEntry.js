@@ -27,7 +27,7 @@ class CompressedEntry {
         translate(canvasW / 2, canvasH / 2) // <-- Will likely need to get rid of/move/change
         rectMode(CENTER);
         textAlign(CENTER, CENTER);
-        textSize(Renderer.point);
+        
 
         let textBounds = font.textBounds(this.output.titles, 0, 0, Renderer.point);
         let dateBounds = font.textBounds(this.output.dates,  0, 0, Renderer.point);
@@ -43,6 +43,7 @@ class CompressedEntry {
         fill(ColorManager.colors.white)
         stroke(ColorManager.colors.black);
         strokeWeight(Renderer.textWeight);
+        textSize(Renderer.point);
         text(this.output.titles, 0, 0);
         fill(ColorManager.colors.line)
         text(this.output.dates, 0, 0);
