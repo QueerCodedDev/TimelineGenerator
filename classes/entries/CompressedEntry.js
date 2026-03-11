@@ -6,34 +6,31 @@ class CompressedEntry {
         this.entry  = entry;
         this.w;
         this.h;
-        this.output = this.formatEntry();
+        this.dates  = '';
+        this.titles = '';
+        this.formatEntry();
     }
 
     formatEntry() {
-        let output = {
-            'titles': '',
-            'dates': ''
-        };
-
         for (let e of this.entry) {
-            output.titles += `\n${e.title}\n`;
-            output.dates  += `\n\n${e.date}`;
+            this.titles += `\n${e.title}\n`;
+            this.dates  += `\n\n${e.date}`;
         }
 
-        return output;
+        textSize(Renderer.point);
+
+        let textBounds = font.textBounds(this.titles, 0, 0, Renderer.point);
+        let dateBounds = font.textBounds(this.dates,  0, 0, Renderer.point);
+
+        this.h = max(textBounds.h, dateBounds.h) + (Renderer.point * 3);
+        this.w = max(textBounds.w, dateBounds.w) +  Renderer.point;
     }
 
     render() {
         translate(canvasW / 2, canvasH / 2) // <-- Will likely need to get rid of/move/change
         rectMode(CENTER);
         textAlign(CENTER, CENTER);
-        
-
-        let textBounds = font.textBounds(this.output.titles, 0, 0, Renderer.point);
-        let dateBounds = font.textBounds(this.output.dates,  0, 0, Renderer.point);
-
-        this.h = max(textBounds.h, dateBounds.h) + (Renderer.point * 3);
-        this.w = max(textBounds.w, dateBounds.w) +  Renderer.point;
+        textSize(Renderer.point);
 
         strokeWeight(Renderer.rectWeight);
         stroke(ColorManager.colors[this.entry[0].universe]);
@@ -43,10 +40,9 @@ class CompressedEntry {
         fill(ColorManager.colors.white)
         stroke(ColorManager.colors.black);
         strokeWeight(Renderer.textWeight);
-        textSize(Renderer.point);
-        text(this.output.titles, 0, 0);
+        text(this.titles, 0, 0);
         fill(ColorManager.colors.line)
-        text(this.output.dates, 0, 0);
+        text(this.dates, 0, 0);
 
         textSize(Renderer._point);
         noStroke();
