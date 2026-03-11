@@ -39,10 +39,16 @@ class CompressedEntry {
     }
 
     render() {
+        // Draw the rectangle that acts as the background for the entry
         this.renderRect();
+        
+        // Draw the main body of the entry (titles and dates)
         this.renderBody();
+
+        // Draw the header of the entry (universe)
         this.renderHeader();
 
+        // Translate in preperation for the drawing of the next entry
         translate(0, this.h + (Settings.offset * 2));
     }
 

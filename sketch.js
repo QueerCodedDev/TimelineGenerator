@@ -7,14 +7,17 @@ function preload() {
 }
 
 function setup() {
-    textFont(Settings.font);
     timeline = new Timeline(dataJSON);
     createCanvas(Settings.canvasW, Settings.canvasH);
 }
 
 function draw() {
-    background(Settings.darkGrey); // <--- Need to draw a background when autoscrolling
-    // Move origin so that it is in the middle, and 20 pixels from the top
-    translate(Settings.canvasW / 2, Settings.offset); // <--- translate needs to be in draw
+    // If scrolling, draw background
+    if (Settings.scroll) background(Settings.darkGrey);
+    
+    // Move origin so that it is in the middle, and Settings.offset pixels from the top
+    translate(Settings.canvasW / 2, Settings.offset);
+
+    // Draw the timeline to the canvas
     timeline.render();
 }
