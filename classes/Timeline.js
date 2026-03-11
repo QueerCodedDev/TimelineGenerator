@@ -10,7 +10,7 @@ class Timeline {
     render() {
         stroke(Renderer.grey);
         strokeWeight(Renderer.rectWeight);
-        line(0, 0, 0, canvasH * 1.5)
+        line(0, 0, 0, canvasH * 1.75)
         this.compEM.render();
     }
 }
