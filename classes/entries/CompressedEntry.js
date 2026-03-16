@@ -32,7 +32,7 @@ class CompressedEntry {
         // Get bounds for titles string, dates string, and header string
         let textBounds = Settings.font.textBounds(this.titles, 0, 0);
         let dateBounds = Settings.font.textBounds(this.dates,  0, 0);
-        let headBounds = Settings.font.textBounds(this.header, 0, 0); // <--- This needs to be changed to account for _point size. Maybe make a new function that calculated each of these on their own before coming back here to compare them
+        let headBounds = Settings.font.textBounds(this.header, 0, 0, Settings._point); // <--- This needs to be changed to account for _point size. Maybe make a new function that calculated each of these on their own before coming back here to compare them
 
         // Set h to be the tallest of the two bounds, and add buffer
         this.h = max(textBounds.h, dateBounds.h) + (Settings.point * 3) + 10;
