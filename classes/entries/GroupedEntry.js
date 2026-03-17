@@ -6,6 +6,7 @@ class GroupedEntry {
         this.dimensions = [];
 
         this.formatEntry();
+        console.log(this.positions);
     }
 
     formatEntry() {
@@ -17,7 +18,19 @@ class GroupedEntry {
             bodyBounds.h += headBounds.h;
             this.dimensions.push(bodyBounds);
 
-            this.positions.push(this.getPosition(e));
+            if (this.entry.indexOf(e) == 0) {
+                e.prev = null;
+                e.next = this.entry[1];
+            } else if (this.entry.indexOf(e) == this.entry.length-1) {
+                e.prev = this.entry[this.entry.length-2];
+            } else {
+                e.prev = this.entry[this.entry.indexOf(e)-1];
+                e.next = this.entry[this.entry.indexOf(e)+1];
+            }
+        }
+
+        for (let e of this.entry) {
+            this.getPosition(e);
         }
     }
 
@@ -26,6 +39,15 @@ class GroupedEntry {
     }
 
     getPosition(item) {
-        
+        let arrPos = this.entry.indexOf(item);
+        let len    = this.entry.length;
+        let arrMid = floor(len / 2);
+        if ((len / 2) == arrMid) {
+            // Even amount of items
+
+        } else {
+            // Odd amount of items
+        }
+
     }
 }
