@@ -6,12 +6,10 @@ class DataEntry {
         this.title    = data.title;
         this.date     = data.air_date;
         this.dateOBJ  = new Date(data.air_date);
-
+        this.color    = Settings.UNI_COLORS[this.universe]; 
 
         // Get circumstantial data
         this.season  = data.season  ? data.season  : null;
         this.episode = data.episode ? data.episode : null;
-
-        //this.color; <-- Unsure if this var will actually be used or not. 
     }
 }

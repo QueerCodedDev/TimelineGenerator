@@ -8,7 +8,7 @@ class Timeline {
         // EntryManagers
         this.dataEM  = new DataEntryManager(dataJSON.media);
         this.compEM  = new CompressedEntryManager(this.dataEM.dataEntriesByAirDate);
-        this.groupEM = new GroupedEntryManager(this.dataEM);
+        this.groupEM = new GroupedEntryManager(this.dataEM.dataEntriesByAirDate);
 
         // Scroll vars
         this.scrollInc = 500;
