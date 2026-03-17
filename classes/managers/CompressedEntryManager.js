@@ -1,6 +1,6 @@
 class CompressedEntryManager {
-    constructor(dataEM) {
-        this.dataEntries = dataEM.dataEntriesByAirDate;
+    constructor(data) {
+        this.dataEntries = data;
         this.compEntries = this.compressEntries(this.dataEntries);
     }
 

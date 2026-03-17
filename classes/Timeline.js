@@ -6,8 +6,9 @@ class Timeline {
         textFont(Settings.font);
 
         // EntryManagers
-        this.dataEM = new DataEntryManager(dataJSON.media);
-        this.compEM = new CompressedEntryManager(this.dataEM);
+        this.dataEM  = new DataEntryManager(dataJSON.media);
+        this.compEM  = new CompressedEntryManager(this.dataEM.dataEntriesByAirDateByUniverse);
+        this.groupEM = new GroupedEntryManager(this.dataEM);
 
         // Scroll vars
         this.scrollInc = 500;
