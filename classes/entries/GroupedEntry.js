@@ -1,12 +1,12 @@
 class GroupedEntry {
-    constructor(entry) {
+    constructor(entryEX) {
         // Array of entries to be grouped
-        this.entry      = entry;
+        this.entry      = entryEX;
         this.positions  = [];
         this.dimensions = [];
 
         this.formatEntry();
-        console.log(this.positions);
+        //console.log(this.positions);
     }
 
     formatEntry() {
@@ -16,6 +16,8 @@ class GroupedEntry {
             
             // Add the height of the header to the height of the body for total height
             bodyBounds.h += headBounds.h;
+
+            // Push dims of current entry to dimensions array
             this.dimensions.push(bodyBounds);
 
             if (this.entry.indexOf(e) == 0) {
@@ -39,11 +41,14 @@ class GroupedEntry {
     }
 
     getPosition(item) {
-        let arrPos = this.entry.indexOf(item);
+        let arrPos = this.entry.indexOf(item); // Pos of item in entry array
         let len    = this.entry.length;
-        let arrMid = floor(len / 2);
+        let arrMid = floor(len / 2); // Finding what the middle pos would be
+        item.mid   = (arrPos == arrMid); // Set if item is a middle item (not sure this works right yet)
+
         if ((len / 2) == arrMid) {
             // Even amount of items
+            
 
         } else {
             // Odd amount of items
