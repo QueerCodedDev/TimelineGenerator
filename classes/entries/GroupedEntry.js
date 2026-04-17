@@ -13,6 +13,7 @@ class GroupedEntry {
         for (let e of this.entry) {
             let bodyBounds = this.getBounds(`${e.title}\n${e.date}`);
             let headBounds = this.getBounds(e.name, Settings._point);
+            let Ld2;
             
             // Add the height of the header to the height of the body for total height
             bodyBounds.h += headBounds.h;
@@ -26,7 +27,7 @@ class GroupedEntry {
             );
 
             // Add empty item as needed to make positioning easier
-            let Ld2 = this.entry.length/2;
+            Ld2 = this.entry.length/2;
             if (this.entry.length%2 == 0) { // Even # of entries
                 this.entry.splice(Ld2, 0, {'mid':true});
             }
