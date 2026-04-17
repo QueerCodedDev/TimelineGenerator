@@ -38,6 +38,9 @@ class Timeline {
         line(0, 0, 0, Settings.canvasH * 2); // *2 is larger than what is needed, but its fine
 
         // Tell the CompressedEntryManager to render all it's entries
-        this.compEM.render();
+        // this.compEM.render();
+
+        // Tell the GroupedEntryManager to render all it's entries
+        this.groupEM.render();
     }
 }
