@@ -18,7 +18,12 @@ class GroupedEntry {
             bodyBounds.h += headBounds.h;
 
             // Push dims of current entry to dimensions array
-            this.dimensions.push(bodyBounds);
+            this.dimensions.push(
+                {
+                    'w': (bodyBounds.w > headBounds.w) ? bodyBounds.w : headBounds.w,
+                    'h': bodyBounds
+                }
+            );
 
             // Add empty item as needed to make positioning easier
             let Ld2 = this.entry.length/2;
@@ -39,12 +44,6 @@ class GroupedEntry {
             }
         }
 
-        // will remove code below this point
-        for (let e of this.entry) {
-            this.getPosition(e);
-        }
-        // and above this point eventually
-
         // Call setPositions, starting with the middle item
         this.setPositions(this.entry[floor(Ld2)]);
     }
@@ -61,7 +60,7 @@ class GroupedEntry {
         // While next entry
         while (curr.next) {
             let next_ind = this.IDO(curr.prev);
-            curr_pos.x += (this.dimensions[next_ind]/2) + (this.dimensions[this.IDO(item)]/2);
+            curr_pos.x += (this.dimensions[next_ind].w/2) + (this.dimensions[this.IDO(item)].w/2);
 
             curr = curr.next;
         }
@@ -70,7 +69,7 @@ class GroupedEntry {
 
         while (curr.prev) {
             let prev_ind = this.IDO(curr.prev);
-            curr_pos.x += (this.dimensions[prev_ind]/2) + (this.dimensions[this.IDO(item)]/2);
+            curr_pos.x += (this.dimensions[prev_ind].w/2) + (this.dimensions[this.IDO(item)].w/2);
 
             curr = curr.prev;
         }
@@ -81,6 +80,39 @@ class GroupedEntry {
     }
 
     render() {
-        
+        // Add code here to render line to connect entries
+        for (let i = 0; i < this.entry.length; i++) {
+            this.renderRect(this.entry[i], i);
+            textSize(Settings.point);
+            fill(Settings.white);
+            stroke(Settings.black);
+            strokeWeight(Settings.textWeight);
+
+            text(`${this.entry[i].title}\n${this.entry[i].date}`, this.positions[i].x, this.positions[i].y);
+
+            this.renderSubtext(this.entry[i], i);
+        }
+
+        translate(0, this.dimensions[i].h * 2);
+    }
+
+    renderRect(e, ind) {
+        strokeWeight(Settings.weight);
+        stroke(e.color); // <--- Need to update this so that the color of each item is based on their specific colors
+        fill(Settings.black);
+        rect(
+            this.positions[ind].x, 
+            this.positions[ind].y, 
+            this.dimensions[ind].w,
+            this.dimensions[ind].h, 
+            Settings.point
+        );
+    }
+
+    renderSubtext(e, ind) {
+        textSize(Settings._point);
+        noStroke();
+        fill(Settings.UNI_COLORS[e.universe]);
+        text(e.name, this.positions[ind].x, this.positions.y-Settings.point);
     }
 }
