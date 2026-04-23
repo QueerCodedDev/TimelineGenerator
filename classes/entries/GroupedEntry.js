@@ -27,7 +27,7 @@ class GroupedEntry {
             );
 
             // Push empty dict for current entry to positions array
-            this.positions.push({});
+            this.positions.push({'x':0, 'y':0});
 
             // Add empty item as needed to make positioning easier
             if (this.entry.length%2 == 0) { // Even # of entries
@@ -58,7 +58,6 @@ class GroupedEntry {
     setPositions(item) {
         let curr = item;
         let curr_pos = this.positions[this.IDO(item)];
-        curr_pos = {'x':0, 'y':0};
 
         // While next entry
         while (curr.next) {
