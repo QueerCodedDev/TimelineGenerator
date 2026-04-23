@@ -20,4 +20,5 @@ function draw() {
 
     // Draw the timeline to the canvas
     timeline.render();
+    noLoop();
 }
