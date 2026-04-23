@@ -26,6 +26,9 @@ class GroupedEntry {
                 }
             );
 
+            // Push empty dict for current entry to positions array
+            this.positions.push({});
+
             // Add empty item as needed to make positioning easier
             if (this.entry.length%2 == 0) { // Even # of entries
                 this.entry.splice(Ld2, 0, {'mid':true});
@@ -97,7 +100,7 @@ class GroupedEntry {
     }
 
     renderRect(e, ind) {
-        strokeWeight(Settings.weight);
+        strokeWeight(Settings.textWeight);
         stroke(e.color); // <--- Need to update this so that the color of each item is based on their specific colors
         fill(Settings.black);
         rect(
