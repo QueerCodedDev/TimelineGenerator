@@ -95,7 +95,7 @@ class GroupedEntry {
             this.renderSubtext(this.entry[i], i);
         }
 
-        translate(0, this.dimensions[i].h * 2);
+        translate(0, this.dimensions[0].h * 2);
     }
 
     renderRect(e, ind) {
@@ -115,6 +115,6 @@ class GroupedEntry {
         textSize(Settings._point);
         noStroke();
         fill(Settings.UNI_COLORS[e.universe]);
-        text(e.name, this.positions[ind].x, this.positions.y-Settings.point);
+        text(e.name, this.positions[ind].x, this.positions[ind].y-Settings.point);
     }
 }
