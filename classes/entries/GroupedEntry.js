@@ -22,7 +22,7 @@ class GroupedEntry {
             this.dimensions.push(
                 {
                     'w': (bodyBounds.w > headBounds.w) ? bodyBounds.w : headBounds.w,
-                    'h': bodyBounds
+                    'h': bodyBounds.h
                 }
             );
 
