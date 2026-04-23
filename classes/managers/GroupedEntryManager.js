@@ -37,6 +37,7 @@ class GroupedEntryManager {
     render() {
         for (let ge of this.groupEntries) {
             ge.render();
+            console.log(ge)
         }
     }
 }
